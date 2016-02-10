@@ -1,4 +1,9 @@
 #!/bin/bash
+pkill start.sh
+pkill node
+pkill prometheus
+pkill grafana-server
+
 cd $(dirname $0)
 HOME=$PWD
 
@@ -52,3 +57,14 @@ done < $HOME/sites
 #cleanup map
 chmod +x out
 chown -R map:map out/map
+
+function restart {
+	systemctl restart fastd@$2
+}
+
+while read l
+do
+        restart $l
+done < $HOME/sites
+
+systemctl restart nginx
