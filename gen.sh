@@ -9,57 +9,57 @@ function replace {
 }
 
 function fastd {
-	cp -r templates/fastd out/fastd/$2
-	replace out/fastd/$2 SITE $2
-	replace out/fastd/$2 MTU $5
+	cp -r templates/fastd new/fastd/$2
+	replace new/fastd/$2 SITE $2
+	replace new/fastd/$2 MTU $5
 }
 
 function map {
-	cp -r templates/map out/map/$2
-	replace out/map/$2 SITE $2
-	replace out/map/$2 PORT $4
-	echo "  - job_name: '$2'" >> out/map/prometheus.yml
-	echo "    target_groups:" >> out/map/prometheus.yml
-	echo "      - targets: ['localhost:4$4']" >> out/map/prometheus.yml
-	mv backup/map/$2/raw.json out/map/$2/
-	cp templates/map/aliases.json.$2 out/map/$2/
+	cp -r templates/map new/map/$2
+	replace new/map/$2 SITE $2
+	replace new/map/$2 PORT $4
+	echo "  - job_name: '$2'" >> new/map/prometheus.yml
+	echo "    target_groups:" >> new/map/prometheus.yml
+	echo "      - targets: ['localhost:4$4']" >> new/map/prometheus.yml
+	cp -r out/map/$2/raw.json new/map/$2/
+	cp templates/map/aliases.json.$2 new/map/$2/
 }
 
 function nginx {
-	cp templates/nginx/domain.org.conf.example$6 out/nginx/conf.d/$3.conf
-	replace out/nginx/conf.d/$3.conf URL $3
-	replace out/nginx/conf.d/$3.conf PORT $4
-	cp -r templates/webdir out/webdir/$3
-	replace out/webdir/$3 NAME "$(echo $1 | sed 's/:/ /g')"
+	cp templates/nginx/domain.org.conf.example$6 new/nginx/conf.d/$3.conf
+	replace new/nginx/conf.d/$3.conf URL $3
+	replace new/nginx/conf.d/$3.conf PORT $4
+	cp -r templates/webdir new/webdir/$3
+	replace new/webdir/$3 NAME "$(echo $1 | sed 's/:/ /g')"
+	replace new/webdir/$3 SITE $2
 }
 
-rm -rf backup
-mv out backup
-mkdir out
+rm -rf new
+mkdir new
 
 #prepare fastd
-cp -r templates/fastdbase out/fastd
-git clone https://github.com/eulenfunk/fastd-peers out/fastd/peers
+cp -r templates/fastdbase new/fastd
+git clone https://github.com/eulenfunk/fastd-peers new/fastd/peers
 
 #prepare map
-cp -r templates/mapbase out/map
-git clone https://github.com/plumpudding/hopglass-server out/map/hopglass-server
-cd out/map/hopglass-server
+cp -r templates/mapbase new/map
+git clone https://github.com/plumpudding/hopglass-server new/map/hopglass-server
+cd new/map/hopglass-server
 npm install
 cd $HOME
-mv backup/map/grafana out/map/
-mv backup/map/prometheus out/map/
-mv backup/map/data out/map/
+mv out/map/grafana new/map/
+cp -r out/map/prometheus new/map/
+mv out/map/data new/map/
 
 #prepare nginx & webdir
-cp -r templates/nginxbase out/nginx
-cp -r templates/webdirbase out/webdir
+cp -r templates/nginxbase new/nginx
+cp -r templates/webdirbase new/webdir
 git clone https://github.com/plumpudding/hopglass
 cd hopglass
 npm install
 grunt
 cd ..
-mv hopglass/build out/webdir/map.eulenfunk.de/
+mv hopglass/build new/webdir/map.eulenfunk.de/
 rm -rf hopglass
 
 while read l
@@ -71,8 +71,12 @@ do
 done < $HOME/sites
 
 #cleanup map
-chmod +x out
-chown -R map:map out/map
+chmod +x new
+chown -R map:map new/map
+
+rm -rf backup
+mv out backup
+mv new out
 
 function restart {
 	systemctl restart fastd@$2
