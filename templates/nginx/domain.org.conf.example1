@@ -1,0 +1,25 @@
+server {
+    listen URL:80;
+    server_name URL;
+
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen URL:443;
+    server_name URL;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/URL/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/URL/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/URL/fullchain.pem;
+
+    location / {
+        root /srv/http/URL;
+        index index.html;
+    }
+
+    location /data/ {
+        proxy_pass http://127.0.0.1:4PORT/;
+    }
+}

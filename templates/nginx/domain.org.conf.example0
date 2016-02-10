@@ -1,0 +1,13 @@
+server {
+    listen URL:80;
+    server_name URL;
+
+    location / {
+        root /srv/http/URL;
+        index index.html;
+    }
+
+    location /data/ {
+        proxy_pass http://127.0.0.1:4PORT/;
+    }
+}

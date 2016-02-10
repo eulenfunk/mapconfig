@@ -1,8 +1,4 @@
 #!/bin/bash
-pkill start.sh
-pkill node
-pkill prometheus
-pkill grafana-server
 
 cd $(dirname $0)
 HOME=$PWD
@@ -29,6 +25,14 @@ function map {
 	cp templates/map/aliases.json.$2 out/map/$2/
 }
 
+function nginx {
+	cp templates/nginx/domain.org.conf.example$6 out/nginx/conf.d/$3.conf
+	replace out/nginx/conf.d/$3.conf URL $3
+	replace out/nginx/conf.d/$3.conf PORT $4
+	cp -r templates/webdir out/webdir/$3
+	replace out/webdir/$3 NAME "$(echo $1 | sed 's/:/ /g')"
+}
+
 rm -rf backup
 mv out backup
 mkdir out
@@ -47,10 +51,22 @@ mv backup/map/grafana out/map/
 mv backup/map/prometheus out/map/
 mv backup/map/data out/map/
 
+#prepare nginx & webdir
+cp -r templates/nginxbase out/nginx
+cp -r templates/webdirbase out/webdir
+git clone https://github.com/plumpudding/hopglass
+cd hopglass
+npm install
+grunt
+cd ..
+mv hopglass/build out/webdir/map.eulenfunk.de/
+rm -rf hopglass
+
 while read l
 do
 	fastd $l
 	map $l
+	nginx $l
 	#$l = NAME SITE URI PORT MTU
 done < $HOME/sites
 
@@ -66,5 +82,9 @@ while read l
 do
         restart $l
 done < $HOME/sites
+netctl restart ens19-ffm
 
+#pkill node
+#pkill prometheus
+#pkill grafana-server
 systemctl restart nginx
