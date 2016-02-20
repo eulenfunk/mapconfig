@@ -18,5 +18,6 @@ fi
 sleep $(expr $RANDOM % 1000 / 100)
 
 pgrep prometheus || (while true; do ./prometheus/prometheus; done) &
+pgrep node_exporter || (while true; do ./prometheus/node_exporter; done) &
 cd grafana
 pgrep grafana-server || (while true; do ./bin/grafana-server; done) &

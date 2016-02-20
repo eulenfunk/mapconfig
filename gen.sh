@@ -80,6 +80,7 @@ mv new out
 
 function restart {
 	systemctl restart fastd@$2
+	systemctl enable fastd@$2
 }
 
 while read l

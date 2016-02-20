@@ -2,3 +2,6 @@ global:
   scrape_interval: 60s
   evaluation_interval: 60s
 scrape_configs:
+  - job_name: 'node_map'
+    target_groups:
+      - targets: ['localhost:9100']
