@@ -1,20 +1,19 @@
 #!/bin/bash
 
-cd $(dirname $0)
-HOME=$PWD
 
+#util
 #replace $2 with $3 in directory $1 recursively
 function replace {
 	find $1 -type f -print0 | xargs -0 sed -i "s;$2;$3;g"
 }
 
-function fastd {
+function fastdcom {
 	cp -r templates/fastd new/fastd/$2
 	replace new/fastd/$2 SITE $2
 	replace new/fastd/$2 MTU $5
 }
 
-function map {
+function mapcom {
 	cp -r templates/map new/map/$2
 	replace new/map/$2 SITE $2
 	replace new/map/$2 PORT $4
@@ -22,10 +21,10 @@ function map {
 	echo "    target_groups:" >> new/map/prometheus.yml
 	echo "      - targets: ['localhost:4$4']" >> new/map/prometheus.yml
 	cp -r out/map/$2/raw.json new/map/$2/
-	cp templates/map/aliases.json.$2 new/map/$2/
+	cp templates/map/aliases.json.$2 new/map/$2/aliases.json
 }
 
-function nginx {
+function nginxcom {
 	cp templates/nginx/domain.org.conf.example$6 new/nginx/conf.d/$3.conf
 	replace new/nginx/conf.d/$3.conf URL $3
 	replace new/nginx/conf.d/$3.conf PORT $4
@@ -34,62 +33,73 @@ function nginx {
 	replace new/webdir/$3 SITE $2
 }
 
-rm -rf new
-mkdir new
-
-#prepare fastd
-cp -r templates/fastdbase new/fastd
-git clone https://github.com/eulenfunk/fastd-peers new/fastd/peers
-
-#prepare map
-cp -r templates/mapbase new/map
-git clone https://github.com/plumpudding/hopglass-server new/map/hopglass-server
-cd new/map/hopglass-server
-npm install
-cd $HOME
-mv out/map/grafana new/map/
-cp -r out/map/prometheus new/map/
-mv out/map/data new/map/
-
-#prepare nginx & webdir
-cp -r templates/nginxbase new/nginx
-cp -r templates/webdirbase new/webdir
-git clone https://github.com/plumpudding/hopglass
-cd hopglass
-npm install
-grunt
-cd ..
-mv hopglass/build new/webdir/map.eulenfunk.de/
-rm -rf hopglass
-
-while read l
-do
-	fastd $l
-	map $l
-	nginx $l
-	#$l = NAME SITE URI PORT MTU
-done < $HOME/sites
-
-#cleanup map
-chmod +x new
-chown -R map:map new/map
-
-rm -rf backup
-mv out backup
-mv new out
-
-function restart {
-	systemctl restart fastd@$2
-	systemctl enable fastd@$2
+function fastdprep {
+	#prepare fastd
+	cp -r templates/fastdbase new/fastd
+	git clone https://github.com/eulenfunk/fastd-peers new/fastd/peers
 }
 
-while read l
-do
-        restart $l
-done < $HOME/sites
-netctl restart ens19-ffm
+function mapprep {
+	#prepare map
+	cp -r templates/mapbase new/map
+	git clone https://github.com/plumpudding/hopglass-server new/map/hopglass-server
+	cd new/map/hopglass-server
+	npm install
+	cd $HOME
+}
 
-#pkill node
-#pkill prometheus
-#pkill grafana-server
-systemctl restart nginx
+function nginxprep {
+	#prepare nginx & webdir
+	cp -r templates/nginxbase new/nginx
+	cp -r templates/webdirbase new/webdir
+	cp -r hopglass/build new/webdir/map.eulenfunk.de/
+}
+
+function hopglass {
+	cd hopglass
+	git fetch --all
+	git checkout -f origin/master
+	npm install
+	npm install grunt-cli
+	rm -rf build
+	node_modules/grunt-cli/bin/grunt
+	cd ..
+	#rm -rf hopglass
+}
+
+function install {
+	#cleanup map
+	chmod +x new
+	sudo chown -R map:map new/map
+	
+	sudo systemctl stop nginx fastd prometheus grafana-server
+	
+	sudo rm -rf backup
+	sudo mv out backup
+	sudo mv new out
+	
+	sudo systemctl start nginx fastd prometheus grafana-server
+}
+
+function all {
+	sudo rm -rf new
+	mkdir new
+
+	fastdprep
+	nginxprep
+	mapprep
+	
+	while read l
+	do
+		#$l = NAME SITE URI PORT MTU
+		fastdcom $l
+		mapcom $l
+		nginxcom $l
+	done < $HOME/sites
+
+	install
+}
+
+cd $(dirname $0)
+HOME=$PWD
+$@

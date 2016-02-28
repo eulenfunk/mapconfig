@@ -1,21 +1,6 @@
 {
   "dataPath": [
-    "http://karte.ffdus.de/data/",
-    "http://map.freifunk-iserlohn.de/data/",
-    "http://map-altena.freifunk-mk.de/data/",
-    "http://map-meinerzhagen.freifunk-mk.de/data/",
-    "http://map.gl.wupper.ffrl.de/data/",
-    "http://map-hemer.freifunk-mk.de/data/",
-    "http://erk.karte.neanderfunk.de/data/",
-    "http://han.karte.neanderfunk.de/data/",
-    "http://hld.karte.neanderfunk.de/data/",
-    "http://hlg.karte.neanderfunk.de/data/",
-    "http://lgf.karte.neanderfunk.de/data/",
-    "http://met.karte.neanderfunk.de/data/",
-    "http://mon.karte.neanderfunk.de/data/",
-    "http://rat.karte.neanderfunk.de/data/",
-    "http://vel.karte.neanderfunk.de/data/",
-    "http://wlf.karte.neanderfunk.de/data/"
+    "http://map.eulenfunk.de:48080/"
   ],
   "siteName": "Eulenfunk",
   "mapSigmaScale": 0.5,
