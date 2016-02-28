@@ -501,7 +501,7 @@
     },
     "neighbours": {
       "batadv": {
-        "": {}
+        "ba:b1:e1:ca:b1:e0": {}
       }
     }
   },
@@ -557,7 +557,7 @@
     },
     "neighbours": {
       "batadv": {
-        "": {}
+        "ba:b1:e4:ca:b1:e0": {}
       }
     }
   }
