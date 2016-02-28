@@ -67,7 +67,8 @@
       "network": {
         "mac": "00:ca:ff:ee:ba:00",
         "mesh_interfaces": [
-          "00:ca:ff:ee:ba:00"
+          "00:ca:ff:ee:ba:00",
+          "02:ca:ff:ee:ba:00"
         ],
         "addresses": [
           "10.155.0.240"
@@ -75,8 +76,11 @@
         "mesh": {
           "bat0": {
             "interfaces": {
-              "other": [
+              "tunnel": [
                 "00:ca:ff:ee:ba:00"
+              ],
+              "other": [
+                "02:ca:ff:ee:ba:00"
               ]
             }
           }
@@ -109,7 +113,15 @@
     },
     "neighbours": {
       "batadv": {
-        "": {}
+        "00:ca:ff:ee:ba:00": {},
+        "02:ca:ff:ee:ba:00": {
+          "02:ca:ff:ee:ba:10": {},
+          "02:ca:ff:ee:ba:20": {},
+          "02:ca:ff:ee:ba:30": {},
+          "02:ca:ff:ee:ba:40": {},
+          "02:ca:ff:ee:ba:50": {},
+          "02:ca:ff:ee:ba:60": {}
+        }
       }
     }
   },
@@ -123,7 +135,8 @@
       "network": {
         "mac": "00:ca:ff:ee:ba:10",
         "mesh_interfaces": [
-          "00:ca:ff:ee:ba:10"
+          "00:ca:ff:ee:ba:10",
+          "02:ca:ff:ee:ba:10"
         ],
         "addresses": [
           "10.155.0.241"
@@ -131,8 +144,11 @@
         "mesh": {
           "bat0": {
             "interfaces": {
-              "other": [
+              "tunnel": [
                 "00:ca:ff:ee:ba:10"
+              ],
+              "other": [
+                "02:ca:ff:ee:ba:10"
               ]
             }
           }
@@ -165,7 +181,15 @@
     },
     "neighbours": {
       "batadv": {
-        "": {}
+        "00:ca:ff:ee:ba:10": {},
+        "02:ca:ff:ee:ba:10": {
+          "02:ca:ff:ee:ba:00": {},
+          "02:ca:ff:ee:ba:20": {},
+          "02:ca:ff:ee:ba:30": {},
+          "02:ca:ff:ee:ba:40": {},
+          "02:ca:ff:ee:ba:50": {},
+          "02:ca:ff:ee:ba:60": {}
+        }
       }
     }
   },
@@ -179,7 +203,8 @@
       "network": {
         "mac": "00:ca:ff:ee:ba:20",
         "mesh_interfaces": [
-          "00:ca:ff:ee:ba:20"
+          "00:ca:ff:ee:ba:20",
+          "02:ca:ff:ee:ba:20"
         ],
         "addresses": [
           "10.155.0.242"
@@ -187,8 +212,11 @@
         "mesh": {
           "bat0": {
             "interfaces": {
-              "other": [
+              "tunnel": [
                 "00:ca:ff:ee:ba:20"
+              ],
+              "other": [
+                "02:ca:ff:ee:ba:20"
               ]
             }
           }
@@ -221,7 +249,15 @@
     },
     "neighbours": {
       "batadv": {
-        "": {}
+        "00:ca:ff:ee:ba:20": {},
+        "02:ca:ff:ee:ba:20": {
+          "02:ca:ff:ee:ba:00": {},
+          "02:ca:ff:ee:ba:01": {},
+          "02:ca:ff:ee:ba:03": {},
+          "02:ca:ff:ee:ba:04": {},
+          "02:ca:ff:ee:ba:05": {},
+          "02:ca:ff:ee:ba:06": {}
+        }
       }
     }
   },
@@ -235,6 +271,7 @@
       "network": {
         "mac": "00:ca:ff:ee:ba:30",
         "mesh_interfaces": [
+          "00:ca:ff:ee:ba:30",
           "00:ca:ff:ee:ba:30"
         ],
         "addresses": [
@@ -243,8 +280,11 @@
         "mesh": {
           "bat0": {
             "interfaces": {
-              "other": [
+              "tunnel": [
                 "00:ca:ff:ee:ba:30"
+              ],
+              "other": [
+                "02:ca:ff:ee:ba:30"
               ]
             }
           }
@@ -277,7 +317,15 @@
     },
     "neighbours": {
       "batadv": {
-        "": {}
+        "00:ca:ff:ee:ba:30": {},
+        "02:ca:ff:ee:ba:30": {
+          "02:ca:ff:ee:ba:00": {},
+          "02:ca:ff:ee:ba:10": {},
+          "02:ca:ff:ee:ba:20": {},
+          "02:ca:ff:ee:ba:40": {},
+          "02:ca:ff:ee:ba:50": {},
+          "02:ca:ff:ee:ba:60": {}
+        }
       }
     }
   },
@@ -291,7 +339,8 @@
       "network": {
         "mac": "00:ca:ff:ee:ba:40",
         "mesh_interfaces": [
-          "00:ca:ff:ee:ba:40"
+          "00:ca:ff:ee:ba:40",
+          "02:ca:ff:ee:ba:40"
         ],
         "addresses": [
           "10.155.0.244"
@@ -299,8 +348,11 @@
         "mesh": {
           "bat0": {
             "interfaces": {
-              "other": [
+              "tunnel": [
                 "00:ca:ff:ee:ba:40"
+              ],
+              "other": [
+                "02:ca:ff:ee:ba:40"
               ]
             }
           }
@@ -333,7 +385,15 @@
     },
     "neighbours": {
       "batadv": {
-        "": {}
+        "00:ca:ff:ee:ba:40": {},
+        "02:ca:ff:ee:ba:40": {
+          "02:ca:ff:ee:ba:00": {},
+          "02:ca:ff:ee:ba:10": {},
+          "02:ca:ff:ee:ba:20": {},
+          "02:ca:ff:ee:ba:30": {},
+          "02:ca:ff:ee:ba:50": {},
+          "02:ca:ff:ee:ba:60": {}
+        }
       }
     }
   },
@@ -347,7 +407,8 @@
       "network": {
         "mac": "00:ca:ff:ee:ba:50",
         "mesh_interfaces": [
-          "00:ca:ff:ee:ba:50"
+          "00:ca:ff:ee:ba:50",
+          "02:ca:ff:ee:ba:50"
         ],
         "addresses": [
           "10.155.0.245"
@@ -355,8 +416,11 @@
         "mesh": {
           "bat0": {
             "interfaces": {
-              "other": [
+              "tunnel": [
                 "00:ca:ff:ee:ba:50"
+              ],
+              "other": [
+                "22:ca:ff:ee:ba:50"
               ]
             }
           }
@@ -389,7 +453,15 @@
     },
     "neighbours": {
       "batadv": {
-        "": {}
+        "00:ca:ff:ee:ba:50": {},
+        "02:ca:ff:ee:ba:50": {
+          "02:ca:ff:ee:ba:00": {},
+          "02:ca:ff:ee:ba:10": {},
+          "02:ca:ff:ee:ba:20": {},
+          "02:ca:ff:ee:ba:30": {},
+          "02:ca:ff:ee:ba:40": {},
+          "02:ca:ff:ee:ba:60": {}
+        }
       }
     }
   },
@@ -403,7 +475,8 @@
       "network": {
         "mac": "00:ca:ff:ee:ba:60",
         "mesh_interfaces": [
-          "00:ca:ff:ee:ba:60"
+          "00:ca:ff:ee:ba:60",
+          "02:ca:ff:ee:ba:60"
         ],
         "addresses": [
           "10.155.0.246"
@@ -411,8 +484,11 @@
         "mesh": {
           "bat0": {
             "interfaces": {
-              "other": [
+              "tunnel": [
                 "00:ca:ff:ee:ba:60"
+              ],
+              "other": [
+                "02:ca:ff:ee:ba:60"
               ]
             }
           }
@@ -445,7 +521,15 @@
     },
     "neighbours": {
       "batadv": {
-        "": {}
+        "00:ca:ff:ee:ba:60": {},
+        "02:ca:ff:ee:ba:60": {
+          "02:ca:ff:ee:ba:00": {},
+          "02:ca:ff:ee:ba:10": {},
+          "02:ca:ff:ee:ba:20": {},
+          "02:ca:ff:ee:ba:30": {},
+          "02:ca:ff:ee:ba:40": {},
+          "02:ca:ff:ee:ba:50": {}
+        }
       }
     }
   },
