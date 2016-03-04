@@ -43,10 +43,10 @@
     }
   ],
   "globalInfos": [
-    { "href": "https://map.eulenfunk.de/stats/dashboard/db/global",
+    { "href": "https://map.eulenfunk.de/stats/dashboard/db/global?var-job=SITE",
       "thumbnail": "https://map.eulenfunk.de/stats/render/dashboard-solo/db/global?panelId=1&fullscreen&theme=light&width=800&height=600&var-job=SITE"
     },
-    { "href": "https://map.eulenfunk.de/stats/dashboard/db/global",
+    { "href": "https://map.eulenfunk.de/stats/dashboard/db/global?var-job=SITE",
       "thumbnail": "https://map.eulenfunk.de/stats/render/dashboard-solo/db/global?panelId=8&fullscreen&theme=light&width=800&height=600&var-job=SITE"
     }
   ]

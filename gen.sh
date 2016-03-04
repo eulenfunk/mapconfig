@@ -73,13 +73,13 @@ function install {
 	chmod +x new
 	sudo chown -R map:map new/map
 	
-	sudo systemctl stop nginx# fastd prometheus grafana-server
+	sudo systemctl stop nginx #fastd prometheus grafana-server
 	
 	sudo rm -rf backup
 	sudo mv out backup
 	sudo mv new out
 	
-	sudo systemctl start nginx# fastd prometheus grafana-server
+	sudo systemctl start nginx #fastd prometheus grafana-server
 	sudo pkill node
 }
 

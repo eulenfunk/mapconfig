@@ -5,9 +5,14 @@ if [ -n "$1" ]
 then
   for i in $@
   do
-    ps aux | grep "start.sh" | grep "$i" | cut -d' ' -f2 | xargs kill 2> /dev/null
-    ps aux | grep bat-$i | tr -s ' ' | cut -d' ' -f2 | xargs kill 2> /dev/null
+#    ps aux | grep "start.sh" | grep "$i" | cut -d' ' -f2 | xargs kill 2> /dev/null
+#    PID=$(ps aux | grep bat-$i | tr -s ' ' | cut -d' ' -f2)
+#    if [ -n $PID ]
+#    then
     (while true; do $i/hopglass.sh; done) &
+#    else
+#      kill $PID
+#    fi
   done
 #else
 #  pkill prometheus

@@ -1,5 +1,5 @@
 server {
-    listen 80;
+    listen URL:80;
     server_name URL;
 
     location / {
