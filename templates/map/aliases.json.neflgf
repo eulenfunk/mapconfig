@@ -1,20 +1,21 @@
 {
   "303f1f5bc26b": {
     "nodeinfo": {
-      "system": {
-        "site_code": "ffnef-lgf"
+      "hardware": {
+        "nproc": 2,
+        "model": "esxi"
       },
       "network": {
-        "mesh_interfaces": [
-          "30:3f:1f:5b:c2:6b",
-          "70:9b:d7:4d:dd:06"
-        ],
+        "mac": "30:3f:1f:5b:c2:6b",
         "addresses": [
           "10.1.240.1",
           "2a03:2260:300e:a0::1",
           "fe80::323f:1fff:fe5b:c26b"
         ],
-        "mac": "30:3f:1f:5b:c2:6b",
+        "mesh_interfaces": [
+          "30:3f:1f:5b:c2:6b",
+          "70:9b:d7:4d:dd:06"
+        ],
         "mesh": {
           "bat-lgf": {
             "interfaces": {
@@ -28,50 +29,50 @@
           }
         }
       },
+      "system": {
+        "site_code": "ffnef-lgf"
+      },
       "software": {
-        "autoupdater": {
-          "enabled": true
+        "batman-adv": {
+          "compat": 15,
+          "version": "2015.1"
         },
         "firmware": {
-          "base": "Ubuntu",
-          "release": "15.10"
+          "release": "15.10",
+          "base": "Ubuntu"
         },
-        "batman-adv": {
-          "version": "2015.1",
-          "compat": 15
+        "autoupdater": {
+          "enabled": true
         },
         "fastd": {
           "enabled": true
         }
       },
-      "node_id": "303f1f5bc26b",
+      "hostname": "neander-1.ffnef.de",
       "owner": {
         "contact": "admin@neanderfunk.de"
       },
-      "hardware": {
-        "model": "esxi",
-        "nproc": 2
-      },
-      "hostname": "neander-1.ffnef.de"
+      "node_id": "303f1f5bc26b"
     },
     "firstseen": "2016-01-08T23:07:00"
   },
   "90896e0bb2d3": {
     "nodeinfo": {
-      "system": {
-        "site_code": "ffnef-lgf"
+      "hardware": {
+        "nproc": 2,
+        "model": "esxi"
       },
       "network": {
-        "mesh_interfaces": [
-          "90:89:6e:0b:b2:d3",
-          "b0:7b:2b:4c:bf:88"
-        ],
+        "mac": "90:89:6e:0b:b2:d3",
         "addresses": [
           "10.1.240.3",
           "2a03:2260:300e:a0::3",
           "fe80::9289:6eff:fe0b:b2d3"
         ],
-        "mac": "90:89:6e:0b:b2:d3",
+        "mesh_interfaces": [
+          "90:89:6e:0b:b2:d3",
+          "b0:7b:2b:4c:bf:88"
+        ],
         "mesh": {
           "bat-lgf": {
             "interfaces": {
@@ -85,31 +86,30 @@
           }
         }
       },
+      "system": {
+        "site_code": "ffnef-lgf"
+      },
       "software": {
-        "autoupdater": {
-          "enabled": true
+        "batman-adv": {
+          "compat": 15,
+          "version": "2015.1"
         },
         "firmware": {
-          "base": "Ubuntu",
-          "release": "15.10"
+          "release": "15.10",
+          "base": "Ubuntu"
         },
-        "batman-adv": {
-          "version": "2015.1",
-          "compat": 15
+        "autoupdater": {
+          "enabled": true
         },
         "fastd": {
           "enabled": true
         }
       },
-      "node_id": "90896e0bb2d3",
+      "hostname": "neander-3.ffnef.de",
       "owner": {
         "contact": "admin@neanderfunk.de"
       },
-      "hardware": {
-        "model": "esxi",
-        "nproc": 2
-      },
-      "hostname": "neander-3.ffnef.de"
+      "node_id": "90896e0bb2d3"
     },
     "firstseen": "2016-03-01T00:01:00"
   }
