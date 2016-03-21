@@ -60,5 +60,10 @@
     { "href": "http://map.eulenfunk.de/stats/dashboard/db/global",
       "thumbnail": "http://map.eulenfunk.de/stats/render/dashboard-solo/db/global?panelId=8&fullscreen&theme=light&width=800&height=600"
     }
+  ],
+  "linkInfos": [
+    { "href": "http://map.eulenfunk.de/stats/dashboard/db/links?var-source={SOURCE}&var-target={TARGET}",
+      "thumbnail": "http://map.eulenfunk.de/stats/render/dashboard-solo/db/links?panelId=1&fullscreen&theme=light&width=800&height=600&var-source={SOURCE}&var-target={TARGET}"
+    }
   ]
 }
