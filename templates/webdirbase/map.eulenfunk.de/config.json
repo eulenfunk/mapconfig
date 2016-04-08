@@ -16,7 +16,10 @@
     "https://mon.karte.neanderfunk.de/data/",
     "https://rat.karte.neanderfunk.de/data/",
     "https://vel.karte.neanderfunk.de/data/",
-    "https://wlf.karte.neanderfunk.de/data/"
+    "https://wlf.karte.neanderfunk.de/data/",
+    "https://hilchenbach.map.eulenfunk.de/data/",
+    "https://mk.map.eulenfunk.de/data/",
+    "https://freudenberg.map.eulenfunk.de/data/"
   ],
   "siteName": "Eulenfunk",
   "mapSigmaScale": 0.5,

@@ -4,7 +4,6 @@ Fichtenfunk:(Iserlohn) ffis map.freifunk-iserlohn.de 8082 1280 1
 Fichtenfunk:(Altena) ffal map-altena.freifunk-mk.de 8083 1280 1
 Fichtenfunk:(Meinerzhagen) ffmz map-meinerzhagen.freifunk-mk.de 8084 1406 1
 Freifunk:GL gl map.gl.wupper.ffrl.de 8085 1406 1
-Wifi:Frankfurt ffm ffm.eulenfunk.de 8086 1280 1
 Fichtenfunk:(Hemer) ffhe map-hemer.freifunk-mk.de 8087 1406 1
 Neanderfunk:(Haan) nefhan han.karte.neanderfunk.de 8088 1364 1
 Neanderfunk:(Hilden) nefhld hld.karte.neanderfunk.de 8089 1364 1
@@ -17,3 +16,6 @@ Neanderfunk:(Velbert) nefvel vel.karte.neanderfunk.de 8095 1364 1
 Neanderfunk:(Wülfrath) nefwlf wlf.karte.neanderfunk.de 8096 1364 1
 Fichtenfunk:(Lüdenscheid) ffls map-luedenscheid.freifunk-mk.de 8097 1406 1
 Fichtenfunk:(Neuenrade) ffnr map-neuenrade.freifunk-mk.de 8098 1406 1
+Siegerland:(Hilchenbach) sihb hilchenbach.map.eulenfunk.de 8099 1406 1
+Fichtenfunk:(Märkischer:Kreis) ffmk mk.map.eulenfunk.de 8100 1406 1
+Siegerland:(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406 1
