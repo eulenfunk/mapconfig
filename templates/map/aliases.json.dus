@@ -1,4 +1,14 @@
 {
+    "60e327c75e36": {
+    "nodeinfo": {
+      "location": {
+        "latitude": 51.164306809,
+        "longitude": 6.888521612
+      },
+      "node_id": "0e327c75e36",
+      "hostname": "camp-schimmelpfennig-unknown-8e36"
+    }
+  },
   "000c29b88561": {
     "firstseen": "2016-02-02T17:49:18.252Z",
     "nodeinfo": {
