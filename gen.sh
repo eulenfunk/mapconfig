@@ -11,6 +11,7 @@ function fastdcom {
 	cp -r templates/fastd new/fastd/$2
 	replace new/fastd/$2 SITE $2
 	replace new/fastd/$2 MTU $5
+	replace new/fastd/$2 BIND "$(echo $7 | sed 's/_/ /g')"
 }
 
 function mapcom {
