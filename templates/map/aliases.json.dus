@@ -1,6 +1,26 @@
 {
     "60e327c75e36": {
     "nodeinfo": {
+      "network": {
+        "addresses": [
+          "fda0:747e:ab29:9375:218:71ff:fe4d:c81a",
+          "2a03:2260:122:0:218:71ff:fe4d:c81a",
+          "fe80::218:71ff:fe4d:c81a"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "tunnel": [
+                "02:1c:71:4d:c8:1a"
+              ],
+              "other": [
+                "02:19:72:4d:c8:1a"
+              ]
+            }
+          }
+        },
+        "mac": "00:18:71:4d:c8:1a"
+      },
       "location": {
         "latitude": 51.164306809,
         "longitude": 6.888521612
