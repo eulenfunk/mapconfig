@@ -1,4 +1,3 @@
-Freifunk:Flingern dus karte.ffdus.de 8080 1364 1 bind_any:10010_default\\;
 Neanderfunk neferk erk.karte.neanderfunk.de 8081 1364 1
 Fichtenfunk:(Iserlohn) ffis map.freifunk-iserlohn.de 8082 1280 1
 Fichtenfunk:(Altena) ffal map-altena.freifunk-mk.de 8083 1280 1
@@ -22,3 +21,4 @@ Siegerland:(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406 1
 Freifunk:Leichlingen lln lln.map.ffgl.eu 8102 1406 1
 Freifunk:Bergisch:Gladbach bgl bgl.map.ffgl.eu 8103 1406 1
 Freifunk:Gelsenkirchen gek karte.ffdus.de 8104 1364 1
+Freifunk:Flingern dus karte.ffdus.de 8080 1364 1 bind_any:10010_default\\;
