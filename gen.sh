@@ -79,7 +79,11 @@ function install {
 	sudo rm -rf backup
 	sudo mv out backup
 	sudo mv new out
-	
+	cd out
+	if [ ! -f secret.conf ]; then
+	  fastd --generate-key |sed s/Secret\:\ /#fastd-key\ \"$HOSTNAME\\nsecret\ \"/| sed s/Public\:\ /#public\ \"/|sed s/\$/\"\;/>secret.conf
+	 fi
+	cd ..
 	sudo systemctl start nginx #fastd prometheus grafana-server
 	sudo pkill node
 }
