@@ -1,12 +1,20 @@
 {
-    "60e327c75e36": {
+  "60e327c75e36": {
     "nodeinfo": {
       "location": {
         "latitude": 51.164306809,
         "longitude": 6.888521612
       },
-      "node_id": "0e327c75e36",
       "hostname": "camp-schimmelpfennig-unknown-8e36"
+    }
+  },
+  "30b5c2812602": {
+    "nodeinfo": {
+      "location": {
+        "latitude": 51.247179299,
+        "longitude": 6.779275239
+      },
+      "hostname": "FF-D-Dieden--30b5c2812602"
     }
   },
   "000c29b88561": {
@@ -37,28 +45,11 @@
         }
       },
       "hostname": "horst",
-      "hardware": {
-        "model": "intel xeon",
-        "nproc": 12
-      },
       "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": false
-        },
-        "autoupdater": {
-          "enabled": false
-        },
         "firmware": {
           "base": "arch",
           "release": "rolling"
         }
-      },
-      "system": {
-        "site_code": "ffdus"
       }
     },
     "neighbours": {
@@ -67,591 +58,171 @@
       }
     }
   },
-  "00caffeeba00": {
-    "firstseen": "2016-02-02T17:49:18.252Z",
+  "cab1e8cab1e0": {
+    "firstseen": "2016-04-07T17:49:18.252Z",
     "nodeinfo": {
-      "owner": {
-        "contact": "kontakt@freifunk-wuppertal.net"
-      },
-      "node_id": "00caffeeba00",
-      "network": {
-        "mac": "00:ca:ff:ee:ba:00",
-        "mesh_interfaces": [
-          "00:ca:ff:ee:ba:00",
-          "02:ca:ff:ee:ba:00"
-        ],
-        "addresses": [
-          "10.155.0.240"
-        ],
-        "mesh": {
-          "bat0": {
-            "interfaces": {
-              "tunnel": [
-                "00:ca:ff:ee:ba:00"
-              ],
-              "other": [
-                "02:ca:ff:ee:ba:00"
-              ]
-            }
-          }
-        }
-      },
-      "hostname": "w0.ffdus",
-      "hardware": {
-        "model": "esxi",
-        "nproc": 1
-      },
-      "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": true
-        },
-        "autoupdater": {
-          "enabled": false
-        },
-        "firmware": {
-          "base": "debian",
-          "release": ""
-        }
-      },
-      "system": {
-        "site_code": "ffdus"
-      }
-    },
-    "neighbours": {
-      "batadv": {
-        "00:ca:ff:ee:ba:00": {},
-        "02:ca:ff:ee:ba:00": {
-          "02:ca:ff:ee:ba:10": {},
-          "02:ca:ff:ee:ba:20": {},
-          "02:ca:ff:ee:ba:30": {},
-          "02:ca:ff:ee:ba:40": {},
-          "02:ca:ff:ee:ba:50": {},
-          "02:ca:ff:ee:ba:60": {}
-        }
-      }
-    }
-  },
-  "00caffeeba10": {
-    "firstseen": "2016-02-02T17:49:18.252Z",
-    "nodeinfo": {
-      "owner": {
-        "contact": "kontakt@freifunk-wuppertal.net"
-      },
-      "node_id": "00caffeeba10",
-      "network": {
-        "mac": "00:ca:ff:ee:ba:10",
-        "mesh_interfaces": [
-          "00:ca:ff:ee:ba:10",
-          "02:ca:ff:ee:ba:10"
-        ],
-        "addresses": [
-          "10.155.0.241"
-        ],
-        "mesh": {
-          "bat0": {
-            "interfaces": {
-              "tunnel": [
-                "00:ca:ff:ee:ba:10"
-              ],
-              "other": [
-                "02:ca:ff:ee:ba:10"
-              ]
-            }
-          }
-        }
-      },
-      "hostname": "w1.ffdus",
-      "hardware": {
-        "model": "esxi",
-        "nproc": 1
-      },
-      "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": true
-        },
-        "autoupdater": {
-          "enabled": false
-        },
-        "firmware": {
-          "base": "debian",
-          "release": ""
-        }
-      },
-      "system": {
-        "site_code": "ffdus"
-      }
-    },
-    "neighbours": {
-      "batadv": {
-        "00:ca:ff:ee:ba:10": {},
-        "02:ca:ff:ee:ba:10": {
-          "02:ca:ff:ee:ba:00": {},
-          "02:ca:ff:ee:ba:20": {},
-          "02:ca:ff:ee:ba:30": {},
-          "02:ca:ff:ee:ba:40": {},
-          "02:ca:ff:ee:ba:50": {},
-          "02:ca:ff:ee:ba:60": {}
-        }
-      }
-    }
-  },
-  "00caffeeba20": {
-    "firstseen": "2016-02-02T17:49:18.252Z",
-    "nodeinfo": {
-      "owner": {
-        "contact": "kontakt@freifunk-wuppertal.net"
-      },
-      "node_id": "00caffeeba20",
-      "network": {
-        "mac": "00:ca:ff:ee:ba:20",
-        "mesh_interfaces": [
-          "00:ca:ff:ee:ba:20",
-          "02:ca:ff:ee:ba:20"
-        ],
-        "addresses": [
-          "10.155.0.242"
-        ],
-        "mesh": {
-          "bat0": {
-            "interfaces": {
-              "tunnel": [
-                "00:ca:ff:ee:ba:20"
-              ],
-              "other": [
-                "02:ca:ff:ee:ba:20"
-              ]
-            }
-          }
-        }
-      },
-      "hostname": "w2.ffdus",
-      "hardware": {
-        "model": "esxi",
-        "nproc": 1
-      },
-      "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": true
-        },
-        "autoupdater": {
-          "enabled": false
-        },
-        "firmware": {
-          "base": "debian",
-          "release": ""
-        }
-      },
-      "system": {
-        "site_code": "ffdus"
-      }
-    },
-    "neighbours": {
-      "batadv": {
-        "00:ca:ff:ee:ba:20": {},
-        "02:ca:ff:ee:ba:20": {
-          "02:ca:ff:ee:ba:00": {},
-          "02:ca:ff:ee:ba:01": {},
-          "02:ca:ff:ee:ba:03": {},
-          "02:ca:ff:ee:ba:04": {},
-          "02:ca:ff:ee:ba:05": {},
-          "02:ca:ff:ee:ba:06": {}
-        }
-      }
-    }
-  },
-  "00caffeeba30": {
-    "firstseen": "2016-02-02T17:49:18.252Z",
-    "nodeinfo": {
-      "owner": {
-        "contact": "kontakt@freifunk-wuppertal.net"
-      },
-      "node_id": "00caffeeba30",
-      "network": {
-        "mac": "00:ca:ff:ee:ba:30",
-        "mesh_interfaces": [
-          "00:ca:ff:ee:ba:30",
-          "00:ca:ff:ee:ba:30"
-        ],
-        "addresses": [
-          "10.155.0.243"
-        ],
-        "mesh": {
-          "bat0": {
-            "interfaces": {
-              "tunnel": [
-                "00:ca:ff:ee:ba:30"
-              ],
-              "other": [
-                "02:ca:ff:ee:ba:30"
-              ]
-            }
-          }
-        }
-      },
-      "hostname": "w3.ffdus",
-      "hardware": {
-        "model": "esxi",
-        "nproc": 1
-      },
-      "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": true
-        },
-        "autoupdater": {
-          "enabled": false
-        },
-        "firmware": {
-          "base": "debian",
-          "release": ""
-        }
-      },
-      "system": {
-        "site_code": "ffdus"
-      }
-    },
-    "neighbours": {
-      "batadv": {
-        "00:ca:ff:ee:ba:30": {},
-        "02:ca:ff:ee:ba:30": {
-          "02:ca:ff:ee:ba:00": {},
-          "02:ca:ff:ee:ba:10": {},
-          "02:ca:ff:ee:ba:20": {},
-          "02:ca:ff:ee:ba:40": {},
-          "02:ca:ff:ee:ba:50": {},
-          "02:ca:ff:ee:ba:60": {}
-        }
-      }
-    }
-  },
-  "00caffeeba40": {
-    "firstseen": "2016-02-02T17:49:18.252Z",
-    "nodeinfo": {
-      "owner": {
-        "contact": "kontakt@freifunk-wuppertal.net"
-      },
-      "node_id": "00caffeeba40",
-      "network": {
-        "mac": "00:ca:ff:ee:ba:40",
-        "mesh_interfaces": [
-          "00:ca:ff:ee:ba:40",
-          "02:ca:ff:ee:ba:40"
-        ],
-        "addresses": [
-          "10.155.0.244"
-        ],
-        "mesh": {
-          "bat0": {
-            "interfaces": {
-              "tunnel": [
-                "00:ca:ff:ee:ba:40"
-              ],
-              "other": [
-                "02:ca:ff:ee:ba:40"
-              ]
-            }
-          }
-        }
-      },
-      "hostname": "w4.ffdus",
-      "hardware": {
-        "model": "esxi",
-        "nproc": 1
-      },
-      "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": true
-        },
-        "autoupdater": {
-          "enabled": false
-        },
-        "firmware": {
-          "base": "debian",
-          "release": ""
-        }
-      },
-      "system": {
-        "site_code": "ffdus"
-      }
-    },
-    "neighbours": {
-      "batadv": {
-        "00:ca:ff:ee:ba:40": {},
-        "02:ca:ff:ee:ba:40": {
-          "02:ca:ff:ee:ba:00": {},
-          "02:ca:ff:ee:ba:10": {},
-          "02:ca:ff:ee:ba:20": {},
-          "02:ca:ff:ee:ba:30": {},
-          "02:ca:ff:ee:ba:50": {},
-          "02:ca:ff:ee:ba:60": {}
-        }
-      }
-    }
-  },
-  "00caffeeba50": {
-    "firstseen": "2016-02-02T17:49:18.252Z",
-    "nodeinfo": {
-      "owner": {
-        "contact": "kontakt@freifunk-wuppertal.net"
-      },
-      "node_id": "00caffeeba50",
-      "network": {
-        "mac": "00:ca:ff:ee:ba:50",
-        "mesh_interfaces": [
-          "00:ca:ff:ee:ba:50",
-          "02:ca:ff:ee:ba:50"
-        ],
-        "addresses": [
-          "10.155.0.245"
-        ],
-        "mesh": {
-          "bat0": {
-            "interfaces": {
-              "tunnel": [
-                "00:ca:ff:ee:ba:50"
-              ],
-              "other": [
-                "22:ca:ff:ee:ba:50"
-              ]
-            }
-          }
-        }
-      },
-      "hostname": "w5.ffdus",
-      "hardware": {
-        "model": "esxi",
-        "nproc": 1
-      },
-      "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": true
-        },
-        "autoupdater": {
-          "enabled": false
-        },
-        "firmware": {
-          "base": "debian",
-          "release": ""
-        }
-      },
-      "system": {
-        "site_code": "ffdus"
-      }
-    },
-    "neighbours": {
-      "batadv": {
-        "00:ca:ff:ee:ba:50": {},
-        "02:ca:ff:ee:ba:50": {
-          "02:ca:ff:ee:ba:00": {},
-          "02:ca:ff:ee:ba:10": {},
-          "02:ca:ff:ee:ba:20": {},
-          "02:ca:ff:ee:ba:30": {},
-          "02:ca:ff:ee:ba:40": {},
-          "02:ca:ff:ee:ba:60": {}
-        }
-      }
-    }
-  },
-  "00caffeeba60": {
-    "firstseen": "2016-02-02T17:49:18.252Z",
-    "nodeinfo": {
-      "owner": {
-        "contact": "kontakt@freifunk-wuppertal.net"
-      },
-      "node_id": "00caffeeba60",
-      "network": {
-        "mac": "00:ca:ff:ee:ba:60",
-        "mesh_interfaces": [
-          "00:ca:ff:ee:ba:60",
-          "02:ca:ff:ee:ba:60"
-        ],
-        "addresses": [
-          "10.155.0.246"
-        ],
-        "mesh": {
-          "bat0": {
-            "interfaces": {
-              "tunnel": [
-                "00:ca:ff:ee:ba:60"
-              ],
-              "other": [
-                "02:ca:ff:ee:ba:60"
-              ]
-            }
-          }
-        }
-      },
-      "hostname": "w6.ffdus",
-      "hardware": {
-        "model": "esxi",
-        "nproc": 1
-      },
-      "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": true
-        },
-        "autoupdater": {
-          "enabled": false
-        },
-        "firmware": {
-          "base": "debian",
-          "release": ""
-        }
-      },
-      "system": {
-        "site_code": "ffdus"
-      }
-    },
-    "neighbours": {
-      "batadv": {
-        "00:ca:ff:ee:ba:60": {},
-        "02:ca:ff:ee:ba:60": {
-          "02:ca:ff:ee:ba:00": {},
-          "02:ca:ff:ee:ba:10": {},
-          "02:ca:ff:ee:ba:20": {},
-          "02:ca:ff:ee:ba:30": {},
-          "02:ca:ff:ee:ba:40": {},
-          "02:ca:ff:ee:ba:50": {}
-        }
-      }
-    }
-  },
-  "bab1e1cab1e0": {
-    "firstseen": "2016-02-02T17:49:18.252Z",
-    "nodeinfo": {
+      "node_id": "cab1e8cab1e0",
       "owner": {
         "contact": "info@ffdus.de"
       },
-      "node_id": "bab1e1cab1e0",
       "network": {
-        "mac": "ba:b1:e1:ca:b1:e0",
+        "mac": "ca:b1:e8:ca:b1:e0",
         "mesh_interfaces": [
-          "ba:b1:e1:ca:b1:e0"
-        ],
-        "addresses": [
-          "10.155.0.254"
+          "ca:b1:e8:ca:b1:e0",
+          "ca:b1:e8:ca:b1:e1"
         ],
         "mesh": {
           "bat0": {
             "interfaces": {
-              "vpn": [
-                "ba:b1:e1:ca:b1:e0"
+              "l2tp": [
+                "ca:b1:e8:ca:b1:e0"
+              ],
+              "other": [
+                "ca:b1:e8:ca:b1:e1"
               ]
             }
           }
         }
       },
-      "hostname": "f11.ffdus",
-      "hardware": {
-        "model": "proxmox",
-        "nproc": 1
-      },
-      "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": true
-        },
-        "autoupdater": {
-          "enabled": false
-        },
-        "firmware": {
-          "base": "ubuntu",
-          "release": "14.4LTS"
-        }
-      },
-      "system": {
-        "site_code": "ffdus"
-      }
+      "hostname": "flingern-m-l2tp"
     },
     "neighbours": {
+      "node_id": "cab1e8cab1e0",
       "batadv": {
-        "ba:b1:e1:ca:b1:e0": {}
+        "ca:b1:e8:ca:b1:e0": {},
+        "ca:b1:e8:ca:b1:e1": {
+          "neighbours": {
+            "ba:b1:e2:ca:b1:e1": {
+              "tq": 255
+            }
+          }
+        }
       }
     }
   },
-  "bab1e4cab1e0": {
-    "firstseen": "2016-02-02T17:49:18.252Z",
+  "cab1e9cab1e0": {
+    "firstseen": "2016-04-07T17:49:18.252Z",
     "nodeinfo": {
+      "node_id": "cab1e9cab1e0",
       "owner": {
         "contact": "info@ffdus.de"
       },
-      "node_id": "bab1e4cab1e0",
       "network": {
-        "mac": "ba:b1:e4:ca:b1:e0",
+        "mac": "ca:b1:e9:ca:b1:e0",
         "mesh_interfaces": [
-          "ba:b1:e4:ca:b1:e0"
-        ],
-        "addresses": [
-          "10.155.0.253"
+          "ca:b1:e9:ca:b1:e0",
+          "ca:b1:e9:ca:b1:e1"
         ],
         "mesh": {
           "bat0": {
             "interfaces": {
-              "vpn": [
-                "ba:b1:e4:ca:b1:e0"
+              "l2tp": [
+                "ca:b1:e9:ca:b1:e0"
+              ],
+              "other": [
+                "ca:b1:e9:ca:b1:e1"
               ]
             }
           }
         }
       },
-      "hostname": "f12.ffdus",
-      "hardware": {
-        "model": "proxmox",
-        "nproc": 1
-      },
-      "software": {
-        "batman-adv": {
-          "compat": 15,
-          "version": "2015.1"
-        },
-        "fastd": {
-          "enabled": true
-        },
-        "autoupdater": {
-          "enabled": false
-        },
-        "firmware": {
-          "base": "ubuntu",
-          "release": "14.4LTS"
-        }
-      },
-      "system": {
-        "site_code": "ffdus"
-      }
+      "hostname": "flingern-l-l2tp"
     },
     "neighbours": {
+      "node_id": "cab1e9cab1e0",
       "batadv": {
-        "ba:b1:e4:ca:b1:e0": {}
+        "ca:b1:e9:ca:b1:e0": {},
+        "ca:b1:e9:ca:b1:e1": {
+          "neighbours": {
+            "ba:b1:e3:ca:b1:e1": {
+              "tq": 255
+            }
+          }
+        }
+      }
+    }
+  },
+  "bab1e2cab1e0": {
+    "firstseen": "2016-04-07T17:49:18.252Z",
+    "nodeinfo": {
+      "node_id": "bab1e2cab1e0",
+      "owner": {
+        "contact": "info@ffdus.de"
+      },
+      "network": {
+        "mac": "ba:b1:e2:ca:b1:e0",
+        "mesh_interfaces": [
+          "ba:b1:e2:ca:b1:e0",
+          "ba:b1:e2:ca:b1:e1"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "tunnel": [
+                "ba:b1:e2:ca:b1:e0"
+              ],
+              "other": [
+                "ba:b1:e2:ca:b1:e1"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "flingern-2-fastd"
+    },
+    "neighbours": {
+      "node_id": "bab1e2cab1e0",
+      "batadv": {
+        "ba:b1:e2:ca:b1:e0": {},
+        "ba:b1:e2:ca:b1:e1": {
+          "neighbours": {
+            "ca:b1:e8:ca:b1:e1": {
+              "tq": 255
+            }
+          }
+        }
+      }
+    }
+  },
+  "bab1e3cab1e0": {
+    "firstseen": "2016-04-07T17:49:18.252Z",
+    "nodeinfo": {
+      "node_id": "bab1e3cab1e0",
+      "owner": {
+        "contact": "info@ffdus.de"
+      },
+      "network": {
+        "mac": "ba:b1:e3:ca:b1:e0",
+        "mesh_interfaces": [
+          "ba:b1:e3:ca:b1:e0",
+          "ba:b1:e3:ca:b1:e1"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "tunnel": [
+                "ba:b1:e3:ca:b1:e0"
+              ],
+              "other": [
+                "ba:b1:e3:ca:b1:e1"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "flingern-3-fastd"
+   },
+    "neighbours": {
+      "node_id": "bab1e3cab1e0",
+      "batadv": {
+        "ba:b1:e3:ca:b1:e0": {},
+        "ba:b1:e3:ca:b1:e1": {
+          "neighbours": {
+            "ca:b1:e9:ca:b1:e1": {
+              "tq": 255
+            }
+          }
+        }
       }
     }
   }
