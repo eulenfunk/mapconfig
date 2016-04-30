@@ -1,3 +1,31 @@
+# mögliche Direktiven
+#  instance 
+#  group
+#  basedom
+#  alias
+
+#  basedom    
+#     fqndn       - domainname unter dem es "alles" gibt, untefiltert
+#     https        - 1:ja, 0: nur http. (Zertifikate sind manuell zu generieren/reneuern!)
+
+#  group: Sammelkarte aus mehreren Domains 
+#     name         - eindeutiger Bezeichner
+#     sitecode(s)  - Komma-separierte Liste von sitecodes
+#     https        - 1:ja, 0: nur http. (Zertifikate sind manuell zu generieren/reneuern!)
+
+#  instance: Freifunk-Broadcast-Domain
+#     name         - eindeutiger Bezeichner
+#     sitecode     - Router-Sitecode, der u dieser Domain zugehörig ist
+#     fqdn         - domainnamen, unter der die Map auf dem Webserver erreichbar sein soll
+#     https        - 1:ja, 0: nur http. (Zertifikate sind manuell zu generieren/reneuern!)
+#     port         - IP-Port auf dem der interne Hopglass-Server für diese Domain antwortet
+#     mtu          - fastd-mtusize dieser Domain
+
+#  alias
+#     quelle       - unter diese fqdn soll die das gleiche abrufbar sein wie 
+#     ziel         - Verweis auf den Namen der Zielinstanz
+
+
 basedom map1.eulenfunk.de 0
 group Eulenfunk ffal,ffhe,ffis,ffls,ffmk,ffnr,bgl,lln,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb map1.eulenfunk.de 0
 
