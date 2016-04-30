@@ -1,0 +1,10 @@
+server {
+    listen URL:80;
+    server_name URL;
+    add_header Access-Control-Allow-Origin *;
+
+    location / {
+        root WEBDIR/URL;
+        index index.html;
+    }
+}

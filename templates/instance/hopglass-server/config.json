@@ -1,0 +1,37 @@
+{
+  "core": { },
+  "receiver": {
+    "announced": {
+      "target": {
+        "ip": "ff02::1",
+        "port": 1001
+      },
+      "port": 3PORT,
+      "interval": {
+        "statistics": 60,
+        "nodeinfo": 500
+      }
+    },
+    "aliases": {
+      "file": "./aliases.json"
+    },
+    "ifaces": [
+      "bat-SITE"
+    ],
+    "storage": {
+      "interval": 30,
+      "file": "/var/local/hopglass-server/SITE/raw.json"
+    },
+    "purge": {
+      "maxAge": 14,
+      "interval": 86400
+    }
+  },
+  "provider": {
+    "offlineTime": 900
+  },
+  "webserver": {
+    "ip": "::",
+    "port": 4PORT
+  }
+}
