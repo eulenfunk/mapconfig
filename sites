@@ -25,48 +25,46 @@
 #     quelle       - unter diese fqdn soll die das gleiche abrufbar sein wie 
 #     ziel         - Verweis auf den Namen der Zielinstanz
 
-
-basedom map1.eulenfunk.de 0
-group Eulenfunk ffal,ffhe,ffis,ffls,ffmk,ffnr,bgl,lln,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb map1.eulenfunk.de 0
+basedom Eulenfunk ffal,ffhe,ffis,ffls,ffmk,ffnr,bgl,lln,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb map.eulenfunk.de
 
 #Fichtenfunk
-group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffnr alle.freifunk-mk.de 0
-instance Fichtenfunk_(Altena) ffal map-altena.freifunk-mk.de 0 8083 1280
-instance Fichtenfunk_(Hemer) ffhe map-hemer.freifunk-mk.de 0 8087 1406
-instance Fichtenfunk_(Iserlohn) ffis map.freifunk-iserlohn.de 0 8082 1280
-instance Fichtenfunk_(Lüdenscheid) ffls map-luedenscheid.freifunk-mk.de 0 8097 1406
-instance Fichtenfunk_(Märkischer_Kreis) ffmk mk.map.eulenfunk.de 0 8100 1406
-instance Fichtenfunk_(Meinerzhagen) ffmz map-meinerzhagen.freifunk-mk.de 0 8084 1406
-instance Fichtenfunk_(Neuenrade) ffnr map-neuenrade.freifunk-mk.de 0 8098 1406
+group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffnr alle.freifunk-mk.de
+instance Fichtenfunk_(Altena) ffal map-altena.freifunk-mk.de 8083 1280
+instance Fichtenfunk_(Hemer) ffhe map-hemer.freifunk-mk.de 8087 1406
+instance Fichtenfunk_(Iserlohn) ffis map.freifunk-iserlohn.de 8082 1280
+instance Fichtenfunk_(Lüdenscheid) ffls map-luedenscheid.freifunk-mk.de 8097 1406
+instance Fichtenfunk_(Märkischer_Kreis) ffmk mk.map.eulenfunk.de 8100 1406
+instance Fichtenfunk_(Meinerzhagen) ffmz map-meinerzhagen.freifunk-mk.de 8084 1406
+instance Fichtenfunk_(Neuenrade) ffnr map-neuenrade.freifunk-mk.de 8098 1406
 
 #GL.Eulenfunk
-group Freifunk_GL gl,bgl,lln map.ffgl.eu 0
-instance Freifunk_GL_(Bergisch_Gladbach) bgl bgl.map.ffgl.eu 0 8105 1406
-instance Freifunk_GL_(Leichlingen) lln lln.map.ffgl.eu 0 8102 1406
+group Freifunk_GL gl,bgl,lln map.ffgl.eu
+instance Freifunk_GL_(Bergisch_Gladbach) bgl bgl.map.ffgl.eu 8105 1406
+instance Freifunk_GL_(Leichlingen) lln lln.map.ffgl.eu 8102 1406
 
 #Neanderfunk
-group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf karte.neanderfunk.de 0
-instance Neanderfunk_(Haan) nefhan han.karte.neanderfunk.de 0 8088 1364
-instance Neanderfunk_(Heiligenhaus) nefhlg hlg.karte.neanderfunk.de 0 8090 1364
-instance Neanderfunk_(Hilden) nefhld hld.karte.neanderfunk.de 0 8089 1364
-instance Neanderfunk_(Langenfeld) neflgf lgf.karte.neanderfunk.de 0 8091 1364
-instance Neanderfunk_(Mettmann) nefmet met.karte.neanderfunk.de 0 8092 1364
-instance Neanderfunk_(Monheim) nefmon mon.karte.neanderfunk.de 0 8093 1364
-instance Neanderfunk_(Erkrath) neferk erk.karte.neanderfunk.de 0 8081 1364
-instance Neanderfunk_(Ratingen) nefrat rat.karte.neanderfunk.de 0 8094 1364
-instance Neanderfunk_(Velbert) nefvel vel.karte.neanderfunk.de 0 8095 1364
-instance Neanderfunk_(Wülfrath) nefwlf wlf.karte.neanderfunk.de 0 8096 1364
+group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf karte.neanderfunk.de
+instance Neanderfunk_(Haan) nefhan han.karte.neanderfunk.de 8088 1364
+instance Neanderfunk_(Heiligenhaus) nefhlg hlg.karte.neanderfunk.de 8090 1364
+instance Neanderfunk_(Hilden) nefhld hld.karte.neanderfunk.de 8089 1364
+instance Neanderfunk_(Langenfeld) neflgf lgf.karte.neanderfunk.de 8091 1364
+instance Neanderfunk_(Mettmann) nefmet met.karte.neanderfunk.de 8092 1364
+instance Neanderfunk_(Monheim) nefmon mon.karte.neanderfunk.de 8093 1364
+instance Neanderfunk_(Erkrath) neferk erk.karte.neanderfunk.de 8081 1364
+instance Neanderfunk_(Ratingen) nefrat rat.karte.neanderfunk.de 8094 1364
+instance Neanderfunk_(Velbert) nefvel vel.karte.neanderfunk.de 8095 1364
+instance Neanderfunk_(Wülfrath) nefwlf wlf.karte.neanderfunk.de 8096 1364
 
 #Siegerland
-group Siegerland sifb,sihb siegerland.map.eulenfunk.de 0
-instance Siegerland_(Freudenberg) sifb freudenberg.map.eulenfunk.de 0 8101 1406
-instance Siegerland_(Hilchenbach) sihb hilchenbach.map.eulenfunk.de 0 8099 1406
+#group Siegerland sifb,sihb siegerland.map.eulenfunk.de
+instance Siegerland_(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406
+instance Siegerland_(Hilchenbach) sihb hilchenbach.map.eulenfunk.de 8099 1406
 
 #Einzelgänger
-instance Freifunk_Flingern dus karte.ffdus.de 0 8080 1364 bind_any:10010_default\\;
-alias map.ffdus.de karte.ffdus.de
+instance Freifunk_Flingern dus karte.ffdus.de 8080 1364 bind_any:10010_default\\;
+#alias map.ffdus.de karte.ffdus.de
 
 #Nicht Eulenfunk
-instance Freifunk_Gelsenkirchen gek gek.map.eulenfunk.de 0 8104 1364
-instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 0 8085 1406
+instance Freifunk_Gelsenkirchen gek gek.map.eulenfunk.de 8104 1364
+instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406
 alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de

@@ -1,0 +1,229 @@
+{
+  "60e327c75e36": {
+    "nodeinfo": {
+      "location": {
+        "latitude": 51.164306809,
+        "longitude": 6.888521612
+      },
+      "hostname": "camp-schimmelpfennig-unknown-8e36"
+    }
+  },
+  "30b5c2812602": {
+    "nodeinfo": {
+      "location": {
+        "latitude": 51.247179299,
+        "longitude": 6.779275239
+      },
+      "hostname": "FF-D-Dieden--30b5c2812602"
+    }
+  },
+  "000c29b88561": {
+    "firstseen": "2016-02-02T17:49:18.252Z",
+    "nodeinfo": {
+      "owner": {
+        "contact": "adorfer@nadeshda.org"
+      },
+      "node_id": "000c29b88561",
+      "network": {
+        "mac": "00:0c:29:b8:85:61",
+        "mesh_interfaces": [
+          "00:0c:29:b8:85:61"
+        ],
+        "addresses": [
+          "fda0:747e:ab29:9375:a882:93ff:fe87:217e",
+          "fe80::ac98:fdff:feaa:f511",
+          "10.155.0.99"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "other": [
+                "00:0c:29:b8:85:61"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "horst",
+      "software": {
+        "firmware": {
+          "base": "arch",
+          "release": "rolling"
+        }
+      }
+    },
+    "neighbours": {
+      "batadv": {
+        "00:0c:29:b8:85:61": {}
+      }
+    }
+  },
+  "cab1e8cab1e0": {
+    "firstseen": "2016-04-07T17:49:18.252Z",
+    "nodeinfo": {
+      "node_id": "cab1e8cab1e0",
+      "owner": {
+        "contact": "info@ffdus.de"
+      },
+      "network": {
+        "mac": "ca:b1:e8:ca:b1:e0",
+        "mesh_interfaces": [
+          "ca:b1:e8:ca:b1:e0",
+          "ca:b1:e8:ca:b1:e1"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "l2tp": [
+                "ca:b1:e8:ca:b1:e0"
+              ],
+              "other": [
+                "ca:b1:e8:ca:b1:e1"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "flingern-m-l2tp"
+    },
+    "neighbours": {
+      "node_id": "cab1e8cab1e0",
+      "batadv": {
+        "ca:b1:e8:ca:b1:e0": {},
+        "ca:b1:e8:ca:b1:e1": {
+          "neighbours": {
+            "ba:b1:e2:ca:b1:e1": {
+              "tq": 255
+            }
+          }
+        }
+      }
+    }
+  },
+  "cab1e9cab1e0": {
+    "firstseen": "2016-04-07T17:49:18.252Z",
+    "nodeinfo": {
+      "node_id": "cab1e9cab1e0",
+      "owner": {
+        "contact": "info@ffdus.de"
+      },
+      "network": {
+        "mac": "ca:b1:e9:ca:b1:e0",
+        "mesh_interfaces": [
+          "ca:b1:e9:ca:b1:e0",
+          "ca:b1:e9:ca:b1:e1"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "l2tp": [
+                "ca:b1:e9:ca:b1:e0"
+              ],
+              "other": [
+                "ca:b1:e9:ca:b1:e1"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "flingern-l-l2tp"
+    },
+    "neighbours": {
+      "node_id": "cab1e9cab1e0",
+      "batadv": {
+        "ca:b1:e9:ca:b1:e0": {},
+        "ca:b1:e9:ca:b1:e1": {
+          "neighbours": {
+            "ba:b1:e3:ca:b1:e1": {
+              "tq": 255
+            }
+          }
+        }
+      }
+    }
+  },
+  "bab1e2cab1e0": {
+    "firstseen": "2016-04-07T17:49:18.252Z",
+    "nodeinfo": {
+      "node_id": "bab1e2cab1e0",
+      "owner": {
+        "contact": "info@ffdus.de"
+      },
+      "network": {
+        "mac": "ba:b1:e2:ca:b1:e0",
+        "mesh_interfaces": [
+          "ba:b1:e2:ca:b1:e0",
+          "ba:b1:e2:ca:b1:e1"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "tunnel": [
+                "ba:b1:e2:ca:b1:e0"
+              ],
+              "other": [
+                "ba:b1:e2:ca:b1:e1"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "flingern-2-fastd"
+    },
+    "neighbours": {
+      "node_id": "bab1e2cab1e0",
+      "batadv": {
+        "ba:b1:e2:ca:b1:e0": {},
+        "ba:b1:e2:ca:b1:e1": {
+          "neighbours": {
+            "ca:b1:e8:ca:b1:e1": {
+              "tq": 255
+            }
+          }
+        }
+      }
+    }
+  },
+  "bab1e3cab1e0": {
+    "firstseen": "2016-04-07T17:49:18.252Z",
+    "nodeinfo": {
+      "node_id": "bab1e3cab1e0",
+      "owner": {
+        "contact": "info@ffdus.de"
+      },
+      "network": {
+        "mac": "ba:b1:e3:ca:b1:e0",
+        "mesh_interfaces": [
+          "ba:b1:e3:ca:b1:e0",
+          "ba:b1:e3:ca:b1:e1"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "tunnel": [
+                "ba:b1:e3:ca:b1:e0"
+              ],
+              "other": [
+                "ba:b1:e3:ca:b1:e1"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "flingern-3-fastd"
+   },
+    "neighbours": {
+      "node_id": "bab1e3cab1e0",
+      "batadv": {
+        "ba:b1:e3:ca:b1:e0": {},
+        "ba:b1:e3:ca:b1:e1": {
+          "neighbours": {
+            "ca:b1:e9:ca:b1:e1": {
+              "tq": 255
+            }
+          }
+        }
+      }
+    }
+  }
+}

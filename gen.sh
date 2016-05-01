@@ -10,75 +10,87 @@ function instance_fastd {
 	rm -rf /etc/fastd/$3
 	cp -r templates/instance/fastd /etc/fastd/$3
 	replace /etc/fastd/$3 SITE $3
-	replace /etc/fastd/$3 MTU $7
-	replace /etc/fastd/$3 BIND "$(echo $8 | sed 's/_/ /g')"
-	systemctl enable fastd@$3
-	systemctl restart fastd@$3
+	replace /etc/fastd/$3 MTU $6
+	replace /etc/fastd/$3 BIND ${7//_/}
+	#systemctl enable fastd@$3
+	#systemctl restart fastd@$3
 }
 
 function instance_hgserver {
-	rm -rf /etc/hopglass-server/$3
-	cp -r templates/instance/hopglass-server /etc/hopglass-server/$3
-	replace /etc/hopglass-server/$3 SITE $3
-	replace /etc/hopglass-server/$3 PORT $6
 	echo "  - job_name: '$3'" >> /etc/prometheus/prometheus.yml
 	echo "    target_groups:" >> /etc/prometheus/prometheus.yml
-	echo "      - targets: ['localhost:4$6']" >> /etc/prometheus/prometheus.yml
+	echo "      - targets: ['localhost:4$5']" >> /etc/prometheus/prometheus.yml
+	rm -rf /etc/hopglass-server/$3
+	cp -r templates/instance/hopglass-server /etc/hopglass-server/$3
+	cd /etc/hopglass-server/$3
+	replace . SITE $3
+	replace . PORT $5
+	cp $HOME/aliases/$3.json ./aliases.json 2> /dev/null
+	cd $HOME
 	mkdir -p /var/local/hopglass-server/$3
-	systemctl enable hopglass-server@$3
-	systemctl restart hopglass-server@$3
+	#systemctl enable hopglass-server@$3
+	#systemctl restart hopglass-server@$3
 }
 
 function instance_nginx {
-	cp templates/instance/example.com.conf$5 /etc/nginx/conf.d/$4.conf
-	replace /etc/nginx/conf.d/$4.conf URL $4
-	replace /etc/nginx/conf.d/$4.conf PORT $6
-	replace /etc/nginx/conf.d/$4.conf WEBDIR $WEBDIR
+	printf " $4" >> hosts
+	cp $HOME/templates/instance/nginx.conf $WEBCONF/$4.conf
+	replace $WEBCONF/$4.conf URL $4
+	replace $WEBCONF/$4.conf PORT $5
 }
 
 function instance_webdir {
-	rm -rf $WEBDIR/$4
-	cp -r templates/instance/webdir $WEBDIR/$4
-	replace $WEBDIR/$4 NAME $(echo $2 | sed 's/_/ /g')
-	replace $WEBDIR/$4 SITE $3
-	replace $WEBDIR/$4 PROTO $BASEDOM_PROTO
-	replace $WEBDIR/$4 BASEDOM $BASEDOM
+	rm -rf $WEBDATA/$4
+	cp -r templates/instance/webdir $WEBDATA/$4
+	replace $WEBDATA/$4 NAME ${2//_/}
+	replace $WEBDATA/$4 SITE $3
 }
 
 #group functions
 
 function group_nginx {
-	cp templates/group/example.com.conf$5 /etc/nginx/conf.d/$4.conf
-	replace /etc/nginx/conf.d/$4.conf URL $4
-	replace /etc/nginx/conf.d/$4.conf WEBDIR $WEBDIR
+	printf " $4" >> hosts
+	cp $HOME/templates/group/nginx.conf $WEBCONF/$4.conf
+	replace $WEBCONF/$4.conf URL $4
 }
 
 function group_webdir {
-	rm -rf $WEBDIR/$4
-	cp -r templates/group/webdir $WEBDIR/$4
-	replace $WEBDIR/$4 NAME $(echo $2 | sed 's/_/ /g')
+	rm -rf $WEBDATA/$4
+	cp -r templates/group/webdir $WEBDATA/$4
+	replace $WEBDATA/$4 NAME "${2//_/}"
 	DATASOURCES=""
-	for SITE in $(echo $3 | sed 's/,/ /g')
+	for SITE in ${3//,/ }
 	do
 		URL=$(cat $HOME/sites | awk "\$3 == \"$SITE\"" | cut -d' ' -f4)
-		URL_ENC=$(cat $HOME/sites | awk "\$3 == \"$SITE\"" | cut -d' ' -f5)
-		if [ "$URL_ENC" == "1" ]
-		then
-			URL_PROTO="https"
-		else
-			URL_PROTO="http"
-		fi
 		if [ "$DATASOURCES" == "" ]
 		then
-			DATASOURCES="    \"$URL_PROTO://$URL/data/\""
+			DATASOURCES="    \"https://$URL/data/\""
 		else
-			DATASOURCES="$DATASOURCES,\n    \"$URL_PROTO://$URL/data/\""
+			DATASOURCES="$DATASOURCES,\n    \"https://$URL/data/\""
 		fi
 	done
-	replace $WEBDIR/$4 DATASOURCES "$DATASOURCES"
-	replace $WEBDIR/$4 SITE $(echo $3 | sed 's/,/\&var-id=/g')
-	replace $WEBDIR/$4 PROTO $BASEDOM_PROTO
-	replace $WEBDIR/$4 BASEDOM $BASEDOM
+	replace $WEBDATA/$4 DATASOURCES "$DATASOURCES"
+	replace $WEBDATA/$4 SITE ${3//,/\\&var-id=}
+}
+
+#alias functions
+
+function alias_nginx {
+	printf " $2" >> hosts
+	LINE=$(cat sites | awk "\$4 == \"$3\"")
+	ALIAS_TYPE=$(echo $LINE | cut -d' ' -f1)
+	cp $HOME/templates/alias/$ALIAS_TYPE.conf $WEBCONF/$2.conf
+	replace $WEBCONF/$2.conf URL $2
+	replace $WEBCONF/$2.conf PORT $(echo $LINE | cut -d' ' -f6)
+	replace $WEBCONF/$2.conf ALIAS $(echo $LINE | cut -d' ' -f4)
+}
+
+#basedom functions
+
+function basedom_nginx {
+	BASEDOM=$4
+	cp $HOME/templates/basedom/nginx.conf $WEBCONF/$4.conf
+	replace $WEBCONF/$4.conf URL $4
 }
 
 #main functions
@@ -98,14 +110,24 @@ function init {
 	mv /etc/nginx{,.bak}
 	cp -r templates/init/nginx /etc/nginx
 	cp base/20-eulenmap.conf /etc/sysctl.d
+	grep -v "$(hostname --ip-address)" /etc/hosts > /etc/hosts.head
 }
 
 function all {
+	#partitial purge
+	rm -rf $WEBDATA/*
+	rm -rf $WEBCONF/*
+	printf "$(hostname --ip-address) $(hostname)" > hosts
 	cp templates/init/prometheus.yml /etc/prometheus/prometheus.yml
 	while read l
 	do
 		#$l = TYPE NAME SITE URI PORT MTU
 		case "$(echo $l | cut -d' ' -f1)" in
+		"basedom")
+			basedom_nginx $l
+			group_webdir $l
+			ln -s /opt/hopglass/web/build $WEBDATA/$BASEDOM/build
+			;;
 		"instance")
 			instance_fastd $l
 			instance_hgserver $l
@@ -116,27 +138,22 @@ function all {
 			group_nginx $l
 			group_webdir $l
 			;;
-		"basedom")
-			BASEDOM=$(echo $l | cut -d' ' -f2)
-			BASEDOM_ENC=$(echo $l | cut -d' ' -f3)
-			if [ "$BASEDOM_ENC" == "1" ]
-			then
-				BASEDOM_PROTO="https"
-			else
-				BASEDOM_PROTO="http"
-			fi
+		"alias")
+			alias_nginx $l
 			;;
 		esac
 	done < $HOME/sites
+	replace $WEBCONF WEBDATA $WEBDATA
+	replace $WEBDATA BASEDOM $BASEDOM
+	cat /etc/hosts.head hosts > /etc/hosts
 	systemctl restart prometheus
 	systemctl restart nginx
 	chown -R hopglass:hopglass /var/local/hopglass-server
-	ln -s /opt/hopglass/web/build $WEBDIR/$BASEDOM/build
 }
 
 cd $(dirname $0)
 HOME=$PWD
-WEBDIR="/var/www"
-
+WEBDATA="/var/www"
+WEBCONF="/etc/nginx/conf.d"
 $@
 
