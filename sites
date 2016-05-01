@@ -1,29 +1,27 @@
 # mögliche Direktiven
-#  instance 
+#  instance
 #  group
 #  basedom
 #  alias
 
-#  basedom    
-#     fqndn       - domainname unter dem es "alles" gibt, untefiltert
-#     https        - 1:ja, 0: nur http. (Zertifikate sind manuell zu generieren/reneuern!)
+#  basedom  
+#      wie group
 
-#  group: Sammelkarte aus mehreren Domains 
-#     name         - eindeutiger Bezeichner
-#     sitecode(s)  - Komma-separierte Liste von sitecodes
-#     https        - 1:ja, 0: nur http. (Zertifikate sind manuell zu generieren/reneuern!)
+#  group: Sammelkarte aus mehreren Domänen
+#      name         - Bezeichnung, die auf der Map angezeigt wird
+#      sitecode(s)  - Komma-separierte Liste der Sitecodes
+#      fqdn         - Domainname, unter dem die Map erreichbar sein soll
 
 #  instance: Freifunk-Broadcast-Domain
-#     name         - eindeutiger Bezeichner
-#     sitecode     - Router-Sitecode, der u dieser Domain zugehörig ist
-#     fqdn         - domainnamen, unter der die Map auf dem Webserver erreichbar sein soll
-#     https        - 1:ja, 0: nur http. (Zertifikate sind manuell zu generieren/reneuern!)
-#     port         - IP-Port auf dem der interne Hopglass-Server für diese Domain antwortet
-#     mtu          - fastd-mtusize dieser Domain
+#      name         - Bezeichnung, die auf der Map angezeigt wird
+#      sitecode     - Eindeutiger Code der Instanz
+#      fqdn         - Domainname, unter dem die Map erreichbar sein soll
+#      port         - IP-Port auf dem der interne Hopglass-Server für diese Domain antwortet
+#      mtu          - fastd-MTU der Domäne
 
 #  alias
-#     quelle       - unter diese fqdn soll die das gleiche abrufbar sein wie 
-#     ziel         - Verweis auf den Namen der Zielinstanz
+#      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
+#      ziel         - Domainname der Zielinstanz
 
 basedom Eulenfunk ffal,ffhe,ffis,ffls,ffmk,ffnr,bgl,lln,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb map.eulenfunk.de
 
@@ -57,12 +55,14 @@ instance Neanderfunk_(Wülfrath) nefwlf wlf.karte.neanderfunk.de 8096 1364
 
 #Siegerland
 #group Siegerland sifb,sihb siegerland.map.eulenfunk.de
+# ^ fehlendes Zertifikat
 instance Siegerland_(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406
 instance Siegerland_(Hilchenbach) sihb hilchenbach.map.eulenfunk.de 8099 1406
 
 #Einzelgänger
 instance Freifunk_Flingern dus karte.ffdus.de 8080 1364 bind_any:10010_default\\;
 #alias map.ffdus.de karte.ffdus.de
+# ^ fehlendes Zertifikat
 
 #Nicht Eulenfunk
 instance Freifunk_Gelsenkirchen gek gek.map.eulenfunk.de 8104 1364
