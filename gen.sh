@@ -11,7 +11,7 @@ function instance_fastd {
 	cp -r templates/instance/fastd /etc/fastd/$3
 	replace /etc/fastd/$3 SITE $3
 	replace /etc/fastd/$3 MTU $6
-	replace /etc/fastd/$3 BIND ${7//_/}
+	replace /etc/fastd/$3 BIND "${7//_/\ }"
 	#systemctl enable fastd@$3
 	#systemctl restart fastd@$3
 }
@@ -42,7 +42,7 @@ function instance_nginx {
 function instance_webdir {
 	rm -rf $WEBDATA/$4
 	cp -r templates/instance/webdir $WEBDATA/$4
-	replace $WEBDATA/$4 NAME ${2//_/}
+	replace $WEBDATA/$4 NAME "${2//_/\ }"
 	replace $WEBDATA/$4 SITE $3
 }
 
@@ -81,7 +81,7 @@ function alias_nginx {
 	ALIAS_TYPE=$(echo $LINE | cut -d' ' -f1)
 	cp $HOME/templates/alias/$ALIAS_TYPE.conf $WEBCONF/$2.conf
 	replace $WEBCONF/$2.conf URL $2
-	replace $WEBCONF/$2.conf PORT $(echo $LINE | cut -d' ' -f6)
+	replace $WEBCONF/$2.conf PORT $(echo $LINE | cut -d' ' -f5)
 	replace $WEBCONF/$2.conf ALIAS $(echo $LINE | cut -d' ' -f4)
 }
 
