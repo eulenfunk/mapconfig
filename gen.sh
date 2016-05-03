@@ -109,6 +109,7 @@ function init {
 	#nginx
 	mv /etc/nginx{,.bak}
 	cp -r templates/init/nginx /etc/nginx
+	openssl dhparam -out /etc/nginx/dhparams.pem 2048
 	cp base/20-eulenmap.conf /etc/sysctl.d
 	grep -v "$(hostname --ip-address)" /etc/hosts > /etc/hosts.head
 }
