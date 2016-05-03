@@ -29,7 +29,7 @@ function instance_hgserver {
 	cd $HOME
 	mkdir -p /var/local/hopglass-server/$3
 	#systemctl enable hopglass-server@$3
-	#systemctl restart hopglass-server@$3
+	systemctl restart hopglass-server@$3
 }
 
 function instance_nginx {
@@ -57,7 +57,7 @@ function group_nginx {
 function group_webdir {
 	rm -rf $WEBDATA/$4
 	cp -r templates/group/webdir $WEBDATA/$4
-	replace $WEBDATA/$4 NAME "${2//_/}"
+	replace $WEBDATA/$4 NAME "${2//_/\ }"
 	DATASOURCES=""
 	for SITE in ${3//,/ }
 	do
