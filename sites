@@ -23,7 +23,7 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk ffal,ffhe,ffis,ffls,ffmk,ffnr,bgl,lln,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb,sisi map.eulenfunk.de
+basedom Eulenfunk ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,bgl,lln,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb,sisi map.eulenfunk.de
 
 #Fichtenfunk
 group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr alle.freifunk-mk.de

@@ -70,7 +70,7 @@ function group_webdir {
 		fi
 	done
 	replace $WEBDATA/$4 DATASOURCES "$DATASOURCES"
-	replace $WEBDATA/$4 SITE ${3//,/\\&var-id=}
+	replace $WEBDATA/$4 SITE ${3//,/\\&var-job=}
 }
 
 #alias functions
@@ -147,7 +147,7 @@ function all {
 	replace $WEBCONF WEBDATA $WEBDATA
 	replace $WEBDATA BASEDOM $BASEDOM
 	cat /etc/hosts.head hosts > /etc/hosts
-	systemctl restart prometheus
+	systemctl restart prometheus-systemd
 	systemctl restart nginx
 	chown -R hopglass:hopglass /var/local/hopglass-server
 }

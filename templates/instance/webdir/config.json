@@ -33,7 +33,7 @@
   ],
   "nodeInfos": [
     { "href": "https://BASEDOM/stats/dashboard/db/node-byid?var-nodeid={NODE_ID}",
-      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=1fullscreen&theme=light&width=600&height=250&var-nodeid={NODE_ID}"
+      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=1fullscreen&theme=light&width=600&height=300&var-nodeid={NODE_ID}"
     },  
     { "href": "https://BASEDOM/stats/dashboard/db/node-byid?var-nodeid={NODE_ID}",
       "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=2fullscreen&theme=light&width=600&height=500&var-nodeid={NODE_ID}"
