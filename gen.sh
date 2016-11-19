@@ -18,7 +18,7 @@ function instance_fastd {
 
 function instance_hgserver {
 	echo "  - job_name: '$3'" >> /etc/prometheus/prometheus.yml
-	echo "    target_groups:" >> /etc/prometheus/prometheus.yml
+	echo "    static_configs:" >> /etc/prometheus/prometheus.yml
 	echo "      - targets: ['localhost:4$5']" >> /etc/prometheus/prometheus.yml
 	rm -rf /etc/hopglass-server/$3
 	cp -r templates/instance/hopglass-server /etc/hopglass-server/$3
@@ -29,7 +29,7 @@ function instance_hgserver {
 	cd $HOME
 	mkdir -p /var/local/hopglass-server/$3
 	#systemctl enable hopglass-server@$3
-	systemctl restart hopglass-server@$3
+	#systemctl restart hopglass-server@$3
 }
 
 function instance_nginx {
@@ -128,6 +128,8 @@ function all {
 			basedom_nginx $l
 			group_webdir $l
 			ln -s /opt/hopglass/web/build $WEBDATA/$BASEDOM/build
+			git clone https://github.com/Moorviper/meshviewer_hwpics $WEBDATA/$BASEDOM/meshviewer_hwpics
+			ln -s $WEBDATA/$BASEDOM/meshviewer_hwpics/nodes $WEBDATA/$BASEDOM/nodes
 			;;
 		"instance")
 			instance_fastd $l
@@ -150,6 +152,7 @@ function all {
 	systemctl restart prometheus-systemd
 	systemctl restart nginx
 	chown -R hopglass:hopglass /var/local/hopglass-server
+	$HOME/patch.sh
 }
 
 cd $(dirname $0)

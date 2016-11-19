@@ -8,15 +8,6 @@
       "hostname": "camp-schimmelpfennig-unknown-8e36"
     }
   },
-  "30b5c2812602": {
-    "nodeinfo": {
-      "location": {
-        "latitude": 51.247179299,
-        "longitude": 6.779275239
-      },
-      "hostname": "FF-D-Dieden--30b5c2812602"
-    }
-  },
   "000c29b88561": {
     "firstseen": "2016-02-02T17:49:18.252Z",
     "nodeinfo": {

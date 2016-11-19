@@ -33,26 +33,31 @@
   ],
   "nodeInfos": [
     { "href": "https://BASEDOM/stats/dashboard/db/node-byid?var-nodeid={NODE_ID}",
-      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=1fullscreen&theme=light&width=600&height=300&var-nodeid={NODE_ID}"
+      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=1&theme=light&width=600&height=300&var-nodeid={NODE_ID}"
     },  
     { "href": "https://BASEDOM/stats/dashboard/db/node-byid?var-nodeid={NODE_ID}",
-      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=2fullscreen&theme=light&width=600&height=500&var-nodeid={NODE_ID}"
+      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=2&theme=light&width=600&height=500&var-nodeid={NODE_ID}"
     },  
     { "href": "https://BASEDOM/stats/dashboard/db/node-byid?var-nodeid={NODE_ID}",  
-      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=3fullscreen&theme=light&width=600&height=200&var-nodeid={NODE_ID}"
+      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=3&theme=light&width=600&height=200&var-nodeid={NODE_ID}"
     }
   ],
   "globalInfos": [
     { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=SITE",
-      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=1&fullscreen&theme=light&width=800&height=600&var-job=SITE"
+      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=1&&theme=light&width=800&height=600&var-job=SITE"
     },
     { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=SITE",
-      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=8&fullscreen&theme=light&width=800&height=600&var-job=SITE"
+      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=8&&theme=light&width=800&height=600&var-job=SITE"
     }
   ],
   "linkInfos": [
     { "href": "https://BASEDOM/stats/dashboard/db/links?var-source={SOURCE}&var-target={TARGET}",
-      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/links?panelId=1&fullscreen&theme=light&width=800&height=600&var-source={SOURCE}&var-target={TARGET}"
+      "thumbnail": "https://BASEDOM/stats/render/dashboard-solo/db/links?panelId=1&&theme=light&width=800&height=600&var-source={SOURCE}&var-target={TARGET}"
+    }
+  ],
+  "hwImg": [
+    { "thumbnail": "https://BASEDOM/nodes/{MODELHASH}.svg",
+      "caption": "Knoten {MODELHASH}"
     }
   ]
 }
