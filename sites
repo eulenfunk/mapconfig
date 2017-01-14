@@ -74,7 +74,7 @@ alias map.ffdus.de karte.ffdus.de
 #Nicht Eulenfunk
 instance Freifunk_Gelsenkirchen gek gek.map.eulenfunk.de 8104 1364
 alias map.ffgek.de gek.map.eulenfunk.de
-instance Freifunk_Duesseldorf ddorf ddorf.map.eulenfunk.de 8105 1364
+instance Freifunk_Duesseldorf ddorf ddorf.map.eulenfunk.de 8106 1364
 instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406
 alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
 instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426
