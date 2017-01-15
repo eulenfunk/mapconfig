@@ -1,0 +1,38 @@
+{
+  "02bbccdd0000": {
+    "firstseen": "2016-11-19T00:00:00.000Z",
+    "nodeinfo": {
+      "owner": {
+        "contact": "me {affe} petabyteboy.de"
+      },
+      "node_id": "02bbccdd0000",
+      "network": {
+        "mac": "02:bb:cc:dd:00:00",
+        "mesh_interfaces": [
+          "02:bb:cc:dd:00:00"
+        ],
+        "addresses": [
+          "172.30.0.100"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "tunnel": [
+                "02:bb:cc:dd:00:00"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "bcd0.ffgl.eu"
+    },
+    "hardware": {
+      "model": "Intel(R) Xeon(R) CPU W3520 @ 2.67GHz"
+    },
+    "neighbours": {
+      "batadv": {
+        "02:bb:cc:dd:00:00": {}
+      }
+    }
+  }
+}
