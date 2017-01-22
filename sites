@@ -24,7 +24,6 @@
 #      ziel         - Domainname der Zielinstanz
 
 basedom Eulenfunk dus,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,bgl,lln,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb,sisi map.eulenfunk.de
-alias map.gek.wupper.freifunk-rheinland.net map.eulenfunk.de
 
 #Fichtenfunk
 group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr alle.freifunk-mk.de
@@ -72,6 +71,7 @@ alias map.ffdus.de karte.ffdus.de
 
 #Nicht Eulenfunk
 instance Freifunk_Gelsenkirchen gek gek.map.eulenfunk.de 8104 1364
+alias map.gek.wupper.freifunk-rheinland.net gek.map.eulenfunk.de
 instance Freifunk_Duesseldorf ddorf ddorf.map.eulenfunk.de 8112 1364
 instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406
 alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
