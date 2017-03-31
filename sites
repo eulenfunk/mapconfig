@@ -45,7 +45,7 @@ instance Freifunk_Bergisch_Gladbach bgl bgl.map.ffgl.eu 8105 1406 # 1 300 1200
 instance Freifunk_Leichlingen lln lln.map.ffgl.eu 8102 1406 # 1 120 1000
 instance Freifunk_Burscheid bcd bcd.map.ffgl.eu 8109 1406 # 1 100 400 2000
 instance Freifunk_Odenthal ode ode.map.ffgl.eu 8110 1406 # 1 100 500
-instance Freifunk_Rösrath rrh rrh.map.ffgl.eu 8110 1406 # 1 100 500
+instance Freifunk_Rösrath rrh rrh.map.ffgl.eu 8113 1406 # 1 100 500
 alias map.freifunk-bergischgladbach.de bgl.map.ffgl.eu 
 alias map.leichlingen.freifunk.net lln.map.ffgl.eu
 alias map.freifunk-leichlingen.net lln.map.ffgl.eu
@@ -60,7 +60,7 @@ instance Neanderfunk_(Langenfeld) neflgf lgf.karte.neanderfunk.de 8091 1364 # 1 
 instance Neanderfunk_(Mettmann) nefmet met.karte.neanderfunk.de 8092 1364 # 1 130 500
 instance Neanderfunk_(Monheim) nefmon mon.karte.neanderfunk.de 8093 1364 # 1 40 200
 instance Neanderfunk_(Erkrath) neferk erk.karte.neanderfunk.de 8081 1364 # 1 20 100
-instance Neanderfunk_(Ratingen) nefrat rat.karte.neanderfunk.de 8094 1364 # 1 100 2000
+instance Neanderfunk_(Ratingen) nefrat rat.karte.neanderfunk.de 8094 1364 # 1 150 2000
 instance Neanderfunk_(Velbert) nefvel vel.karte.neanderfunk.de 8095 1364 # 1 80 500
 instance Neanderfunk_(Wülfrath) nefwlf wlf.karte.neanderfunk.de 8096 1364 # 1 25 80
 
@@ -80,6 +80,6 @@ alias map.gek.wupper.freifunk-rheinland.net gek.map.eulenfunk.de
 instance Freifunk_Duesseldorf ddorf ddorf.map.eulenfunk.de 8112 1364 # 2 350 2000
 instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 2 100 800
 alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
-instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 4 550 2000
+instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 3 550 2000
 alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
 instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 4 120 500
