@@ -43,7 +43,7 @@ group Freifunk_GL gl,bgl,lln,bcd,ode,rrh map.ffgl.eu
 group Freifunk_LBO bcd,ode,lln lbo.map.ffgl.eu
 instance Freifunk_Bergisch_Gladbach bgl bgl.map.ffgl.eu 8105 1406 # 1 300 1200
 instance Freifunk_Leichlingen lln lln.map.ffgl.eu 8102 1406 # 1 160 1000
-instance Freifunk_Burscheid bcd bcd.map.ffgl.eu 8109 1406 # 1 100 400 2000
+instance Freifunk_Burscheid bcd bcd.map.ffgl.eu 8109 1406 # 1 150 400 2000
 instance Freifunk_Odenthal ode ode.map.ffgl.eu 8110 1406 # 1 100 500
 instance Freifunk_Rösrath rrh rrh.map.ffgl.eu 8113 1406 # 1 100 500
 alias map.freifunk-bergischgladbach.de bgl.map.ffgl.eu 
