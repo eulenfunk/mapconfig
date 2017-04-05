@@ -27,7 +27,7 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk dus,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,bgl,lln,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb,sisi map.eulenfunk.de
+basedom Eulenfunk dus,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,bgl,lln,rrh,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb,sisi map.eulenfunk.de
 
 #Fichtenfunk
 group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr alle.freifunk-mk.de
@@ -35,14 +35,14 @@ instance Fichtenfunk_(Altena) ffal map-altena.freifunk-mk.de 8083 1280 # 1 150 8
 instance Fichtenfunk_(Hemer) ffhe map-hemer.freifunk-mk.de 8087 1406 # 1 70 350
 instance Fichtenfunk_(Iserlohn) ffis map.freifunk-iserlohn.de 8082 1280 # 1 250 1000
 instance Fichtenfunk_(Lüdenscheid) ffls map-luedenscheid.freifunk-mk.de 8097 1406 # 1 210 1000
-instance Fichtenfunk_(Märkischer_Kreis) ffmk mk.map.eulenfunk.de 8100 1406 # 1 120 550
+instance Fichtenfunk_(Märkischer_Kreis) ffmk mk.map.eulenfunk.de 8100 1406 # 1 150 550
 instance Fichtenfunk_(Meinerzhagen) ffmz map-meinerzhagen.freifunk-mk.de 8084 1406 # 1 150 500 
 instance Fichtenfunk_(Neuenrade) ffnr map-neuenrade.freifunk-mk.de 8098 1406 # 1 80 400 
 #GL
 group Freifunk_GL gl,bgl,lln,bcd,ode,rrh map.ffgl.eu 
 group Freifunk_LBO bcd,ode,lln lbo.map.ffgl.eu
 instance Freifunk_Bergisch_Gladbach bgl bgl.map.ffgl.eu 8105 1406 # 1 300 1200
-instance Freifunk_Leichlingen lln lln.map.ffgl.eu 8102 1406 # 1 160 1000
+instance Freifunk_Leichlingen lln lln.map.ffgl.eu 8102 1406 # 1 180 1000
 instance Freifunk_Burscheid bcd bcd.map.ffgl.eu 8109 1406 # 1 150 400 2000
 instance Freifunk_Odenthal ode ode.map.ffgl.eu 8110 1406 # 1 100 500
 instance Freifunk_Rösrath rrh rrh.map.ffgl.eu 8113 1406 # 1 100 500
