@@ -29,7 +29,7 @@ function instance_hgserver {
 	cd $HOME
 	mkdir -p /var/local/hopglass-server/$3
 	#systemctl enable hopglass-server@$3
-	#systemctl restart hopglass-server@$3
+	systemctl restart hopglass-server@$3
 }
 
 function instance_nginx {

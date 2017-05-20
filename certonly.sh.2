@@ -1,0 +1,5 @@
+cd /etc/letsencrypt/live
+for i in map-altena.freifunk-mk.de map-hemer.freifunk-mk.de map.freifunk-iserlohn.de map-luedenscheid.freifunk-mk.de mk.map.eulenfunk.de map-meinerzhagen.freifunk-mk.de map-neuenrade.freifunk-mk.de bgl.map.ffgl.eu lln.map.ffgl.eu bcd.map.ffgl.eu ode.map.ffgl.eu rrh.map.ffgl.eu han.karte.neanderfunk.de hlg.karte.neanderfunk.de hld.karte.neanderfunk.de lgf.karte.neanderfunk.de met.karte.neanderfunk.de mon.karte.neanderfunk.de erk.karte.neanderfunk.de rat.karte.neanderfunk.de vel.karte.neanderfunk.de wlf.karte.neanderfunk.de freudenberg.map.eulenfunk.de hilchenbach.map.eulenfunk.de siegen.map.eulenfunk.de karte.ffdus.de gek.map.eulenfunk.de ddorf.map.eulenfunk.de map.gl.wupper.ffrl.de wup.map.eulenfunk.de rade.map.eulenfunk.de alle.freifunk-mk.de map.ffgl.eu lbo.map.ffgl.eu karte.neanderfunk.de siegerland.map.eulenfunk.de map.freifunk-bergischgladbach.de map.leichlingen.freifunk.net map.freifunk-leichlingen.net map.fflln.net map.ffdus.de map.gek.wupper.freifunk-rheinland.net map.gl.wupper.freifunk-rheinland.net map.freifunk-wuppertal.net
+do
+	ln -s map.eulenfunk.de $i
+done

@@ -5,6 +5,13 @@
   "showContact": true,  
   "maxAge": 14,
   "mapLayers": [
+    { "name": "CartoDB",
+      "url": "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+      "config": {
+        "maxZoom": 20,
+        "attribution": "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors | &copy; <a href=\"https://carto.com/attribution\">CARTO</a>"
+      }
+    },
     { "name": "OSM Standard",
       "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       "config": {
@@ -13,21 +20,22 @@
         "maxZoom": 19  
       }
     },
-    { "name": "MapQuest",
-      "url": "https://otile{s}-s.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.jpg",
-      "config": {
-        "subdomains": "1234",
-        "type": "osm",  
-        "attribution": "Tiles &copy; <a href=\"https://www.mapquest.com/\" target=\"_blank\">MapQuest</a>, Data CC-BY-SA OpenStreetMap",  
-        "maxZoom": 18
-      }   
-    },  
     { "name": "OSM deutscher Stil",
       "url": "http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png",  
       "config": {
         "type": "osm",
         "attribution": "<a target=\"_blank\" href=\"http://www.openstreetmap.org/\">Karte hergestellt aus OpenStreetMap-Daten</a> | <a rel=\"license\" target=\"_blank\" href=\"http://opendatacommons.org/licenses/odbl/\">Open Database License (ODbL)</a>",  
         "maxZoom": 18
+      }
+    },
+    {
+      "name": "Luftbilder NRW",
+      "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop20?",
+      "config": {
+        "maxZoom": 20,
+        "attribution": "<a href=\"http://www.bezreg-koeln.nrw.de/brk_internet/geobasis/luftbilderzeugnisse/digitale_orthophotos/index.html\">DOP20</a>, Land NRW (2017), Datenlizenz Deutschland - Namensnennung - Version 2.0 (<a href=\"https://www.govdata.de/dl-de/by-2-0\">www.govdata.de/dl-de/by-2-0</a>)",
+        "format": "image/jpeg",
+        "layers": "nw_dop20"
       }
     }
   ],
