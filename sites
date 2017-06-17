@@ -64,6 +64,7 @@ instance Neanderfunk_(Ratingen) nefrat rat.karte.neanderfunk.de 8094 1364 # 1 15
 instance Neanderfunk_(Velbert) nefvel vel.karte.neanderfunk.de 8095 1364 # 1 80 500
 instance Neanderfunk_(Wülfrath) nefwlf wlf.karte.neanderfunk.de 8096 1364 # 1 25 80
 instance Eulenfunk_(LVR) neflvr lvr.map.eulenfunk.de 8114 1364 # 1 25 80
+alias karte.fflvr.de lvr.map.eulenfunk.de
 
 #Siegerland
 group Siegerland sifb,sihb,sisi siegerland.map.eulenfunk.de
