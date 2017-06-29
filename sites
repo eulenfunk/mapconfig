@@ -42,7 +42,7 @@ instance Fichtenfunk_(Neuenrade) ffnr map-neuenrade.freifunk-mk.de 8098 1406 # 1
 group Freifunk_GL gl,bgl,lln,bcd,ode,rrh map.ffgl.eu 
 #group Freifunk_LBO bcd,ode,lln lbo.map.ffgl.eu
 instance Freifunk_Bergisch_Gladbach bgl bgl.map.ffgl.eu 8105 1406 # 1 300 1200
-instance Freifunk_Leichlingen lln lln.map.ffgl.eu 8102 1406 # 1 180 1000
+instance Freifunk_Leichlingen lln lln.map.ffgl.eu 8102 1406 # 1 240 1000
 instance Freifunk_Burscheid bcd bcd.map.ffgl.eu 8109 1406 # 1 150 400 2000
 instance Freifunk_Odenthal ode ode.map.ffgl.eu 8110 1406 # 1 100 500
 instance Freifunk_Rösrath rrh rrh.map.ffgl.eu 8113 1406 # 1 100 500
@@ -56,7 +56,7 @@ group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel
 instance Neanderfunk_(Haan) nefhan han.karte.neanderfunk.de 8088 1364 # 1 25 100
 instance Neanderfunk_(Heiligenhaus) nefhlg hlg.karte.neanderfunk.de 8090 1364 # 1 40 200
 instance Neanderfunk_(Hilden) nefhld hld.karte.neanderfunk.de 8089 1364 # 1 45 500
-instance Neanderfunk_(Langenfeld) neflgf lgf.karte.neanderfunk.de 8091 1364 # 1 11 49
+instance Neanderfunk_(Langenfeld) neflgf lgf.karte.neanderfunk.de 8091 1364 # 1 11 20
 instance Neanderfunk_(Mettmann) nefmet met.karte.neanderfunk.de 8092 1364 # 1 130 500
 instance Neanderfunk_(Monheim) nefmon mon.karte.neanderfunk.de 8093 1364 # 1 40 200
 instance Neanderfunk_(Erkrath) neferk erk.karte.neanderfunk.de 8081 1364 # 1 20 100
@@ -84,4 +84,4 @@ instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 2 100 800
 alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
 instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 3 550 2000
 alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
-instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 4 120 500
+instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 3 120 500
