@@ -80,6 +80,10 @@
           }
         }
       }
+    },
+    "statistics": {
+      "gateway": "ca:b1:e2:ca:b1:e7",
+      "gateway_nexthop": "ca:b1:e2:ca:b1:e7"
     }
   },
   "cab1e9cab1e0": {
@@ -122,6 +126,10 @@
           }
         }
       }
+    },
+    "statistics": {
+      "gateway": "ca:b1:e3:ca:b1:e7",
+      "gateway_nexthop": "ca:b1:e3:ca:b1:e7"
     }
   },
   "bab1e2cab1e0": {
@@ -132,16 +140,18 @@
         "contact": "info@ffdus.de"
       },
       "network": {
-        "mac": "ba:b1:e2:ca:b1:e0",
+        "mac": "ca:b1:e2:ca:b1:e7",
         "mesh_interfaces": [
           "ba:b1:e2:ca:b1:e0",
-          "ba:b1:e2:ca:b1:e1"
+          "ba:b1:e2:ca:b1:e1",
+          "ca:b1:e2:ca:b1:e7"
         ],
         "mesh": {
           "bat0": {
             "interfaces": {
               "tunnel": [
-                "ba:b1:e2:ca:b1:e0"
+                "ba:b1:e2:ca:b1:e0",
+                "ca:b1:e2:ca:b1:e7"
               ],
               "other": [
                 "ba:b1:e2:ca:b1:e1"
@@ -174,16 +184,18 @@
         "contact": "info@ffdus.de"
       },
       "network": {
-        "mac": "ba:b1:e3:ca:b1:e0",
+        "mac": "ca:b1:e3:ca:b1:e7",
         "mesh_interfaces": [
           "ba:b1:e3:ca:b1:e0",
-          "ba:b1:e3:ca:b1:e1"
+          "ba:b1:e3:ca:b1:e1",
+          "ca:b1:e3:ca:b1:e7"
         ],
         "mesh": {
           "bat0": {
             "interfaces": {
               "tunnel": [
-                "ba:b1:e3:ca:b1:e0"
+                "ba:b1:e3:ca:b1:e0",
+                "ca:b1:e3:ca:b1:e7"
               ],
               "other": [
                 "ba:b1:e3:ca:b1:e1"
