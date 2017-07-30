@@ -1,0 +1,27 @@
+{
+  "04eeefca1172": {
+    "firstseen": "2017-01-07T17:49:18.252Z",
+    "nodeinfo": {
+      "node_id": "04eeefca1172",
+      "owner": {
+        "contact": "info@ffnef.de"
+      },
+      "network": {
+        "mac":	"04:ee:ef:ca:11:72",
+        "mesh_interfaces": [
+          "04:ee:ef:ca:11:72"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "fastd": [
+                "04:ee:ef:ca:11:72"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "ffnef-hlg-2"
+    }
+  }
+}

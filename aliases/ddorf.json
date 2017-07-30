@@ -1,21 +1,21 @@
 {
-  "0abeef250002": {
+  "06beef250002": {
     "firstseen": "2017-01-07T17:49:18.252Z",
     "nodeinfo": {
-      "node_id": "0abeef250002",
+      "node_id": "06beef250002",
       "owner": {
         "contact": "@"
       },
       "network": {
-        "mac":	"0a:be:ef:25:00:02",
+        "mac":	"06:be:ef:25:00:02",
         "mesh_interfaces": [
-          "0a:be:ef:25:00:02"
+          "06:be:ef:25:00:02"
         ],
         "mesh": {
           "bat0": {
             "interfaces": {
               "l2tp": [
-                "0a:be:ef:25:00:02"
+                "06:be:ef:25:00:02"
               ]
             }
           }
@@ -24,23 +24,23 @@
       "hostname": "ddorf-2"
     }
   },
-  "0abeef250001": {
+  "06beef250001": {
     "firstseen": "2017-01-07T17:49:18.252Z",
     "nodeinfo": {
-      "node_id": "0abeef250001",
+      "node_id": "06beef250001",
       "owner": {
         "contact": "@"
       },
       "network": {
-        "mac":	"0a:be:ef:25:00:01",
+        "mac":	"06:be:ef:25:00:01",
         "mesh_interfaces": [
-          "0a:be:ef:25:00:01"
+          "06:be:ef:25:00:01"
         ],
         "mesh": {
           "bat0": {
             "interfaces": {
               "l2tp": [
-                "0a:be:ef:25:00:01"
+                "06:be:ef:25:00:01"
               ]
             }
           }

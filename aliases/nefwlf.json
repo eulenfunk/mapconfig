@@ -1,0 +1,27 @@
+{
+  "04eeefca117b": {
+    "firstseen": "2017-01-07T17:49:18.252Z",
+    "nodeinfo": {
+      "node_id": "04eeefca117b",
+      "owner": {
+        "contact": "info@ffnef.de"
+      },
+      "network": {
+        "mac":	"04:ee:ef:ca:11:7b",
+        "mesh_interfaces": [
+          "04:ee:ef:ca:11:7b"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "fastd": [
+                "04:ee:ef:ca:11:7b"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "ffnef-wlf-2"
+    }
+  }
+}

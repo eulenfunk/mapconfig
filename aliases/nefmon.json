@@ -1,0 +1,27 @@
+{
+  "04eeefca1174": {
+    "firstseen": "2017-01-07T17:49:18.252Z",
+    "nodeinfo": {
+      "node_id": "04eeefca1174",
+      "owner": {
+        "contact": "info@ffnef.de"
+      },
+      "network": {
+        "mac":	"04:ee:ef:ca:11:74",
+        "mesh_interfaces": [
+          "04:ee:ef:ca:11:74"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "fastd": [
+                "04:ee:ef:ca:11:74"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "ffnef-mon-2"
+    }
+  }
+}

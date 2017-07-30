@@ -52,7 +52,7 @@ alias map.freifunk-leichlingen.net lln.map.ffgl.eu
 alias map.fflln.net lln.map.ffgl.eu
 
 #Neanderfunk
-group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf karte.neanderfunk.de
+group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,neflvr karte.neanderfunk.de
 instance Neanderfunk_(Haan) nefhan han.karte.neanderfunk.de 8088 1364 # 1 25 100
 instance Neanderfunk_(Heiligenhaus) nefhlg hlg.karte.neanderfunk.de 8090 1364 # 1 40 200
 instance Neanderfunk_(Hilden) nefhld hld.karte.neanderfunk.de 8089 1364 # 1 45 500
