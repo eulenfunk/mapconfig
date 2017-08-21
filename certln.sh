@@ -2,7 +2,7 @@
 #   /etc/letsencrypt/live/map.eulenfunk.de-0001/fullchain.pem
 base=/etc/letsencrypt/live
 dest=ddorf.map.eulenfunk.de
-dest=map.eulenfunk.de-0001
+dest=map.eulenfunk.de-0002
  ln -s $base/$dest $base/map.eulenfunk.de
 
 for dom in $(cat /opt/eulenfunk/map/sites|grep -v ^\#|grep instance |cut -d" " -f4|sed ':a;N;$!ba;s/\n/ /g'); do 

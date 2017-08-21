@@ -49,7 +49,6 @@ instance Freifunk_Rösrath rrh rrh.map.ffgl.eu 8113 1406 # 1 100 500
 alias map.freifunk-bergischgladbach.de bgl.map.ffgl.eu 
 alias map.leichlingen.freifunk.net lln.map.ffgl.eu
 alias map.freifunk-leichlingen.net lln.map.ffgl.eu
-alias map.fflln.net lln.map.ffgl.eu
 
 #Neanderfunk
 group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,neflvr karte.neanderfunk.de
