@@ -32,7 +32,7 @@ basedom Eulenfunk dus,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,bgl,lln,rrh,nefhan,nefh
 #Fichtenfunk
 group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr alle.freifunk-mk.de
 instance Fichtenfunk_(Altena) ffal map-altena.freifunk-mk.de 8083 1280 # 1 150 800
-instance Fichtenfunk_(Hemer) ffhe map-hemer.freifunk-mk.de 8087 1406 # 1 70 350
+instance Fichtenfunk_(Hemer) ffhe map-hemer.freifunk-mk.de 8087 1406 # 1 90 400
 instance Fichtenfunk_(Iserlohn) ffis map.freifunk-iserlohn.de 8082 1280 # 1 250 1000
 instance Fichtenfunk_(Lüdenscheid) ffls map-luedenscheid.freifunk-mk.de 8097 1406 # 1 210 1000
 instance Fichtenfunk_(Märkischer_Kreis) ffmk mk.map.eulenfunk.de 8100 1406 # 1 150 550
