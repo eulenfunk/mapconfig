@@ -76,11 +76,11 @@ instance Freifunk_Flingern dus karte.ffdus.de 8080 1364 bind_any:10010_default\\
 alias map.ffdus.de karte.ffdus.de
 
 #Nicht Eulenfunk
-instance Freifunk_Gelsenkirchen gek gek.map.eulenfunk.de 8104 1364 # 2 80 2000
+instance Freifunk_Gelsenkirchen gek gek.map.eulenfunk.de 8104 1364 # 3 80 2000
 alias map.gek.wupper.freifunk-rheinland.net gek.map.eulenfunk.de 
 instance Freifunk_Duesseldorf ddorf ddorf.map.eulenfunk.de 8112 1364 # 2 450 2000
-instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 2 100 800
+instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 4 100 800
 alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
 instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 3 550 2000
 alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
-instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 4 120 500
+instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 5 120 500
