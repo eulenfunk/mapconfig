@@ -12,8 +12,8 @@ function instance_fastd {
 	replace /etc/fastd/$3 SITE $3
 	replace /etc/fastd/$3 MTU $6
 	replace /etc/fastd/$3 BIND "${7//_/\ }"
-	systemctl enable fastd@$3
-	systemctl restart fastd@$3
+	#systemctl enable fastd@$3
+	#systemctl restart fastd@$3
 }
 
 function instance_hgserver {
@@ -29,7 +29,7 @@ function instance_hgserver {
 	cd $HOME
 	mkdir -p /var/local/hopglass-server/$3
 	#systemctl enable hopglass-server@$3
-	systemctl restart hopglass-server@$3
+	#systemctl restart hopglass-server@$3
 }
 
 function instance_nginx {

@@ -24,10 +24,11 @@
           }
         }
       },
-      "hostname": "lln0.ffgl.eu"
-    },
-    "hardware": {
-      "model": "Intel(R) Xeon(R) CPU W3520 @ 2.67GHz"
+      "vpn": true,
+      "hostname": "lln0.ffgl.eu",
+      "hardware": {
+        "model": "Intel(R) Xeon(R) CPU W3520 @ 2.67GHz"
+      }
     },
     "neighbours": {
       "batadv": {
