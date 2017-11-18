@@ -16,6 +16,15 @@ function instance_fastd {
 	#systemctl restart fastd@$3
 }
 
+function instance_yanic {
+	cp templates/instance/yanic.conf /etc/yanic/$3.conf
+	replace /etc/yanic/$3.conf SITE $3
+	replace /etc/yanic/$3.conf PORT $5
+	mkdir -p /home/yanic/$3
+	chown yanic /home/yanic/$3
+	#systemctl start yanic@$3
+}
+
 function instance_hgserver {
 	echo "  - job_name: '$3'" >> /etc/prometheus/prometheus.yml
 	echo "    static_configs:" >> /etc/prometheus/prometheus.yml
@@ -37,6 +46,7 @@ function instance_nginx {
 	cp $HOME/templates/instance/nginx.conf $WEBCONF/$4.conf
 	replace $WEBCONF/$4.conf URL $4
 	replace $WEBCONF/$4.conf PORT $5
+	replace $WEBCONF/$4.conf SITE $3
 }
 
 function instance_webdir {
@@ -44,6 +54,8 @@ function instance_webdir {
 	cp -r templates/instance/webdir $WEBDATA/$4
 	replace $WEBDATA/$4 NAME "${2//_/\ }"
 	replace $WEBDATA/$4 SITE $3
+
+	(sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$3}"; cp templates/instance/config_meshviewer.json /tmp/meshviewer-$3/config.json; replace /tmp/meshviewer-$3/config.json NAME "${2//_/\ }";	replace /tmp/meshviewer-$3/config.json SITE $3;	replace /tmp/meshviewer-$3/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$3; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$3/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$3) &
 }
 
 #group functions
@@ -71,6 +83,8 @@ function group_webdir {
 	done
 	replace $WEBDATA/$4 DATASOURCES "$DATASOURCES"
 	replace $WEBDATA/$4 SITE ${3//,/\\&var-job=}
+
+	(sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$4}"; cp templates/group/config_meshviewer.json /tmp/meshviewer-$4/config.json; replace /tmp/meshviewer-$4/config.json NAME "${2//_/\ }"; replace /tmp/meshviewer-$4/config.json SITE ${3//,/\\&var-job=}; replace /tmp/meshviewer-$4/config.json DATASOURCES "$DATASOURCES"; replace /tmp/meshviewer-$4/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$4; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$4/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$4) &
 }
 
 #alias functions
@@ -118,6 +132,9 @@ function all {
 	#partitial purge
 	rm -rf $WEBDATA/*
 	rm -rf $WEBCONF/*
+	rm -rf /tmp/meshviewer*
+	cp -r /opt/hopglass/meshviewer /tmp/
+	rm -rf /tmp/meshviewer/build
 	printf "$(hostname --ip-address) $(hostname)" > hosts
 	cp templates/init/prometheus.yml /etc/prometheus/prometheus.yml
 	while read l
@@ -128,12 +145,14 @@ function all {
 			basedom_nginx $l
 			group_webdir $l
 			ln -s /opt/hopglass/web/build $WEBDATA/$BASEDOM/build
-			git clone https://github.com/Moorviper/meshviewer_hwpics $WEBDATA/$BASEDOM/meshviewer_hwpics
+#			git clone https://github.com/Moorviper/meshviewer_hwpics $WEBDATA/$BASEDOM/meshviewer_hwpics
+			git clone https://github.com/Adorfer/meshviewer_hwpics $WEBDATA/$BASEDOM/meshviewer_hwpics
 			ln -s $WEBDATA/$BASEDOM/meshviewer_hwpics/nodes $WEBDATA/$BASEDOM/nodes
 			;;
 		"instance")
 			instance_fastd $l
 			instance_hgserver $l
+			instance_yanic $l
 			instance_nginx $l
 			instance_webdir $l
 			;;

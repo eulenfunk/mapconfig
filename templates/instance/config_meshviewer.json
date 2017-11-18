@@ -1,0 +1,83 @@
+{
+  "dataPath": "data/",
+  "reverseGeocodingApi": "https://regensburg.freifunk.net/geocoding/reverse",
+  "siteName": "NAME",
+  "mapSigmaScale": 0.5,
+  "maxAge": 14,
+  "showContact": true,  
+  "mapLayers": [
+    { "name": "CartoDB",
+      "url": "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+      "config": {
+        "maxZoom": 20,
+        "attribution": "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors | &copy; <a href=\"https://carto.com/attribution\">CARTO</a>"
+      }
+    },
+    { "name": "OSM Standard",
+      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "config": {
+        "type": "osm", 
+        "attribution": "<a target=\"_blank\" href=\"http://www.openstreetmap.org/\">Karte hergestellt aus OpenStreetMap-Daten</a> | <a rel=\"license\" target=\"_blank\" href=\"http://opendatacommons.org/licenses/odbl/\">Open Database License (ODbL)</a>",  
+        "maxZoom": 19  
+      }
+    },
+    { "name": "OSM deutscher Stil",
+      "url": "http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png",  
+      "config": {
+        "type": "osm",
+        "attribution": "<a target=\"_blank\" href=\"http://www.openstreetmap.org/\">Karte hergestellt aus OpenStreetMap-Daten</a> | <a rel=\"license\" target=\"_blank\" href=\"http://opendatacommons.org/licenses/odbl/\">Open Database License (ODbL)</a>",  
+        "maxZoom": 18
+      }
+    },
+    {
+      "name": "Luftbilder NRW",
+      "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop20?",
+      "config": {
+        "maxZoom": 20,
+        "attribution": "<a href=\"http://www.bezreg-koeln.nrw.de/brk_internet/geobasis/luftbilderzeugnisse/digitale_orthophotos/index.html\">DOP20</a>, Land NRW (2017), Datenlizenz Deutschland - Namensnennung - Version 2.0 (<a href=\"https://www.govdata.de/dl-de/by-2-0\">www.govdata.de/dl-de/by-2-0</a>)",
+        "format": "image/jpeg",
+        "layers": "nw_dop20"
+      }
+    }
+  ],
+  "nodeInfos": [
+    { "href": "https://BASEDOM/stats/dashboard/db/node-byid?var-nodeid={NODE_ID}",
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=1&theme=light&width=600&height=300&var-nodeid={NODE_ID}"
+    },  
+    { "href": "https://BASEDOM/stats/dashboard/db/node-byid?var-nodeid={NODE_ID}",
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=2&theme=light&width=600&height=500&var-nodeid={NODE_ID}"
+    },  
+    { "href": "https://BASEDOM/stats/dashboard/db/node-byid?var-nodeid={NODE_ID}",  
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/node-byid?panelId=3&theme=light&width=600&height=200&var-nodeid={NODE_ID}"
+    }
+  ],
+  "globalInfos": [
+    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=SITE",
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=1&&theme=light&width=800&height=600&var-job=SITE"
+    },
+    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=SITE",
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=8&&theme=light&width=800&height=600&var-job=SITE"
+    }
+  ],
+  "linkInfos": [
+    { "href": "https://BASEDOM/stats/dashboard/db/links?var-source={SOURCE_ID}&var-target={TARGET_ID}",
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/links?panelId=1&&theme=light&width=800&height=600&var-source={SOURCE_ID}&var-target={TARGET_ID}"
+    }
+  ],
+  "fixedCenter": [
+    [
+      51.123350825,
+      6.975631714
+    ],
+    [
+      50.880076982,
+      7.253723145
+    ]
+  ],
+  "siteNames": [
+    {
+      "site": "SITE",
+      "name": "NAME"
+    }
+  ]
+}
