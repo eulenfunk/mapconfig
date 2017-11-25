@@ -22,7 +22,9 @@ function instance_yanic {
 	replace /etc/yanic/$3.conf PORT $5
 	mkdir -p /home/yanic/$3
 	chown yanic /home/yanic/$3
-	#systemctl start yanic@$3
+	mkdir -p /tmp/yanic/$3
+	chown yanic /tmp/yanic/$3
+	systemctl restart yanic@$3
 }
 
 function instance_hgserver {
@@ -55,7 +57,7 @@ function instance_webdir {
 	replace $WEBDATA/$4 NAME "${2//_/\ }"
 	replace $WEBDATA/$4 SITE $3
 
-	(sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$3}"; cp templates/instance/config_meshviewer.json /tmp/meshviewer-$3/config.json; replace /tmp/meshviewer-$3/config.json NAME "${2//_/\ }";	replace /tmp/meshviewer-$3/config.json SITE $3;	replace /tmp/meshviewer-$3/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$3; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$3/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$3) &
+	# (sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$3}"; cp templates/instance/config_meshviewer.json /tmp/meshviewer-$3/config.json; replace /tmp/meshviewer-$3/config.json NAME "${2//_/\ }";	replace /tmp/meshviewer-$3/config.json SITE $3;	replace /tmp/meshviewer-$3/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$3; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$3/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$3) &
 }
 
 #group functions
@@ -84,7 +86,7 @@ function group_webdir {
 	replace $WEBDATA/$4 DATASOURCES "$DATASOURCES"
 	replace $WEBDATA/$4 SITE ${3//,/\\&var-job=}
 
-	(sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$4}"; cp templates/group/config_meshviewer.json /tmp/meshviewer-$4/config.json; replace /tmp/meshviewer-$4/config.json NAME "${2//_/\ }"; replace /tmp/meshviewer-$4/config.json SITE ${3//,/\\&var-job=}; replace /tmp/meshviewer-$4/config.json DATASOURCES "$DATASOURCES"; replace /tmp/meshviewer-$4/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$4; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$4/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$4) &
+	# (sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$4}"; cp templates/group/config_meshviewer.json /tmp/meshviewer-$4/config.json; replace /tmp/meshviewer-$4/config.json NAME "${2//_/\ }"; replace /tmp/meshviewer-$4/config.json SITE ${3//,/\\&var-job=}; replace /tmp/meshviewer-$4/config.json DATASOURCES "$DATASOURCES"; replace /tmp/meshviewer-$4/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$4; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$4/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$4) &
 }
 
 #alias functions
