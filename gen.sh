@@ -40,7 +40,7 @@ function instance_hgserver {
 	cd $HOME
 	mkdir -p /var/local/hopglass-server/$3
 	#systemctl enable hopglass-server@$3
-	#systemctl restart hopglass-server@$3
+	systemctl restart hopglass-server@$3
 }
 
 function instance_nginx {
@@ -154,7 +154,7 @@ function all {
 		"instance")
 			instance_fastd $l
 			instance_hgserver $l
-			instance_yanic $l
+			#instance_yanic $l
 			instance_nginx $l
 			instance_webdir $l
 			;;
