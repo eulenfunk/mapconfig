@@ -61,7 +61,7 @@ instance Neanderfunk_(Mettmann) nefmet met.karte.neanderfunk.de 8092 1364 # 1 13
 instance Neanderfunk_(Monheim) nefmon mon.karte.neanderfunk.de 8093 1364 # 1 120 400
 instance Neanderfunk_(Erkrath) neferk erk.karte.neanderfunk.de 8081 1364 # 1 20 70
 instance Neanderfunk_(Ratingen) nefrat rat.karte.neanderfunk.de 8094 1364 # 1 150 2000
-instance Neanderfunk_(Velbert) nefvel vel.karte.neanderfunk.de 8095 1364 # 1 80 500
+instance Neanderfunk_(Velbert) nefvel vel.karte.neanderfunk.de 8095 1364 # 1 120 500
 instance Neanderfunk_(Wülfrath) nefwlf wlf.karte.neanderfunk.de 8096 1364 # 1 80 200
 instance Eulenfunk_(LVR) neflvr lvr.map.eulenfunk.de 8114 1364 # 1 25 80
 alias karte.fflvr.de lvr.map.eulenfunk.de
@@ -84,4 +84,4 @@ instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 1 100 400
 alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
 instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 1 550 2000
 alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
-instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 3 120 500
+instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 5 120 500
