@@ -33,7 +33,7 @@ basedom Eulenfunk dus,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,bgl,lln,ode,bcd,rrh,nef
 #Fichtenfunk
 group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr alle.freifunk-mk.de
 instance Fichtenfunk_(Altena) ffal map-altena.freifunk-mk.de 8083 1280 # 1 150 800
-instance Fichtenfunk_(Hemer) ffhe map-hemer.freifunk-mk.de 8087 1406 # 1 120 500
+instance Fichtenfunk_(Hemer) ffhe map-hemer.freifunk-mk.de 8087 1406 # 1 170 600
 instance Fichtenfunk_(Iserlohn) ffis map.freifunk-iserlohn.de 8082 1280 # 1 250 1000
 instance Fichtenfunk_(Lüdenscheid) ffls map-luedenscheid.freifunk-mk.de 8097 1406 # 1 250 1000
 instance Fichtenfunk_(Märkischer_Kreis) ffmk mk.map.eulenfunk.de 8100 1406 # 1 190 550
@@ -55,8 +55,8 @@ alias map.freifunk-leichlingen.net lln.map.ffgl.eu
 group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,neflvr karte.neanderfunk.de
 instance Neanderfunk_(Haan) nefhan han.karte.neanderfunk.de 8088 1364 # 1 70 150
 instance Neanderfunk_(Heiligenhaus) nefhlg hlg.karte.neanderfunk.de 8090 1364 # 1 40 150
-instance Neanderfunk_(Hilden) nefhld hld.karte.neanderfunk.de 8089 1364 # 1 45 500
-instance Neanderfunk_(Langenfeld) neflgf lgf.karte.neanderfunk.de 8091 1364 # 1 7 20
+instance Neanderfunk_(Hilden) nefhld hld.karte.neanderfunk.de 8089 1364 # 1 80 600
+instance Neanderfunk_(Langenfeld) neflgf lgf.karte.neanderfunk.de 8091 1364 # 1 30 100
 instance Neanderfunk_(Mettmann) nefmet met.karte.neanderfunk.de 8092 1364 # 1 130 500
 instance Neanderfunk_(Monheim) nefmon mon.karte.neanderfunk.de 8093 1364 # 1 120 400
 instance Neanderfunk_(Erkrath) neferk erk.karte.neanderfunk.de 8081 1364 # 1 20 70
@@ -68,7 +68,7 @@ alias karte.fflvr.de lvr.map.eulenfunk.de
 
 #Siegerland
 group Siegerland sifb,sihb,sisi siegerland.map.eulenfunk.de
-instance Siegerland_(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406 # 1 90 2000
+instance Siegerland_(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406 # 1 90 600
 instance Siegerland_(Hilchenbach) sihb hilchenbach.map.eulenfunk.de 8099 1406 # 1 130 2000
 instance Siegerland_(Siegen) sisi siegen.map.eulenfunk.de 8107 1406 # 1 300 2000
 
@@ -80,7 +80,7 @@ alias map.ffdus.de karte.ffdus.de
 instance Freifunk_Gelsenkirchen gek gek.map.eulenfunk.de 8104 1364 # 1 10 50
 alias map.gek.wupper.freifunk-rheinland.net gek.map.eulenfunk.de 
 instance Freifunk_Duesseldorf ddorf ddorf.map.eulenfunk.de 8112 1364 # 2 450 2000
-instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 1 100 400
+instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 1 100 200
 alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
 instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 1 550 2000
 alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
