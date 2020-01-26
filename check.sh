@@ -5,7 +5,7 @@ function check_service {
 	result=$(systemctl status --no-pager $1 | grep -o -e failed -e inactive -e active)
 	num=0
 	if [ "$result" == "active" ] ; then num=1; fi
-	printf "$num;0.1:1;0:1 "
+	printf "$num;0.1:2;0:2 "
 	echo status=$result
 }
 
