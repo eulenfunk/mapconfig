@@ -16,6 +16,28 @@ function instance_fastd {
 	#systemctl restart fastd@$3
 }
 
+#$l = TYPE NAME SITE URI PORT MTU
+#      name         - Bezeichnung, die auf der Map angezeigt wird
+#      sitecode     - Eindeutiger Code der Instanz
+#      fqdn         - Domainname, unter dem die Map erreichbar sein soll
+#      port         - IP-Port auf dem der interne Hopglass-Server für diese Domain antwortet
+#      mtu          - fastd-MTU der Domäne
+#      fastd.conf   - Additionelle erste Zeile für die Fastd-config (bind...)
+#      batgws       - exakte Anzahl der Fastd-Gatways (Alarmwert check_mk)
+#      batnodes     - maximale Anzahl der Batman-Knoten (Crit-wert check_mk, Warn 80%)
+#      batclients   - maximale Anzahl der Batman-Clients (Crit-wert für check_mk, Warn 80%)
+function instance_l2tp {
+	rm -rf /etc/l2tp/$3
+	BROKERS="$(cat /etc/fastd/peers/$3/* | \
+		tr "\n" "#" | \
+		sed -e 's/^/-b /g' -e 's/#$//g' -e 's/#/ -b /g')"
+	echo "BROKERS=\"$BROKERS\"" > /etc/l2tp/$3
+	echo "MTU=$6" >> /etc/l2tp/$3
+	echo "UUID=$(cat /etc/machine-id)" >> /etc/l2tp/$3
+	systemctl enable tunneldigger@$3
+	#systemctl restart tunneldigger@$3
+}
+
 function instance_yanic {
 	cp templates/instance/yanic.conf /etc/yanic/$3.conf
 	replace /etc/yanic/$3.conf SITE $3
@@ -118,9 +140,17 @@ function init {
 	fastd --generate-key > secret.conf
 	sed -e 's/Secret: /secret "/g' -e 's/$/";/g' -e 's/Public: /#public "/g' -i secret.conf
 	chmod 700 secret.conf
-	cp $HOME/templates/init/batup.sh .
-	chmod +x batup.sh
+
+	# networking scripts
+	mkdir -p /usr/local/bin
+	cd /usr/local/bin
+	cp $HOME/templates/init/batup .
+	chmod +x batup
 	cd $HOME
+
+	# service files
+	cp $HOME/templates/init/tunneldigger@.service /etc/systemd/system/
+	systemctl daemon-reload
 
 	#nginx
 	mv /etc/nginx{,.bak}
@@ -155,6 +185,12 @@ function all {
 			instance_fastd $l
 			instance_hgserver $l
 			#instance_yanic $l
+			instance_nginx $l
+			instance_webdir $l
+			;;
+		"instancel2tp")
+			instance_l2tp $l
+			instance_hgserver $l
 			instance_nginx $l
 			instance_webdir $l
 			;;

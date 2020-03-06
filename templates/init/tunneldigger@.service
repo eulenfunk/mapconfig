@@ -1,0 +1,11 @@
+[Unit]
+Description=Tunneldigger (connection %I)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env tunneldigger -i %I -u $UUID -s /usr/local/bin/batup $BROKERS
+EnvironmentFile=/etc/l2tp/test1vel
+
+[Install]
+WantedBy=multi-user.target

@@ -66,6 +66,8 @@ instance Neanderfunk_(Wülfrath) nefwlf wlf.karte.neanderfunk.de 8096 1364 # 1 8
 instance Eulenfunk_(LVR) neflvr lvr.map.eulenfunk.de 8114 1364 # 1 25 80
 alias karte.fflvr.de lvr.map.eulenfunk.de
 
+instancel2tp Neanderfunk_(Velbert)_(L2TP) nefveltest1 nefveltest1.map.eulenfunk.de 8105 1364 # 1 120 500
+
 #Siegerland
 group Siegerland sifb,sihb,sisi siegerland.map.eulenfunk.de
 instance Siegerland_(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406 # 1 90 600
