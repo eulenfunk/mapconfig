@@ -13,7 +13,7 @@ function instance_fastd {
 	replace /etc/fastd/$3 MTU $6
 	replace /etc/fastd/$3 BIND "${7//_/\ }"
 	#systemctl enable fastd@$3
-	#systemctl restart fastd@$3
+	systemctl restart fastd@$3
 }
 
 #$l = TYPE NAME SITE URI PORT MTU
