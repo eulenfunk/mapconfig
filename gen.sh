@@ -7,6 +7,7 @@ function replace {
 #instance functions
 
 function instance_fastd {
+        echo instance_fastd $3
 	rm -rf /etc/fastd/$3
 	cp -r templates/instance/fastd /etc/fastd/$3
 	replace /etc/fastd/$3 SITE $3
@@ -27,6 +28,7 @@ function instance_fastd {
 #      batnodes     - maximale Anzahl der Batman-Knoten (Crit-wert check_mk, Warn 80%)
 #      batclients   - maximale Anzahl der Batman-Clients (Crit-wert für check_mk, Warn 80%)
 function instance_l2tp {
+        echo instance_l2tp $3
 	rm -rf /etc/l2tp/$3
 	BROKERS="$(cat /etc/fastd/peers/$3/* | \
 		tr "\n" "#" | \
@@ -34,6 +36,7 @@ function instance_l2tp {
 	echo "BROKERS=\"$BROKERS\"" > /etc/l2tp/$3
 	echo "MTU=$6" >> /etc/l2tp/$3
 	echo "UUID=$(cat /etc/machine-id)" >> /etc/l2tp/$3
+	cp templates/init/tunneldigger\@.service /etc/systemd/system/tunneldigger\@.service
 	systemctl enable tunneldigger@$3
 	#systemctl restart tunneldigger@$3
 }
@@ -191,6 +194,7 @@ function all {
 		"instancel2tp")
 			instance_l2tp $l
 			instance_hgserver $l
+			#instance_yanic $l
 			instance_nginx $l
 			instance_webdir $l
 			;;

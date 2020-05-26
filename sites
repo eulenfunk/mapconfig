@@ -67,7 +67,7 @@ instance Eulenfunk_(LVR) neflvr lvr.map.eulenfunk.de 8114 1364 # 1 25 80
 alias karte.fflvr.de lvr.map.eulenfunk.de
 
 #instancel2tp Neanderfunk_(Velbert)_(L2TP) nefveltest1 nefveltest1.map.eulenfunk.de 8115 1364 # 1 120 500
-instancel2tp Neanderfunk_(Mettmann)_(L2TP) nefmetl2tp nefmetl2tp.map.eulenfunk.de 8116 1364 # 1 120 500
+instancel2tp Neanderfunk_(Mettmann)_(L2TP) nefmetl2tp nefmetl2tp.karte.neanderfunk.de 8116 1364 # 1 120 500
 
 #Siegerland
 group Siegerland sifb,sihb,sisi siegerland.map.eulenfunk.de
