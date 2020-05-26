@@ -52,7 +52,7 @@ alias map.leichlingen.freifunk.net lln.map.ffgl.eu
 alias map.freifunk-leichlingen.net lln.map.ffgl.eu
 
 #Neanderfunk
-group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,neflvr karte.neanderfunk.de
+group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,neflvr,nefhanl2tp,nefhlgl2tp,nefhldl2tp,neflgfl2tp,nefmetl2tp,nefmonl2tp,neferkl2tp,nefratl2tp,nefvell2tp,nefwlfl2tp,neflvr karte.neanderfunk.de
 instance Neanderfunk_(Haan) nefhan han.karte.neanderfunk.de 8088 1364 # 1 70 150
 instance Neanderfunk_(Heiligenhaus) nefhlg hlg.karte.neanderfunk.de 8090 1364 # 1 40 150
 instance Neanderfunk_(Hilden) nefhld hld.karte.neanderfunk.de 8089 1364 # 1 80 600
@@ -66,8 +66,17 @@ instance Neanderfunk_(Wülfrath) nefwlf wlf.karte.neanderfunk.de 8096 1364 # 1 8
 instance Eulenfunk_(LVR) neflvr lvr.map.eulenfunk.de 8114 1364 # 1 25 80
 alias karte.fflvr.de lvr.map.eulenfunk.de
 
-#instancel2tp Neanderfunk_(Velbert)_(L2TP) nefveltest1 nefveltest1.map.eulenfunk.de 8115 1364 # 1 120 500
-instancel2tp Neanderfunk_(Mettmann)_(L2TP) nefmetl2tp nefmetl2tp.karte.neanderfunk.de 8116 1364 # 1 120 500
+instancel2tp Neanderfunk_(Haan)_(L2TP) nefhanl2tp nefhanl2tp.karte.neanderfunk.de 8115 1364 # 1 120 500
+instancel2tp Neanderfunk_(Heiligenhaus)_(L2TP) nefhlgl2tp nefhlgl2tp.karte.neanderfunk.de 8116 1364 # 1 120 500
+instancel2tp Neanderfunk_(Hilden)_(L2TP) nefhldl2tp nefhldl2tp.karte.neanderfunk.de 8117 1364 # 1 120 500
+instancel2tp Neanderfunk_(Langenfeld)_(L2TP) neflgfl2tp neflgfl2tp.karte.neanderfunk.de 8118 1364 # 1 120 500
+instancel2tp Neanderfunk_(Mettmann)_(L2TP) nefmetl2tp nefmetl2tp.karte.neanderfunk.de 8119 1364 # 1 120 500
+instancel2tp Neanderfunk_(Monheim)_(L2TP) nefmonl2tp nefmonl2tp.karte.neanderfunk.de 8120 1364 # 1 120 500
+instancel2tp Neanderfunk_(Erkrath)_(L2TP) neferkl2tp neferkl2tp.karte.neanderfunk.de 8121 1364 # 1 120 500
+instancel2tp Neanderfunk_(Ratingen)_(L2TP) nefratl2tp nefratl2tp.karte.neanderfunk.de 8122 1364 # 1 120 500
+instancel2tp Neanderfunk_(Velbert)_(L2TP) nefvell2tp nefvell2tp.karte.neanderfunk.de 8123 1364 # 1 120 500
+instancel2tp Neanderfunk_(Wülfrath)_(L2TP) nefwlfl2tp nefwlfl2tp.karte.neanderfunk.de 8124 1364 # 1 120 500
+instancel2tp Eulenfunk_(LVR)_(L2TP) neflvrl2tp neflvrl2tp.karte.neanderfunk.de 8125 1364 # 1 120 500
 
 #Siegerland
 group Siegerland sifb,sihb,sisi siegerland.map.eulenfunk.de
