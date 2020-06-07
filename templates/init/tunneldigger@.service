@@ -4,9 +4,16 @@ After=network.target
 
 [Service]
 Type=simple
+#ExecStartPre=/usr/local/bin/warten
+#ExecStartPre=/bin/sleep 20
+#ExecStartPre=ping -c 15 8.8.8.8
 #ExecStart=/usr/bin/env tunneldigger -i %I -u $UUID -s /usr/local/bin/batup $BROKERS
-ExecStart=/usr/bin/env tunneldigger -i %I -u %I-eulenmap -s /usr/local/bin/batup $BROKERS
+ExecStart=/usr/bin/env tunneldigger -i %I -u %I-eulenmap -t $ID -s /usr/local/bin/batup $BROKERS
 EnvironmentFile=/etc/l2tp/%I
+
+RemainAfterExit=no
+Restart=on-failure
+RestartSec=30s
 
 [Install]
 WantedBy=multi-user.target

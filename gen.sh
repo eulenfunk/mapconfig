@@ -34,11 +34,12 @@ function instance_l2tp {
 		tr "\n" "#" | \
 		sed -e 's/^/-b /g' -e 's/#$//g' -e 's/#/ -b /g')"
 	echo "BROKERS=\"$BROKERS\"" > /etc/l2tp/$3
+	echo "ID=$5" >> /etc/l2tp/$3
 	echo "MTU=$6" >> /etc/l2tp/$3
 	echo "UUID=$(cat /etc/machine-id)" >> /etc/l2tp/$3
 	cp templates/init/tunneldigger\@.service /etc/systemd/system/tunneldigger\@.service
 	systemctl enable tunneldigger@$3
-	#systemctl restart tunneldigger@$3
+	systemctl restart tunneldigger@$3
 }
 
 function instance_yanic {
@@ -149,6 +150,8 @@ function init {
 	cd /usr/local/bin
 	cp $HOME/templates/init/batup .
 	chmod +x batup
+	cp $HOME/templates/init/delay.sh .
+	chmod +x delay.sh
 	cd $HOME
 
 	# service files
