@@ -1,0 +1,127 @@
+{
+  "02be4adeff00": {
+    "firstseen": "2016-01-01T00:00:00.000Z",
+    "nodeinfo": {
+      "node_id": "02be4adeff00",
+      "owner": {
+        "contact": "Freifunk Server rade0"
+      },
+      "network": {
+        "mac":	"02:be:4a:de:ff:00",
+        "mesh_interfaces": [
+          "02:be:4a:de:ff:00"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "fastd": [
+                "02:be:4a:de:ff:00"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "rade0"
+    }
+  },
+	"02be4adeff30": {
+    "firstseen": "2016-01-01T00:00:00.000Z",
+    "nodeinfo": {
+      "node_id": "02be4adeff30",
+      "owner": {
+        "contact": "Freifunk Server rade3"
+      },
+      "network": {
+        "mac":	"02:be:4a:de:ff:30",
+        "mesh_interfaces": [
+          "02:be:4a:de:ff:30"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "fastd": [
+                "02:be:4a:de:ff:30"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "rade3"
+    }
+  },
+	"02be4adeff40": {
+    "firstseen": "2016-01-01T00:00:00.000Z",
+    "nodeinfo": {
+      "node_id": "02be4adeff40",
+      "owner": {
+        "contact": "Freifunk Server rade4"
+      },
+      "network": {
+        "mac":	"02:be:4a:de:ff:40",
+        "mesh_interfaces": [
+          "02:be:4a:de:ff:30"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "fastd": [
+                "02:be:4a:de:ff:40"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "rade4"
+    }
+  },
+	"02be4adeff50": {
+    "firstseen": "2016-01-01T00:00:00.000Z",
+    "nodeinfo": {
+      "node_id": "02be4adeff50",
+      "owner": {
+        "contact": "Freifunk Server rade5"
+      },
+      "network": {
+        "mac":	"02:be:4a:de:ff:50",
+        "mesh_interfaces": [
+          "02:be:4a:de:ff:50"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "fastd": [
+                "02:be:4a:de:ff:50"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "rade5"
+    }
+  },
+	"04be4adefe60": {
+    "firstseen": "2016-01-01T00:00:00.000Z",
+    "nodeinfo": {
+      "node_id": "04be4adefe60",
+      "owner": {
+        "contact": "Freifunk Server wupper6"
+      },
+      "network": {
+        "mac":	"04:be:4a:de:fe:60",
+        "mesh_interfaces": [
+          "04:be:4a:de:fe:60"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "fastd": [
+                "04:be:4a:de:fe:60"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "wupper6"
+    }
+  }
+}
