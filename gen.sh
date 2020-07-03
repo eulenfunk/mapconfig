@@ -30,7 +30,7 @@ function instance_fastd {
 function instance_l2tp {
         echo instance_l2tp $3
 	rm -rf /etc/l2tp/$3
-	BROKERS="$(cat /etc/fastd/peers/$3/* | \
+	BROKERS="$(cat $(ls /etc/fastd/peers/$3/*|grep -v '~') | \
 		tr "\n" "#" | \
 		sed -e 's/^/-b /g' -e 's/#$//g' -e 's/#/ -b /g')"
 	echo "BROKERS=\"$BROKERS\"" > /etc/l2tp/$3
