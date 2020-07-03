@@ -77,8 +77,17 @@ instancel2tp Neanderfunk_(Ratingen)_(L2TP) nefratl2tp nefratl2tp.karte.neanderfu
 instancel2tp Neanderfunk_(Velbert)_(L2TP) nefvell2tp nefvell2tp.karte.neanderfunk.de 8123 1364 # 1 120 500
 instancel2tp Neanderfunk_(Wülfrath)_(L2TP) nefwlfl2tp nefwlfl2tp.karte.neanderfunk.de 8124 1364 # 1 120 500
 instancel2tp Eulenfunk_(LVR)_(L2TP) neflvrl2tp neflvrl2tp.karte.neanderfunk.de 8125 1364 # 1 120 500
-instancel2tp 13_dusfl 13dusfl 13dusfl.karte.neanderfunk.de 8126 1364 # 1 120 500
+instancel2tp Düsseldorf-Unterkünfte 12dusuk dusuk12.karte.neanderfunk.de 8126 1364 # 1 120 500
+instancel2tp Düsseldorf-Flingern 13dusfl dusfl13.karte.neanderfunk.de 8127 1364 # 1 120 500
+instancel2tp Wuppertal-Barmen 14wupbar wupbar14.karte.neanderfunk.de 8128 1364 # 1 120 500
+instancel2tp Marienheide 15mrh mrh15.karte.neanderfunk.de 8129 1364 # 1 120 500
+instancel2tp Gummersbach 16gmb gmb16.karte.neanderfunk.de 8130 1364 # 1 120 500
+instancel2tp Wipperfürth 17wip wip17.karte.neanderfunk.de 8131 1364 # 1 120 500
 
+#Flingern-Grouping
+instance Freifunk_Flingern dus olddus.karte.neanderfunk.de 8080 1364 bind_any:10010_default\\; 2 400 2000
+group Flingern dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip karte.ffdus.de
+alias map.ffdus.de karte.ffdus.de
 
 #Siegerland
 group Siegerland sifb,sihb,sisi siegerland.map.eulenfunk.de
@@ -86,10 +95,6 @@ instance Siegerland_(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406 # 
 instance Siegerland_(Hilchenbach) sihb hilchenbach.map.eulenfunk.de 8099 1406 # 1 130 2000
 instance Siegerland_(Siegen) sisi siegen.map.eulenfunk.de 8107 1406 # 1 300 2000
 
-#Einzelgänger
-instance Freifunk_Flingern dus karte.ffdus.de 8080 1364 bind_any:10010_default\\; 2 400 2000
-alias map.ffdus.de karte.ffdus.de
-group Flingern dus,13dusfl flingern.karte.neanderfunk.de
 
 #Nicht Eulenfunk
 instance Freifunk_Gelsenkirchen gek gek.map.eulenfunk.de 8104 1364 # 1 10 50
