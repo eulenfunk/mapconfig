@@ -1,0 +1,82 @@
+{
+   "000c29b88561": {
+    "firstseen": "2016-02-02T17:49:18.252Z",
+    "nodeinfo": {
+      "owner": {
+        "contact": "adorfer@nadeshda.org"
+      },
+      "node_id": "000c29b88561",
+      "network": {
+        "mac": "00:0c:29:b8:85:61",
+        "mesh_interfaces": [
+          "00:0c:29:b8:85:61"
+        ],
+        "addresses": [
+          "fda0:747e:ab29:9375:a882:93ff:fe87:217e",
+          "fe80::ac98:fdff:feaa:f511",
+          "10.155.0.99"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "other": [
+                "00:0c:29:b8:85:61"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "horst",
+      "software": {
+        "firmware": {
+          "base": "arch",
+          "release": "rolling"
+        }
+      }
+    },
+    "neighbours": {
+      "batadv": {
+        "00:0c:29:b8:85:61": {}
+      }
+    }
+  },
+   "02a5a799a213": {
+    "firstseen": "2015-02-02T17:49:18.252Z",
+    "nodeinfo": {
+      "owner": {
+        "contact": "ad@ffdus.de"
+      },
+      "node_id": "02a5a799a213",
+      "network": {
+        "mac": "02:a5:a7:99:a2:13",
+        "mesh_interfaces": [
+          "02:a5:a7:99:a2:13"
+        ],
+        "addresses": [
+          "fe80::ac98:fdff:feaa:f511"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "other": [
+                "02:a5:a7:99:a2:13"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "eulenmap",
+      "software": {
+        "firmware": {
+          "base": "ubuntu",
+          "release": "18.04LTS"
+        }
+      }
+    },
+    "neighbours": {
+      "batadv": {
+        "02:ca:ff:ee:13:03": {}
+      }
+    }
+  }
+}
