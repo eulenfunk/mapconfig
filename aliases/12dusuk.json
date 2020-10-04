@@ -1,0 +1,41 @@
+{
+   "02a5a799a213": {
+    "firstseen": "2015-02-02T17:49:18.252Z",
+    "nodeinfo": {
+      "owner": {
+        "contact": "ad@ffdus.de"
+      },
+      "node_id": "02a5a799a213",
+      "network": {
+        "mac": "02:a5:a7:99:a2:13",
+        "mesh_interfaces": [
+          "02:a5:a7:99:a2:13"
+        ],
+        "addresses": [
+          "fe80::ac98:fdff:feaa:f251"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "other": [
+                "02:a5:a7:99:a2:13"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "eulenmap",
+      "software": {
+        "firmware": {
+          "base": "ubuntu",
+          "release": "18.04LTS"
+        }
+      }
+    },
+    "neighbours": {
+      "batadv": {
+        "02:ca:ff:ee:12:03": {}
+      }
+    }
+  }
+}
