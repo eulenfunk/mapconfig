@@ -27,7 +27,7 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,bgl,lln,ode,bcd,rrh,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,neflvr,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,sifb,sihb,sisi map.eulenfunk.de
+basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,bgl,lln,ode,bcd,rrh,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,sifb,sihb,sisi map.eulenfunk.de
 #basedom Eulenfunk dus,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb,sisi map.eulenfunk.de
 
 #Fichtenfunk
@@ -52,8 +52,7 @@ alias map.leichlingen.freifunk.net lln.map.ffgl.eu
 alias map.freifunk-leichlingen.net lln.map.ffgl.eu
 
 #Neanderfunk
-group Neanderfunk nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,neflvr,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr karte.neanderfunk.de
-alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
+group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr karte.neanderfunk.de
 instancel2tp Neanderfunk_(Haan)_(Domain_06) nef06han nef06han.karte.neanderfunk.de 8115 1364 # 1 120 500
 instancel2tp Neanderfunk_(Heiligenhaus)_(Domain_08) nef08hlg nef08hlg.karte.neanderfunk.de 8116 1364 # 1 120 500
 instancel2tp Neanderfunk_(Hilden)_(Domain_04) nef04hld nef04hld.karte.neanderfunk.de 8117 1364 # 1 120 500
@@ -71,6 +70,7 @@ instancel2tp Wuppertal-Barmen 14wupbar wupbar14.karte.neanderfunk.de 8128 1364 #
 instancel2tp Marienheide 15mrh mrh15.karte.neanderfunk.de 8129 1364 # 1 120 500
 instancel2tp Gummersbach 16gmb gmb16.karte.neanderfunk.de 8130 1364 # 1 120 500
 instancel2tp Wipperfürth 17wip wip17.karte.neanderfunk.de 8131 1364 # 1 120 500
+alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
 
 #Flingern-Grouping
 instance Freifunk_Flingern dus olddus.map.ffdus.de 8080 1364 bind_any:10010_default\\; 2 400 2000
