@@ -30,6 +30,14 @@
 basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,sifb,sihb,sisi map.eulenfunk.de
 #basedom Eulenfunk dus,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb,sisi map.eulenfunk.de
 
+#Nicht Eulenfunk
+instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 1 50 100
+alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
+instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 1 300 1000
+alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
+instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 3 180 500
+
+
 #Fichtenfunk
 group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr alle.freifunk-mk.de
 instance Fichtenfunk_(Altena) ffal map-altena.freifunk-mk.de 8083 1280 # 1 150 800
@@ -50,10 +58,11 @@ alias map.freifunk-bergischgladbach.de bgl.map.ffgl.eu
 alias map.leichlingen.freifunk.net lln.map.ffgl.eu
 alias map.freifunk-leichlingen.net lln.map.ffgl.eu
 
+
 #Neanderfunk
 group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr karte.neanderfunk.de
 instancel2tp Neanderfunk_(Haan)_(Domain_06) nef06han nef06han.karte.neanderfunk.de 8115 1364 # 1 120 500
-instancel2tp Neanderfunk_(Heiligenhaus)_(Domain_08) nef08hlg nef08hlg.karte.neanderfunk.de 8116 1364 # 1 120 500
+instancel2tp Neanderfunk_(Heiligenhaus)_(Domain_08) nef08hlg nef08hlg.karte.neanderfunk.de 8116 1364 # 1 120 200
 instancel2tp Neanderfunk_(Hilden)_(Domain_04) nef04hld nef04hld.karte.neanderfunk.de 8117 1364 # 1 120 500
 instancel2tp Neanderfunk_(Langenfeld)_(Domain_09) nef09lgf nef09lgf.karte.neanderfunk.de 8118 1364 # 1 50 200
 instancel2tp Neanderfunk_(Mettmann)_(Domain_02) nef02met nef02met.karte.neanderfunk.de 8119 1364 # 1 120 500
@@ -62,13 +71,13 @@ instancel2tp Neanderfunk_(Erkrath)_(Domain_07) nef07erk nef07erk.karte.neanderfu
 instancel2tp Neanderfunk_(Ratingen)_(Domain_03) nef03rat nef03rat.karte.neanderfunk.de 8122 1364 # 1 120 500
 instancel2tp Neanderfunk_(Velbert)_(Domain_01) nef01vel nef01vel.karte.neanderfunk.de 8123 1364 # 1 120 500
 instancel2tp Neanderfunk_(Wülfrath)_(Domain_10) nef10wlf nef10wlf.karte.neanderfunk.de 8124 1364 # 1 120 500
-instancel2tp Eulenfunk_(LVR)_(Domain_11) nef11lvr nef11lvr.karte.neanderfunk.de 8125 1364 # 1 120 500
+instancel2tp Eulenfunk_(LVR)_(Domain_11) nef11lvr nef11lvr.karte.neanderfunk.de 8125 1364 # 1 120 300
 instancel2tp Düsseldorf-Unterkünfte 12dusuk dusuk12.map.ffdus.de 8126 1364 # 1 120 500
 instancel2tp Düsseldorf-Flingern 13dusfl dusfl13.map.ffdus.de 8127 1364 # 1 200 600
 instancel2tp Wuppertal-Barmen 14wupbar wupbar14.karte.neanderfunk.de 8128 1364 # 1 120 500
 instancel2tp Marienheide 15mrh mrh15.karte.neanderfunk.de 8129 1364 # 1 120 500
-instancel2tp Gummersbach 16gmb gmb16.karte.neanderfunk.de 8130 1364 # 1 30 500
-instancel2tp Wipperfürth 17wip wip17.karte.neanderfunk.de 8131 1364 # 1 20 500
+instancel2tp Gummersbach 16gmb gmb16.karte.neanderfunk.de 8130 1364 # 1 30 200
+instancel2tp Wipperfürth 17wip wip17.karte.neanderfunk.de 8131 1364 # 1 20 100
 #alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
 
 #Flingern-Grouping
@@ -83,9 +92,3 @@ instance Siegerland_(Hilchenbach) sihb hilchenbach.map.eulenfunk.de 8099 1406 # 
 instance Siegerland_(Siegen) sisi siegen.map.eulenfunk.de 8107 1406 # 1 400 2000
 
 
-#Nicht Eulenfunk
-instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 1 50 200
-alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
-instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 1 250 1000
-alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
-instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 3 180 500
