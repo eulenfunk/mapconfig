@@ -24,7 +24,7 @@
           }
         }
       },
-      "hostname": "eulenmap",
+      "hostname": "himalia",
       "software": {
         "firmware": {
           "base": "ubuntu",
