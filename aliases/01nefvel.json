@@ -1,0 +1,41 @@
+{
+   "02caffee0105": {
+    "firstseen": "2020-11-01T17:49:18.252Z",
+    "nodeinfo": {
+      "owner": {
+        "contact": "plaste@ffnef.de"
+      },
+      "node_id": "02caffee0105",
+      "network": {
+        "mac": "02:ca:ff:ee:01:05",
+        "mesh_interfaces": [
+          "02:ca:ff:ee:01:05"
+        ],
+        "addresses": [
+          "fe80::02ca:ffff:feee:0105"
+        ],
+        "mesh": {
+          "bat0": {
+            "interfaces": {
+              "other": [
+                "02:ca:ff:ee:01:05"
+              ]
+            }
+          }
+        }
+      },
+      "hostname": "eulenmap",
+      "software": {
+        "firmware": {
+          "base": "ubuntu",
+          "release": "18.04LTS"
+        }
+      }
+    },
+    "neighbours": {
+      "batadv": {
+        "02:a5:a7:99:a2:13": {}
+      }
+    }
+  }
+}
