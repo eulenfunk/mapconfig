@@ -1,8 +1,8 @@
 #!/bin/bash
 #   /etc/letsencrypt/live/map.eulenfunk.de-0001/fullchain.pem
 base=/etc/letsencrypt/live
-dest=ddorf.map.eulenfunk.de
-dest=map.eulenfunk.de-0005
+#base=ddorf.map.eulenfunk.de
+dest=map.eulenfunk.de-0006
  echo ln -f -s -n  $base/$dest $base/map.eulenfunk.de
  ln -f -s -n  $base/$dest $base/map.eulenfunk.de
 

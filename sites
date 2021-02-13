@@ -32,7 +32,7 @@ basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,
 
 #Nicht Eulenfunk
 instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 1 50 100
-alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
+#alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
 instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 1 300 1000
 alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
 instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 3 180 500
