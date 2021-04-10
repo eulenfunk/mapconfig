@@ -79,6 +79,20 @@ instancel2tp Wuppertal-Barmen 14wupbar wupbar14.karte.neanderfunk.de 8128 1364 #
 instancel2tp Marienheide 15mrh mrh15.karte.neanderfunk.de 8129 1364 # 1 120 500
 instancel2tp Gummersbach 16gmb gmb16.karte.neanderfunk.de 8130 1364 # 1 30 200
 instancel2tp Wipperfürth 17wip wip17.karte.neanderfunk.de 8131 1364 # 1 20 100
+instancel2tp Neanderfunk_Unterkünfte_(Domain_18) nef18uk nef18uk.karte.neanderfunk.de 8132 1364 # 1 15 75
+instancel2tp Neanderfunk_Agios_(Domain_19) nef19agi nef19agi.karte.neanderfunk.de 8133 1364 # 1 15 75
+instancel2tp Neanderfunk_Gertis_(Domain_20) nef20grt nef20grt.karte.neanderfunk.de 8134 1364 # 1 15 75
+instancel2tp Neanderfunk_Gaastria_(Domain_21) nef21gls nef21gls.karte.neanderfunk.de 8135 1364 # 1 15 75
+instancel2tp Neanderfunk_Panagia_(Domain_22) nef22png nef22png.karte.neanderfunk.de 8136 1364 # 1 15 75
+instancel2tp Neanderfunk_Atokos_(Domain_23) nef23atk nef23atk.karte.neanderfunk.de 8137 1364 # 1 15 75
+instancel2tp Neanderfunk_Kravia_(Domain_24) nef24krv nef24krv.karte.neanderfunk.de 8138 1364 # 1 15 75
+instancel2tp Neanderfunk_Pasas_(Domain_25) nef25pss nef25pss.karte.neanderfunk.de 8139 1364 # 1 15 75
+instancel2tp Neanderfunk_Vatos_(Domain_26) nef26vts nef26vts.karte.neanderfunk.de 8140 1364 # 1 15 75
+instancel2tp Neanderfunk_Gordi_(Domain_27) nef27grd nef27grd.karte.neanderfunk.de 8141 1364 # 1 15 75
+instancel2tp Neanderfunk_Platia_(Domain_28) nef28plt nef28plt.karte.neanderfunk.de 8142 1364 # 1 15 75
+instancel2tp Neanderfunk_Gavdos_(Domain_29) nef29gvd nef29gvd.karte.neanderfunk.de 8143 1364 # 1 15 75
+instancel2tp Neanderfunk_Arsidia_(Domain_30) nef30ars nef30ars.karte.neanderfunk.de 8144 1364 # 1 15 75
+
 #alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
 
 #Flingern-Grouping
