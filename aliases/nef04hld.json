@@ -3,8 +3,8 @@
     "nodeinfo": {
      "node_id": "802aa819659b",
      "location": {
-      "longitude":  "51.176014",
-      "latitude": "6.931005"
+      "longitude":  "6.931005",
+      "latitude": "51.176014"
      }
     }
    },
@@ -12,8 +12,8 @@
     "nodeinfo": {
      "node_id": "802aa8196511",
      "location": {
-      "longitude": "51.1765635363926", 
-      "latitude": "6.931531584362651"
+      "longitude": "6.931531584362651", 
+      "latitude": "51.1765635363926"
      }
     }
    }
