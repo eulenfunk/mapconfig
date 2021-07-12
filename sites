@@ -65,7 +65,7 @@ group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk
 instancel2tp Neanderfunk_(Haan)_(Domain_06) nef06han nef06han.karte.neanderfunk.de 8115 1364 # 1 120 500
 instancel2tp Neanderfunk_(Heiligenhaus)_(Domain_08) nef08hlg nef08hlg.karte.neanderfunk.de 8116 1364 # 1 120 200
 instancel2tp Neanderfunk_(Hilden)_(Domain_04) nef04hld nef04hld.karte.neanderfunk.de 8117 1364 # 1 120 500
-instancel2tp Neanderfunk_(Langenfeld)_(Domain_09) nef09lgf nef09lgf.karte.neanderfunk.de 8118 1364 # 1 50 200
+instancel2tp Neanderfunk_(Langenfeld)_(Domain_09) nef09lgf nef09lgf.karte.neanderfunk.de 8118 1364 # 1 50 80
 instancel2tp Neanderfunk_(Mettmann)_(Domain_02) nef02met nef02met.karte.neanderfunk.de 8119 1364 # 1 120 500
 instancel2tp Neanderfunk_(Monheim)_(Domain_05) nef05mon nef05mon.karte.neanderfunk.de 8120 1364 # 1 120 500
 instancel2tp Neanderfunk_(Erkrath)_(Domain_07) nef07erk nef07erk.karte.neanderfunk.de 8121 1364 # 1 100 100
@@ -75,28 +75,28 @@ instancel2tp Neanderfunk_(Wülfrath)_(Domain_10) nef10wlf nef10wlf.karte.neander
 instancel2tp Eulenfunk_(LVR)_(Domain_11) nef11lvr nef11lvr.karte.neanderfunk.de 8125 1364 # 1 120 300
 instancel2tp Düsseldorf-Unterkünfte 12dusuk dusuk12.map.ffdus.de 8126 1364 # 1 120 500
 instancel2tp Düsseldorf-Flingern 13dusfl dusfl13.map.ffdus.de 8127 1364 # 1 200 600
-instancel2tp Wuppertal-Barmen 14wupbar wupbar14.karte.neanderfunk.de 8128 1364 # 1 120 500
+instancel2tp Wuppertal-Barmen 14wupbar wupbar14.karte.neanderfunk.de 8128 1364 # 1 160 500
 instancel2tp Marienheide 15mrh mrh15.karte.neanderfunk.de 8129 1364 # 1 120 500
-instancel2tp Gummersbach 16gmb gmb16.karte.neanderfunk.de 8130 1364 # 1 30 200
+instancel2tp Gummersbach 16gmb gmb16.karte.neanderfunk.de 8130 1364 # 1 30 80
 instancel2tp Wipperfürth 17wip wip17.karte.neanderfunk.de 8131 1364 # 1 20 100
-instancel2tp Neanderfunk_Unterkünfte_(Domain_18) nef18uk nef18uk.karte.neanderfunk.de 8132 1364 # 1 15 75
-instancel2tp Neanderfunk_Agios_(Domain_19) nef19agi nef19agi.karte.neanderfunk.de 8133 1364 # 1 15 75
-instancel2tp Neanderfunk_Gertis_(Domain_20) nef20grt nef20grt.karte.neanderfunk.de 8134 1364 # 1 15 75
-instancel2tp Neanderfunk_Gaastria_(Domain_21) nef21gls nef21gls.karte.neanderfunk.de 8135 1364 # 1 15 75
-instancel2tp Neanderfunk_Panagia_(Domain_22) nef22png nef22png.karte.neanderfunk.de 8136 1364 # 1 15 75
-instancel2tp Neanderfunk_Atokos_(Domain_23) nef23atk nef23atk.karte.neanderfunk.de 8137 1364 # 1 15 75
-instancel2tp Neanderfunk_Kravia_(Domain_24) nef24krv nef24krv.karte.neanderfunk.de 8138 1364 # 1 15 75
-instancel2tp Neanderfunk_Pasas_(Domain_25) nef25pss nef25pss.karte.neanderfunk.de 8139 1364 # 1 15 75
-instancel2tp Neanderfunk_Vatos_(Domain_26) nef26vts nef26vts.karte.neanderfunk.de 8145 1364 # 1 15 75
-instancel2tp Neanderfunk_Gordi_(Domain_27) nef27grd nef27grd.karte.neanderfunk.de 8141 1364 # 1 15 75
-instancel2tp Neanderfunk_Platia_(Domain_28) nef28plt nef28plt.karte.neanderfunk.de 8142 1364 # 1 15 75
-instancel2tp Neanderfunk_Gavdos_(Domain_29) nef29gvd nef29gvd.karte.neanderfunk.de 8143 1364 # 1 15 75
-instancel2tp Neanderfunk_Arsidia_(Domain_30) nef30ars nef30ars.karte.neanderfunk.de 8144 1364 # 1 15 75
+instancel2tp Neanderfunk_Unterkünfte_(Domain_18) nef18uk nef18uk.karte.neanderfunk.de 8132 1364 # 1 15 100
+instancel2tp Neanderfunk_Agios_(Domain_19) nef19agi nef19agi.karte.neanderfunk.de 8133 1364 # 1 15 20
+instancel2tp Neanderfunk_Gertis_(Domain_20) nef20grt nef20grt.karte.neanderfunk.de 8134 1364 # 1 15 20
+instancel2tp Neanderfunk_Gaastria_(Domain_21) nef21gls nef21gls.karte.neanderfunk.de 8135 1364 # 1 15 20
+instancel2tp Neanderfunk_Panagia_(Domain_22) nef22png nef22png.karte.neanderfunk.de 8136 1364 # 1 15 20
+instancel2tp Neanderfunk_Atokos_(Domain_23) nef23atk nef23atk.karte.neanderfunk.de 8137 1364 # 1 15 20
+instancel2tp Neanderfunk_Kravia_(Domain_24) nef24krv nef24krv.karte.neanderfunk.de 8138 1364 # 1 15 20
+instancel2tp Neanderfunk_Pasas_(Domain_25) nef25pss nef25pss.karte.neanderfunk.de 8139 1364 # 1 15 20
+instancel2tp Neanderfunk_Vatos_(Domain_26) nef26vts nef26vts.karte.neanderfunk.de 8145 1364 # 1 15 20
+instancel2tp Neanderfunk_Gordi_(Domain_27) nef27grd nef27grd.karte.neanderfunk.de 8141 1364 # 1 15 20
+instancel2tp Neanderfunk_Platia_(Domain_28) nef28plt nef28plt.karte.neanderfunk.de 8142 1364 # 1 15 20
+instancel2tp Neanderfunk_Gavdos_(Domain_29) nef29gvd nef29gvd.karte.neanderfunk.de 8143 1364 # 1 15 20
+instancel2tp Neanderfunk_Arsidia_(Domain_30) nef30ars nef30ars.karte.neanderfunk.de 8144 1364 # 1 15 20
 
 #alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
 
 #Flingern-Grouping
-instance Freifunk_Flingern dus olddus.map.ffdus.de 8080 1364 bind_any:10010_default\\; 2 400 2000
+instance Freifunk_Flingern dus olddus.map.ffdus.de 8080 1364 bind_any:10010_default\\; 0 1 1
 group Flingern dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip karte.ffdus.de
 alias map.ffdus.de karte.ffdus.de
 
