@@ -96,7 +96,7 @@ instancel2tp Neanderfunk_Arsidia_(Domain_30) nef30ars nef30ars.karte.neanderfunk
 #alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
 
 #Flingern-Grouping
-instance Freifunk_Flingern dus olddus.map.ffdus.de 8080 1364 bind_any:10010_default\\; 0 1 1
+instance Freifunk_Flingern dus olddus.map.ffdus.de 8080 1364 bind_any:10010_default\\; 0 0 0
 group Flingern dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip karte.ffdus.de
 alias map.ffdus.de karte.ffdus.de
 
