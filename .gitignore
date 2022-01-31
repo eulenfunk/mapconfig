@@ -2,3 +2,6 @@ identity.sh
 hosts
 *~
 .*
+*.old
+*.2
+*.bak

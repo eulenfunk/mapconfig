@@ -8,6 +8,6 @@ hb=$(echo $hostkey|cut -b 3-4)
 ip l set dev "$2" address 02:a5:a7:99:$lb:$hb
 ip l set dev "$2" up
 modprobe batman-adv
-batctl -m "bat-$2" if add "$2"
-#netctl restart bat-$1
+batctl meshif bat-$2 interface create routing_algo BATMAN_IV
+batctl meshif bat-$2 interface -M add $2
 ip l set dev "bat-$2" up
