@@ -1,5 +1,6 @@
-# mögliiche Direktiven
+# mögliche Direktiven
 #  instance
+#  instancewgvxlan for wireguard-domains using vxlan.
 #  group
 #  basedom
 #  alias
