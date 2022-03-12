@@ -47,7 +47,13 @@ instance Fichtenfunk_(Lüdenscheid) ffls map-luedenscheid.freifunk-mk.de 8097 14
 instance Fichtenfunk_(Märkischer_Kreis) ffmk mk.map.eulenfunk.de 8100 1406 # 1 190 550
 instance Fichtenfunk_(Meinerzhagen) ffmz map-meinerzhagen.freifunk-mk.de 8084 1406 # 1 150 500 
 instance Fichtenfunk_(Neuenrade) ffnr map-neuenrade.freifunk-mk.de 8098 1406 # 1 80 400
+<<<<<<< HEAD
 instancewgvxlan Fichtenfunk_(Nord) ffnord map-nord.freifunk-mk.de 8050 1280 # 1 80 400
+=======
+instancewgvxlan Fichtenfunk_(Nord) ffmk_nord map-nord.freifunk-mk.de 8050 1280 # 1 80 400
+instancewgvxlan Fichtenfunk_(West) ffmk_west map-west.freifunk-mk.de 8051 1280 # 1 80 400
+instancewgvxlan Fichtenfunk_(Ost) ffmk_ost map-ost.freifunk-mk.de 8052 1280 # 1 80 400
+>>>>>>> 5813476421d67c76a6d795e9f5d3df60ce7060b0
 
 #GL
 group Freifunk_GL gl,bgl,lln,bcd,ode,rrh map.ffgl.eu 
