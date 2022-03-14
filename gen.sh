@@ -42,6 +42,47 @@ function instance_l2tp {
 	systemctl restart tunneldigger@$3
 }
 
+function instance_wgvxlan {
+	echo instance_wgvxlan $3
+
+	[ -f /etc/fastd/peers/$3/$3 ] || return
+	source /etc/fastd/peers/$3/$3
+
+	export PRIVATE_KEY=$(wg genkey)
+	export PUBLIC_KEY=$(echo $PRIVATE_KEY | wg pubkey)
+	#export IPV6_ADDR=$(echo $PUBLIC_KEY |md5sum|sed 's/^\(..\)\(..\)\(..\)\(..\)\(..\)\(..\).*$/fe80::\1\2:\3\4:\5\6/')
+	export IPV6_ADDR=$(wgvxlan_ipv6 $PUBLIC_KEY)
+	export SITE=$3
+	EXPVARS='$PRIVATE_KEY:$SERVER_PUBLIC_KEY:$SERVER_ENDPOINT:$ALLOWED_IPS:$IPV6_ADDR:$VXLAN_ID:$SITE'
+	export PRIVATE_KEY SERVER_PUBLIC_KEY SERVER_ENDPOINT ALLOWED_IPS VXLAN_ID
+
+	[ ! -d /etc/wireguard ] && mkdir -p /etc/wireguard
+	envsubst "$EXPVARS" < $HOME/templates/instance/wireguard/wg.conf > /etc/wireguard/wg-$3.conf
+
+	# tell the supernode our public key
+	JSON='{"domain": "'"$SITE"'","public_key": "'"$PUBLIC_KEY"'"}'
+	#wget -O- -v --post-data="$JSON" $BROKER
+	curl -X POST $BROKER -d "$JSON"
+
+	# check if wg interface still exists
+	ip a s bat-$SITE >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		ip link del bat-$SITE
+	fi
+	ip a s vxlan-$SITE >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		ip link del vxlan-$SITE
+	fi
+	ip a s wg-$SITE >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		ip link del wg-$SITE
+	fi
+
+	# connect to wireguard (vxlan and bat interfaces are handled by wg-quick)
+	systemctl restart wg-quick@wg-$SITE
+	systemctl enable wg-quick@wg-$SITE
+}
+
 function instance_yanic {
 	cp templates/instance/yanic.conf /etc/yanic/$3.conf
 	replace /etc/yanic/$3.conf SITE $3
@@ -135,6 +176,14 @@ function basedom_nginx {
 	replace $WEBCONF/$4.conf URL $4
 }
 
+# wgvxlan ipv6 helper function
+function wgvxlan_ipv6 {
+	# generate a predictable v6 address
+	local macaddr="$(echo $1 |md5sum|sed 's/^\(..\)\(..\)\(..\)\(..\)\(..\).*$/02:\1:\2:\3:\4:\5/')"
+	local oldIFS="$IFS"; IFS=':'; set -- $macaddr; IFS="$oldIFS"
+	echo "fe80::$1$2:$3ff:fe$4:$5$6"
+}
+
 #main functions
 
 function init {
@@ -154,9 +203,17 @@ function init {
 	chmod +x delay.sh
 	cd $HOME
 
+	#wireguard
+	cp $home/templates/wg-watch /usr/local/bin
+	chmod +x /usr/local/bin/wg-watch
+	cp $home/templates/wg-watch.service /etc/systemd/system
+	cp $home/templates/wg-watch.timer /etc/systemd/system
+
 	# service files
 	cp $HOME/templates/init/tunneldigger@.service /etc/systemd/system/
 	systemctl daemon-reload
+	systemctl enable wg-watch.timer
+	systemctl start wg-watch.timer
 
 	#nginx
 	mv /etc/nginx{,.bak}
@@ -196,6 +253,13 @@ function all {
 			;;
 		"instancel2tp")
 			instance_l2tp $l
+			instance_hgserver $l
+			#instance_yanic $l
+			instance_nginx $l
+			instance_webdir $l
+			;;
+		"instancewgvxlan")
+			instance_wgvxlan $l
 			instance_hgserver $l
 			#instance_yanic $l
 			instance_nginx $l

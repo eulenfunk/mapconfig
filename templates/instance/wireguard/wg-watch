@@ -1,0 +1,36 @@
+#!/bin/bash
+TIMEOUT=180
+SLEEP=5
+
+EXIT=0
+declare -a line
+
+while IFS=$'\t' read -r -a line ; do
+	# get site-code from interface name
+	#SITE=$(echo $line[0] | sed 's/.*wg-//')
+	SITE=${line[0]#wg-*}
+
+	# check if line is a peer & if peer is configured by fastd-peers & if latest handshake is >60s old.
+	# If so: Trigger the broker. If that was successful, wait for the interface to reconnect.
+	# If interface doesn't reconnect, trigger wg-service restart.
+	# No luck? Supernode is down.
+	if [ ${#line[*]} -eq 9 ]  && [ -f /etc/fastd/peers/$SITE/$SITE ] && [ $(( $(date +%s) - ${line[5]} )) -gt $TIMEOUT ]  ; then
+		echo $SITE
+		PRIVATE_KEY=$(sed -n 's/^PrivateKey = \(.*\)/\1/p' /etc/wireguard/${line[0]}.conf)
+		PUBLIC_KEY=$(echo $PRIVATE_KEY | wg pubkey)
+		PEER=$(sed -n 's/^SERVER_PUBLIC_KEY=\(.*\)/\1/p' /etc/fastd/peers/$SITE/$SITE | cut -d'"' -f2)
+		BROKER=$(sed -n 's/^BROKER=\(.*\)/\1/p' /etc/fastd/peers/$SITE/$SITE | cut -d'"' -f2)
+		JSON='{"domain": "'"$SITE"'","public_key": "'"$PUBLIC_KEY"'"}'
+
+		curl -f -X POST -d "$JSON" $BROKER>/dev/null 2>&1
+
+		sleep $SLEEP
+		read -r -a status <<< $(wg show ${line[0]} dump | grep $PEER)
+		if [ $(( $(date +%s) - ${status[5]} )) -gt $TIMEOUT ]; then
+			echo "$SITE is not answering."
+			EXIT=1
+		fi
+	fi
+done < <(wg show all dump)
+
+exit $EXIT
