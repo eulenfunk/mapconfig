@@ -1,0 +1,10 @@
+[Unit]
+Description=Wireguard Broker guardian      
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/wg-watch
+
+[Install]
+WantedBy=multi-user.target
