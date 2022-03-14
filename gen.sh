@@ -43,45 +43,44 @@ function instance_l2tp {
 }
 
 function instance_wgvxlan {
-	for filename in /etc/fastd/peers/$3/*; do
-		[ -e "$filename" ] || continue
-		(
-		source $filename
-		export PRIVATE_KEY=$(wg genkey)
-		export PUBLIC_KEY=$(echo $PRIVATE_KEY | wg pubkey)
-		#export IPV6_ADDR=$(echo $PUBLIC_KEY |md5sum|sed 's/^\(..\)\(..\)\(..\)\(..\)\(..\)\(..\).*$/fe80::\1\2:\3\4:\5\6/')
-		export IPV6_ADDR=$(wgvxlan_ipv6 $PUBLIC_KEY)
-		export SITE=$3
-		EXPVARS='$PRIVATE_KEY:$SERVER_PUBLIC_KEY:$SERVER_ENDPOINT:$ALLOWED_IPS:$IPV6_ADDR:$VXLAN_ID:$SITE'
-		export PRIVATE_KEY SERVER_PUBLIC_KEY SERVER_ENDPOINT ALLOWED_IPS VXLAN_ID
+	echo instance_wgvxlan $3
 
-		[ ! -d /etc/wireguard ] && mkdir -p /etc/wireguard
-		envsubst "$EXPVARS" < $HOME/templates/instance/wireguard/wg.conf > /etc/wireguard/wg-$3.conf
+	[ -f /etc/fastd/peers/$3/$3 ] || return
+	source /etc/fastd/peers/$3/$3
 
-		# tell the supernode our public key
-		JSON='{"domain": "'"$SITE"'","public_key": "'"$PUBLIC_KEY"'"}'
-		#wget -O- -v --post-data="$JSON" $BROKER
-		curl -X POST $BROKER -d "$JSON"
+	export PRIVATE_KEY=$(wg genkey)
+	export PUBLIC_KEY=$(echo $PRIVATE_KEY | wg pubkey)
+	#export IPV6_ADDR=$(echo $PUBLIC_KEY |md5sum|sed 's/^\(..\)\(..\)\(..\)\(..\)\(..\)\(..\).*$/fe80::\1\2:\3\4:\5\6/')
+	export IPV6_ADDR=$(wgvxlan_ipv6 $PUBLIC_KEY)
+	export SITE=$3
+	EXPVARS='$PRIVATE_KEY:$SERVER_PUBLIC_KEY:$SERVER_ENDPOINT:$ALLOWED_IPS:$IPV6_ADDR:$VXLAN_ID:$SITE'
+	export PRIVATE_KEY SERVER_PUBLIC_KEY SERVER_ENDPOINT ALLOWED_IPS VXLAN_ID
 
-		# check if wg interface still exists
-		ip a s bat-$SITE >/dev/null 2>&1
-		if [ $? -eq 0 ]; then
-			ip link del bat-$SITE
-		fi
-		ip a s vxlan-$SITE >/dev/null 2>&1
-		if [ $? -eq 0 ]; then
-			ip link del vxlan-$SITE
-		fi
-		ip a s wg-$SITE >/dev/null 2>&1
-		if [ $? -eq 0 ]; then
-			ip link del wg-$SITE
-		fi
+	[ ! -d /etc/wireguard ] && mkdir -p /etc/wireguard
+	envsubst "$EXPVARS" < $HOME/templates/instance/wireguard/wg.conf > /etc/wireguard/wg-$3.conf
 
-		# connect to wireguard (vxlan and bat interfaces are handled by wg-quick)
-		systemctl restart wg-quick@wg-$SITE
-		systemctl enable wg-quick@wg-$SITE
-		)
-	done
+	# tell the supernode our public key
+	JSON='{"domain": "'"$SITE"'","public_key": "'"$PUBLIC_KEY"'"}'
+	#wget -O- -v --post-data="$JSON" $BROKER
+	curl -X POST $BROKER -d "$JSON"
+
+	# check if wg interface still exists
+	ip a s bat-$SITE >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		ip link del bat-$SITE
+	fi
+	ip a s vxlan-$SITE >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		ip link del vxlan-$SITE
+	fi
+	ip a s wg-$SITE >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		ip link del wg-$SITE
+	fi
+
+	# connect to wireguard (vxlan and bat interfaces are handled by wg-quick)
+	systemctl restart wg-quick@wg-$SITE
+	systemctl enable wg-quick@wg-$SITE
 }
 
 function instance_yanic {
@@ -204,9 +203,17 @@ function init {
 	chmod +x delay.sh
 	cd $HOME
 
+	#wireguard
+	cp $home/templates/wg-watch /usr/local/bin
+	chmod +x /usr/local/bin/wg-watch
+	cp $home/templates/wg-watch.service /etc/systemd/system
+	cp $home/templates/wg-watch.timer /etc/systemd/system
+
 	# service files
 	cp $HOME/templates/init/tunneldigger@.service /etc/systemd/system/
 	systemctl daemon-reload
+	systemctl enable wg-watch.timer
+	systemctl start wg-watch.timer
 
 	#nginx
 	mv /etc/nginx{,.bak}

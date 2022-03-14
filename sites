@@ -28,8 +28,8 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,sifb,sihb,sisi map.eulenfunk.de
-#basedom Eulenfunk dus,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,nefhan,nefhlg,nefhld,neflgf,nefmet,nefmon,neferk,nefrat,nefvel,nefwlf,sifb,sihb,sisi map.eulenfunk.de
+basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,gl,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,sifb,sihb,sisi map.eulenfunk.de
+#basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,sifb,sihb,sisi map.eulenfunk.de
 
 #Nicht Eulenfunk
 instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 1 50 100
@@ -40,7 +40,7 @@ instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 2 180 500
 
 
 #Fichtenfunk
-group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr,ffmk_nord,ffmk_west,ffmk_ost alle.freifunk-mk.de
+group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr,ffmk_nord alle.freifunk-mk.de
 instance Fichtenfunk_(Altena) ffal map-altena.freifunk-mk.de 8083 1280 # 1 150 800
 instance Fichtenfunk_(Hemer) ffhe map-hemer.freifunk-mk.de 8087 1406 # 1 170 600
 instance Fichtenfunk_(Iserlohn) ffis map.freifunk-iserlohn.de 8082 1280 # 1 250 1000
