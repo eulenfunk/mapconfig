@@ -40,7 +40,7 @@ instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 2 180 500
 
 
 #Fichtenfunk
-group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr alle.freifunk-mk.de
+group Fichtenfunk ffal,ffhe,ffis,ffls,ffmk,ffmz,ffnr,ffmk_nord,ffmk_west,ffmk_ost alle.freifunk-mk.de
 instance Fichtenfunk_(Altena) ffal map-altena.freifunk-mk.de 8083 1280 # 1 150 800
 instance Fichtenfunk_(Hemer) ffhe map-hemer.freifunk-mk.de 8087 1406 # 1 170 600
 instance Fichtenfunk_(Iserlohn) ffis map.freifunk-iserlohn.de 8082 1280 # 1 250 1000
