@@ -7,29 +7,29 @@ declare -a line
 
 while IFS=$'\t' read -r -a line ; do
 	# get site-code from interface name
-	#nef27grd=$(echo $line[0] | sed 's/.*wg-//')
-	nef27grd=${line[0]#wg-*}
+	#nef10wlf=$(echo $line[0] | sed 's/.*wg-//')
+	nef10wlf=${line[0]#wg-*}
 
 	# check if line is a peer & if peer is configured by fastd-peers & if latest handshake is >60s old.
 	# If so: Trigger the broker. If that was successful, wait for the interface to reconnect.
 	# If interface doesn't reconnect, trigger wg-service restart.
 	# No luck? Supernode is down.
-	if [ ${#line[*]} -eq 9 ]  && [ -f /etc/fastd/peers/$nef27grd/$nef27grd ] && [ $(( $(date +%s) - ${line[5]} )) -gt $TIMEOUT ]  ; then
-		echo $nef27grd
+	if [ ${#line[*]} -eq 9 ]  && [ -f /etc/fastd/peers/$nef10wlf/$nef10wlf ] && [ $(( $(date +%s) - ${line[5]} )) -gt $TIMEOUT ]  ; then
+		echo $nef10wlf
 		PRIVATE_KEY=$(sed -n 's/^PrivateKey = \(.*\)/\1/p' /etc/wireguard/${line[0]}.conf)
 		PUBLIC_KEY=$(echo $PRIVATE_KEY | wg pubkey)
-		PEER=$(sed -n 's/^SERVER_PUBLIC_KEY=\(.*\)/\1/p' /etc/fastd/peers/$nef27grd/$nef27grd | cut -d'"' -f2)
-		BROKER=$(sed -n 's/^BROKER=\(.*\)/\1/p' /etc/fastd/peers/$nef27grd/$nef27grd | cut -d'"' -f2)
-		JSON='{"domain": "'"$nef27grd"'","public_key": "'"$PUBLIC_KEY"'"}'
+		PEER=$(sed -n 's/^SERVER_PUBLIC_KEY=\(.*\)/\1/p' /etc/fastd/peers/$nef10wlf/$nef10wlf | cut -d'"' -f2)
+		BROKER=$(sed -n 's/^BROKER=\(.*\)/\1/p' /etc/fastd/peers/$nef10wlf/$nef10wlf | cut -d'"' -f2)
+		JSON='{"domain": "'"$nef10wlf"'","public_key": "'"$PUBLIC_KEY"'"}'
 
 		curl -f -X POST -d "$JSON" $BROKER>/dev/null 2>&1
 
-		systemctl restart wg-quick@wg-$nef27grd
+		systemctl restart wg-quick@wg-$nef10wlf
 
 		sleep $SLEEP
 		read -r -a status <<< $(wg show ${line[0]} dump | grep $PEER)
 		if [ $(( $(date +%s) - ${status[5]} )) -gt $TIMEOUT ]; then
-			echo "$nef27grd is not answering."
+			echo "$nef10wlf is not answering."
 			EXIT=1
 		fi
 	fi

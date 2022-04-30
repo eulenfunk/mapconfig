@@ -7,7 +7,7 @@
             "ip": "ff02::1",
             "port": 1001
           },
-          "port": 38141,
+          "port": 38124,
           "timings": {
             "base": 300,
             "multipliers": {
@@ -26,11 +26,11 @@
       }
     ],
     "ifaces": [
-      "bat-nef27grd"
+      "bat-nef10wlf"
     ],
     "storage": {
       "interval": 300,
-      "file": "/var/local/hopglass-server/nef27grd/raw.json"
+      "file": "/var/local/hopglass-server/nef10wlf/raw.json"
     },
     "purge": {
       "maxAge": 14,
@@ -44,6 +44,6 @@
   },
   "webserver": {
     "ip": "::",
-    "port": 48141
+    "port": 48124
   }
 }

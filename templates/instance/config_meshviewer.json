@@ -19,11 +19,11 @@
     }
   ],
   "globalInfos": [
-    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=nef27grd",
-      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=1&&theme=light&width=800&height=600&var-job=nef27grd"
+    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=nef10wlf",
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=1&&theme=light&width=800&height=600&var-job=nef10wlf"
     },
-    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=nef27grd",
-      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=8&&theme=light&width=800&height=600&var-job=nef27grd"
+    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=nef10wlf",
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=8&&theme=light&width=800&height=600&var-job=nef10wlf"
     }
   ],
   "linkInfos": [
@@ -43,7 +43,7 @@
   ],
   "siteNames": [
     {
-      "site": "nef27grd",
+      "site": "nef10wlf",
       "name": "NAME"
     }
   ]
