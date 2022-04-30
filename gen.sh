@@ -10,14 +10,14 @@ function instance_fastd {
         echo instance_fastd $3
 	rm -rf /etc/fastd/$3
 	cp -r templates/instance/fastd /etc/fastd/$3
-	replace /etc/fastd/$3 SITE $3
+	replace /etc/fastd/$3 ffnr $3
 	replace /etc/fastd/$3 MTU $6
 	replace /etc/fastd/$3 BIND "${7//_/\ }"
 	#systemctl enable fastd@$3
 	systemctl restart fastd@$3
 }
 
-#$l = TYPE NAME SITE URI PORT MTU
+#$l = TYPE NAME ffnr URI 8098 MTU
 #      name         - Bezeichnung, die auf der Map angezeigt wird
 #      sitecode     - Eindeutiger Code der Instanz
 #      fqdn         - Domainname, unter dem die Map erreichbar sein soll
@@ -52,41 +52,41 @@ function instance_wgvxlan {
 	export PUBLIC_KEY=$(echo $PRIVATE_KEY | wg pubkey)
 	#export IPV6_ADDR=$(echo $PUBLIC_KEY |md5sum|sed 's/^\(..\)\(..\)\(..\)\(..\)\(..\)\(..\).*$/fe80::\1\2:\3\4:\5\6/')
 	export IPV6_ADDR=$(wgvxlan_ipv6 $PUBLIC_KEY)
-	export SITE=$3
-	EXPVARS='$PRIVATE_KEY:$SERVER_PUBLIC_KEY:$SERVER_ENDPOINT:$ALLOWED_IPS:$IPV6_ADDR:$VXLAN_ID:$SITE'
+	export ffnr=$3
+	EXPVARS='$PRIVATE_KEY:$SERVER_PUBLIC_KEY:$SERVER_ENDPOINT:$ALLOWED_IPS:$IPV6_ADDR:$VXLAN_ID:$ffnr'
 	export PRIVATE_KEY SERVER_PUBLIC_KEY SERVER_ENDPOINT ALLOWED_IPS VXLAN_ID
 
 	[ ! -d /etc/wireguard ] && mkdir -p /etc/wireguard
 	envsubst "$EXPVARS" < $HOME/templates/instance/wireguard/wg.conf > /etc/wireguard/wg-$3.conf
 
 	# tell the supernode our public key
-	JSON='{"domain": "'"$SITE"'","public_key": "'"$PUBLIC_KEY"'"}'
+	JSON='{"domain": "'"$ffnr"'","public_key": "'"$PUBLIC_KEY"'"}'
 	#wget -O- -v --post-data="$JSON" $BROKER
 	curl -X POST $BROKER -d "$JSON"
 
 	# check if wg interface still exists
-	ip a s bat-$SITE >/dev/null 2>&1
+	ip a s bat-$ffnr >/dev/null 2>&1
 	if [ $? -eq 0 ]; then
-		ip link del bat-$SITE
+		ip link del bat-$ffnr
 	fi
-	ip a s vxlan-$SITE >/dev/null 2>&1
+	ip a s vxlan-$ffnr >/dev/null 2>&1
 	if [ $? -eq 0 ]; then
-		ip link del vxlan-$SITE
+		ip link del vxlan-$ffnr
 	fi
-	ip a s wg-$SITE >/dev/null 2>&1
+	ip a s wg-$ffnr >/dev/null 2>&1
 	if [ $? -eq 0 ]; then
-		ip link del wg-$SITE
+		ip link del wg-$ffnr
 	fi
 
 	# connect to wireguard (vxlan and bat interfaces are handled by wg-quick)
-	systemctl restart wg-quick@wg-$SITE
-	systemctl enable wg-quick@wg-$SITE
+	systemctl restart wg-quick@wg-$ffnr
+	systemctl enable wg-quick@wg-$ffnr
 }
 
 function instance_yanic {
 	cp templates/instance/yanic.conf /etc/yanic/$3.conf
-	replace /etc/yanic/$3.conf SITE $3
-	replace /etc/yanic/$3.conf PORT $5
+	replace /etc/yanic/$3.conf ffnr $3
+	replace /etc/yanic/$3.conf 8098 $5
 	mkdir -p /home/yanic/$3
 	chown yanic /home/yanic/$3
 	mkdir -p /tmp/yanic/$3
@@ -101,8 +101,8 @@ function instance_hgserver {
 	rm -rf /etc/hopglass-server/$3
 	cp -r templates/instance/hopglass-server /etc/hopglass-server/$3
 	cd /etc/hopglass-server/$3
-	replace . SITE $3
-	replace . PORT $5
+	replace . ffnr $3
+	replace . 8098 $5
 	cp $HOME/aliases/$3.json ./aliases.json 2> /dev/null
 	cd $HOME
 	mkdir -p /var/local/hopglass-server/$3
@@ -114,17 +114,17 @@ function instance_nginx {
 	printf " $4" >> hosts
 	cp $HOME/templates/instance/nginx.conf $WEBCONF/$4.conf
 	replace $WEBCONF/$4.conf URL $4
-	replace $WEBCONF/$4.conf PORT $5
-	replace $WEBCONF/$4.conf SITE $3
+	replace $WEBCONF/$4.conf 8098 $5
+	replace $WEBCONF/$4.conf ffnr $3
 }
 
 function instance_webdir {
 	rm -rf $WEBDATA/$4
 	cp -r templates/instance/webdir $WEBDATA/$4
 	replace $WEBDATA/$4 NAME "${2//_/\ }"
-	replace $WEBDATA/$4 SITE $3
+	replace $WEBDATA/$4 ffnr $3
 
-	# (sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$3}"; cp templates/instance/config_meshviewer.json /tmp/meshviewer-$3/config.json; replace /tmp/meshviewer-$3/config.json NAME "${2//_/\ }";	replace /tmp/meshviewer-$3/config.json SITE $3;	replace /tmp/meshviewer-$3/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$3; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$3/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$3) &
+	# (sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$3}"; cp templates/instance/config_meshviewer.json /tmp/meshviewer-$3/config.json; replace /tmp/meshviewer-$3/config.json NAME "${2//_/\ }";	replace /tmp/meshviewer-$3/config.json ffnr $3;	replace /tmp/meshviewer-$3/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$3; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$3/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$3) &
 }
 
 #group functions
@@ -140,9 +140,9 @@ function group_webdir {
 	cp -r templates/group/webdir $WEBDATA/$4
 	replace $WEBDATA/$4 NAME "${2//_/\ }"
 	DATASOURCES=""
-	for SITE in ${3//,/ }
+	for ffnr in ${3//,/ }
 	do
-		URL=$(cat $HOME/sites | awk "\$3 == \"$SITE\"" | cut -d' ' -f4)
+		URL=$(cat $HOME/sites | awk "\$3 == \"$ffnr\"" | cut -d' ' -f4)
 		if [ "$DATASOURCES" == "" ]
 		then
 			DATASOURCES="    \"https://$URL/data/\""
@@ -151,9 +151,9 @@ function group_webdir {
 		fi
 	done
 	replace $WEBDATA/$4 DATASOURCES "$DATASOURCES"
-	replace $WEBDATA/$4 SITE ${3//,/\\&var-job=}
+	replace $WEBDATA/$4 ffnr ${3//,/\\&var-job=}
 
-	# (sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$4}"; cp templates/group/config_meshviewer.json /tmp/meshviewer-$4/config.json; replace /tmp/meshviewer-$4/config.json NAME "${2//_/\ }"; replace /tmp/meshviewer-$4/config.json SITE ${3//,/\\&var-job=}; replace /tmp/meshviewer-$4/config.json DATASOURCES "$DATASOURCES"; replace /tmp/meshviewer-$4/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$4; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$4/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$4) &
+	# (sudo -u hopglass bash -c "cp -r /tmp/meshviewer{,-$4}"; cp templates/group/config_meshviewer.json /tmp/meshviewer-$4/config.json; replace /tmp/meshviewer-$4/config.json NAME "${2//_/\ }"; replace /tmp/meshviewer-$4/config.json ffnr ${3//,/\\&var-job=}; replace /tmp/meshviewer-$4/config.json DATASOURCES "$DATASOURCES"; replace /tmp/meshviewer-$4/config.json BASEDOM $BASEDOM; sudo -u hopglass bash -c "cd /tmp/meshviewer-$4; node_modules/.bin/gulp"; cp -r /tmp/meshviewer-$4/build $WEBDATA/$4/new; rm -rf /tmp/meshviewer-$4) &
 }
 
 #alias functions
@@ -164,7 +164,7 @@ function alias_nginx {
 	ALIAS_TYPE=$(echo $LINE | cut -d' ' -f1)
 	cp $HOME/templates/alias/$ALIAS_TYPE.conf $WEBCONF/$2.conf
 	replace $WEBCONF/$2.conf URL $2
-	replace $WEBCONF/$2.conf PORT $(echo $LINE | cut -d' ' -f5)
+	replace $WEBCONF/$2.conf 8098 $(echo $LINE | cut -d' ' -f5)
 	replace $WEBCONF/$2.conf ALIAS $(echo $LINE | cut -d' ' -f4)
 }
 
@@ -234,7 +234,7 @@ function all {
 	cp templates/init/prometheus.yml /etc/prometheus/prometheus.yml
 	while read l
 	do
-		#$l = TYPE NAME SITE URI PORT MTU
+		#$l = TYPE NAME ffnr URI 8098 MTU
 		case "$(echo $l | cut -d' ' -f1)" in
 		"basedom")
 			basedom_nginx $l

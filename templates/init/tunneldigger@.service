@@ -1,5 +1,5 @@
 [Unit]
-Description=Tunneldigger (connection SITE)
+Description=Tunneldigger (connection ffnr)
 After=network.target
 
 [Service]

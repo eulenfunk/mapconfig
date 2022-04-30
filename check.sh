@@ -19,7 +19,7 @@ HOME=$PWD
 
 while read l
 do
-	#$l = TYPE NAME SITE URI PORT MTU
+	#$l = TYPE NAME ffnr URI 8098 MTU
 	[ "$(echo $l | cut -d' ' -f1)" == "instance" ] && check_instance $l
 done < $HOME/sites
 

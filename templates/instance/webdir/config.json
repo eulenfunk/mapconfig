@@ -57,11 +57,11 @@
     }
   ],
   "globalInfos": [
-    { "href": "https://BASEDOM/stats/d/000000012/global?orgId=1&var-job=SITE",
-      "thumbnail": "https://BASEDOM/stats/render/d-solo/000000012/global?orgId=1&panelId=1&theme=light&width=800&height=600&var-job=SITE"
+    { "href": "https://BASEDOM/stats/d/000000012/global?orgId=1&var-job=ffnr",
+      "thumbnail": "https://BASEDOM/stats/render/d-solo/000000012/global?orgId=1&panelId=1&theme=light&width=800&height=600&var-job=ffnr"
     },
-    { "href": "https://BASEDOM/stats/d/000000012/global?orgId=1&var-job=SITE",
-      "thumbnail": "https://BASEDOM/stats/render/d-solo/000000012/global?orgId=1&panelId=8&theme=light&width=800&height=600&var-job=SITE"
+    { "href": "https://BASEDOM/stats/d/000000012/global?orgId=1&var-job=ffnr",
+      "thumbnail": "https://BASEDOM/stats/render/d-solo/000000012/global?orgId=1&panelId=8&theme=light&width=800&height=600&var-job=ffnr"
     }
   ],
   "linkInfos": [

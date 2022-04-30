@@ -7,7 +7,7 @@
             "ip": "ff02::1",
             "port": 1001
           },
-          "port": 3PORT,
+          "port": 38098,
           "timings": {
             "base": 300,
             "multipliers": {
@@ -26,11 +26,11 @@
       }
     ],
     "ifaces": [
-      "bat-SITE"
+      "bat-ffnr"
     ],
     "storage": {
       "interval": 300,
-      "file": "/var/local/hopglass-server/SITE/raw.json"
+      "file": "/var/local/hopglass-server/ffnr/raw.json"
     },
     "purge": {
       "maxAge": 14,
@@ -44,6 +44,6 @@
   },
   "webserver": {
     "ip": "::",
-    "port": 4PORT
+    "port": 48098
   }
 }

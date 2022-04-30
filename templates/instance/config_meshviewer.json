@@ -19,11 +19,11 @@
     }
   ],
   "globalInfos": [
-    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=SITE",
-      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=1&&theme=light&width=800&height=600&var-job=SITE"
+    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=ffnr",
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=1&&theme=light&width=800&height=600&var-job=ffnr"
     },
-    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=SITE",
-      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=8&&theme=light&width=800&height=600&var-job=SITE"
+    { "href": "https://BASEDOM/stats/dashboard/db/global?var-job=ffnr",
+      "image": "https://BASEDOM/stats/render/dashboard-solo/db/global?panelId=8&&theme=light&width=800&height=600&var-job=ffnr"
     }
   ],
   "linkInfos": [
@@ -43,7 +43,7 @@
   ],
   "siteNames": [
     {
-      "site": "SITE",
+      "site": "ffnr",
       "name": "NAME"
     }
   ]
