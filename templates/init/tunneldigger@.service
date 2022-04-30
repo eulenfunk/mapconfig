@@ -1,5 +1,5 @@
 [Unit]
-Description=Tunneldigger (connection ffnr)
+Description=Tunneldigger (connection nef27grd)
 After=network.target
 
 [Service]

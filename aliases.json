@@ -1,0 +1,20 @@
+{
+   "802aa819659b": {
+    "nodeinfo": {
+     "node_id": "802aa819659b",
+     "location": {
+      "longitude":  "6.931005",
+      "latitude": "51.176014"
+     }
+    }
+   },
+   "802aa8196511": {
+    "nodeinfo": {
+     "node_id": "802aa8196511",
+     "location": {
+      "longitude": "6.931531584362651", 
+      "latitude": "51.1765635363926"
+     }
+    }
+   }
+}
