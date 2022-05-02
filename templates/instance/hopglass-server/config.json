@@ -26,11 +26,11 @@
       }
     ],
     "ifaces": [
-      "bat-nef10wlf"
+      "bat-SITE"
     ],
     "storage": {
       "interval": 300,
-      "file": "/var/local/hopglass-server/nef10wlf/raw.json"
+      "file": "/var/local/hopglass-server/SITE/raw.json"
     },
     "purge": {
       "maxAge": 14,
