@@ -7,7 +7,7 @@
             "ip": "ff02::1",
             "port": 1001
           },
-          "port": 38124,
+          "port": 3PORT,
           "timings": {
             "base": 300,
             "multipliers": {
@@ -44,6 +44,6 @@
   },
   "webserver": {
     "ip": "::",
-    "port": 48124
+    "port": 4PORT
   }
 }
