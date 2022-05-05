@@ -100,10 +100,9 @@ function instance_hgserver {
 	echo "      - targets: ['localhost:4$5']" >> /etc/prometheus/prometheus.yml
 	rm -rf /etc/hopglass-server/$3
 	cp -r templates/instance/hopglass-server /etc/hopglass-server/$3
-	cd /etc/hopglass-server/$3
-	replace . SITE $3
-	replace . PORT $5
-	cp $HOME/aliases/$3.json ./aliases.json 2> /dev/null
+	replace /etc/hopglass-server/$3 SITE $3
+	replace /etc/hopglass-server/$3 PORT $5
+	cp $HOME/aliases/$3.json /etc/hopglass-server/$3/aliases.json 2> /dev/null
 	cd $HOME
 	mkdir -p /var/local/hopglass-server/$3
 	#systemctl enable hopglass-server@$3
