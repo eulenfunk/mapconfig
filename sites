@@ -28,7 +28,7 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,sifb,sihb,sisi map.eulenfunk.de
+basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,sifb,sihb,sisi map.eulenfunk.de
 #basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,sifb,sihb,sisi map.eulenfunk.de
 
 #Nicht Eulenfunk
@@ -49,7 +49,6 @@ instance Fichtenfunk_(Märkischer_Kreis) ffmk mk.map.eulenfunk.de 8100 1406 # 1 
 instance Fichtenfunk_(Meinerzhagen) ffmz map-meinerzhagen.freifunk-mk.de 8084 1406 # 1 150 500 
 instance Fichtenfunk_(Neuenrade) ffnr map-neuenrade.freifunk-mk.de 8098 1406 # 1 80 400
 instancewgvxlan Fichtenfunk_(Nord) ffmk_nord map-nord.freifunk-mk.de 8050 1280 # 1 80 400
-instancewgvxlan Fichtenfunk_(West) ffmk_west map-west.freifunk-mk.de 8051 1280 # 1 80 400
 instancewgvxlan Fichtenfunk_(Ost) ffmk_ost map-ost.freifunk-mk.de 8052 1280 # 1 80 400
 
 #GL
