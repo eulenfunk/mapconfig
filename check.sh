@@ -29,7 +29,7 @@ HOME=$PWD
 
 while read l
 do
-	#$l = TYPE NAME nef10wlf URI 8124 MTU
+	#$l = TYPE NAME SITE URI BIND MTU
 	[ "$(echo $l | cut -d' ' -f1 )" == "instance" ] && check_instance $l
 	[ "$(echo $l | cut -d' ' -f1 )" == "instancel2tp" ] && check_l2tpinstance $l
 	[ "$(echo $l | cut -d' ' -f1 )" == "instancewgvxlan" ] && check_wgvxlaninstance $l
