@@ -1,4 +1,8 @@
 #!/bin/bash
+set -u # stop at unset variables
+set -o pipefail # do not assume ok after multple chained pies.
+# set -e # stop on errors - want to, but errorhandling is not yet done. TBD
+
 
 function replace {
 	find $1 -type f -print0 | xargs -0 sed -i "s;$2;$3;g"
