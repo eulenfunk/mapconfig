@@ -28,7 +28,7 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,sifb,sihb,sisi map.eulenfunk.de
+basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,sifb,sihb,sisi map.eulenfunk.de
 #basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,sifb,sihb,sisi map.eulenfunk.de
 
 #Nicht Eulenfunk
@@ -65,7 +65,7 @@ alias map.freifunk-leichlingen.net lln.map.ffgl.eu
 
 
 #Neanderfunk
-group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars karte.neanderfunk.de
+group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30ars,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw karte.neanderfunk.de
 instancel2tp Neanderfunk_(Haan)_(Domain_06) nef06han nef06han.karte.neanderfunk.de 8115 1364 # 1 120 500
 instancel2tp Neanderfunk_(Heiligenhaus)_(Domain_08) nef08hlg nef08hlg.karte.neanderfunk.de 8116 1364 # 1 120 200
 instancel2tp Neanderfunk_(Hilden)_(Domain_04) nef04hld nef04hld.karte.neanderfunk.de 8117 1364 # 1 120 500
@@ -96,6 +96,7 @@ instancel2tp Neanderfunk_Gordi_(Domain_27) nef27grd nef27grd.karte.neanderfunk.d
 instancel2tp Neanderfunk_Platia_(Domain_28) nef28plt nef28plt.karte.neanderfunk.de 8142 1364 # 1 15 20
 instancel2tp Neanderfunk_Gavdos_(Domain_29) nef29gvd nef29gvd.karte.neanderfunk.de 8143 1364 # 1 15 20
 instancel2tp Neanderfunk_Arsidia_(Domain_30) nef30ars nef30ars.karte.neanderfunk.de 8144 1364 # 1 15 20
+group LVR nef11lvr,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw lvr.karte.neanderfunk.de
 instancel2tp Eulenfunk_(LVR-NordOst)_(Domain_31) nef31lvrno nef31lvrno.karte.neanderfunk.de 8146 1364 # 1 50 100
 instancel2tp Eulenfunk_(LVR-NordWest)_(Domain_32) nef31lvrnw nef32lvrnw.karte.neanderfunk.de 8147 1364 # 1 50 100
 instancel2tp Eulenfunk_(LVR-MitteOst)_(Domain_33) nef31lvrmo nef33lvrmo.karte.neanderfunk.de 8148 1364 # 1 50 100
