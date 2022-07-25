@@ -98,11 +98,11 @@ instancel2tp Neanderfunk_Gavdos_(Domain_29) nef29gvd nef29gvd.karte.neanderfunk.
 instancel2tp Neanderfunk_(Solingen)_(Domain_30) nef30sol nef30sol.karte.neanderfunk.de 8144 1364 # 1 15 20
 group LVR nef11lvr,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw lvr.karte.neanderfunk.de
 instancel2tp Eulenfunk_(LVR-NordOst)_(Domain_31) nef31lvrno nef31lvrno.karte.neanderfunk.de 8146 1364 # 1 50 100
-instancel2tp Eulenfunk_(LVR-NordWest)_(Domain_32) nef31lvrnw nef32lvrnw.karte.neanderfunk.de 8147 1364 # 1 50 100
-instancel2tp Eulenfunk_(LVR-MitteOst)_(Domain_33) nef31lvrmo nef33lvrmo.karte.neanderfunk.de 8148 1364 # 1 50 100
-instancel2tp Eulenfunk_(LVR-MitteWest)_(Domain_34) nef31lvrmw nef34lvrmw.karte.neanderfunk.de 8149 1364 # 1 50 100
-instancel2tp Eulenfunk_(LVR-SüdOst)_(Domain_35) nef31lvrso nef35lvrso.karte.neanderfunk.de 8150 1364 # 1 50 100
-instancel2tp Eulenfunk_(LVR-Südwest)_(Domain_36) nef31lvrsw nef36lvrsw.karte.neanderfunk.de 8151 1364 # 1 50 100
+instancel2tp Eulenfunk_(LVR-NordWest)_(Domain_32) nef32lvrnw nef32lvrnw.karte.neanderfunk.de 8147 1364 # 1 50 100
+instancel2tp Eulenfunk_(LVR-MitteOst)_(Domain_33) nef33lvrmo nef33lvrmo.karte.neanderfunk.de 8148 1364 # 1 50 100
+instancel2tp Eulenfunk_(LVR-MitteWest)_(Domain_34) nef34lvrmw nef34lvrmw.karte.neanderfunk.de 8149 1364 # 1 50 100
+instancel2tp Eulenfunk_(LVR-SüdOst)_(Domain_35) nef35lvrso nef35lvrso.karte.neanderfunk.de 8150 1364 # 1 50 100
+instancel2tp Eulenfunk_(LVR-Südwest)_(Domain_36) nef36lvrsw nef36lvrsw.karte.neanderfunk.de 8151 1364 # 1 50 100
 
 #alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
 
