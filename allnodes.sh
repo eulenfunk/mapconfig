@@ -1,5 +1,4 @@
 #!/bin/bash
-cd /home/adorfer/fakeffdusmap
 sitesf=/opt/eulenfunk/map/sites
 #sitesf=./sites
 jsonpath=/data/nodes.json
@@ -13,10 +12,8 @@ readarray -t -O "${#domurls[@]}" domurls < <( cat $sitesf|grep ^instance|cut -d"
 for value in "${domurls[@]}"
 do
      url=https://$value$jsonpath
-#     echo $url
      domurlss[${#domurlss[@]}]=$url
 done
-
 
 c=0
 for url in "${domurlss[@]}"
@@ -41,4 +38,3 @@ if [ ! -f "$outpath/$outfile" ] && [ -f  $jsonoutput ]; then
   cp $jsonoutput $outpath/$outfile
  fi
 [ $(find $tfileprefix.* 2>/dev/null |wc -l) -gt 0 ] && rm $tfileprefix.*
-
