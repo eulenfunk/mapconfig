@@ -18,7 +18,7 @@ done
 c=0
 for url in "${domurlss[@]}"
 do
-     echo $c $url
+     #echo $c $url
      dumpfile=$tfileprefix.$c
      wget -4 -O $dumpfile $url >/dev/null 2>&1
      [ ${#nodesstring} -ge 2 ] && nodesstring+=" + "
@@ -26,9 +26,6 @@ do
      filestring+=" $dumpfile "
      let c++
 done
-
-#echo nodesstring: $nodesstring
-#echo filestring: $filestring
 
 jq -cs --arg filestring "$filestring" --arg nodesstring "$nodesstring"  "{ version: (.[0].version), timestamp: (.[0].timestamp), nodes: ( $nodesstring ) }" $filestring > $jsonoutput
 
