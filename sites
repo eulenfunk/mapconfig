@@ -47,7 +47,6 @@ instance Freifunk_Odenthal ode ode.map.ffgl.eu 8110 1406 # 1 100 500
 instance Freifunk_Rösrath rrh rrh.map.ffgl.eu 8140 1406 # 1 100 100
 alias map.freifunk-bergischgladbach.de bgl.map.ffgl.eu 
 alias map.leichlingen.freifunk.net lln.map.ffgl.eu
-alias map.freifunk-leichlingen.net lln.map.ffgl.eu
 
 
 #Neanderfunk
