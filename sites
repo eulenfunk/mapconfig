@@ -93,7 +93,7 @@ instancel2tp Siegen-Wittgenstein_Nord_(Domain_37) nef37siwin nef37siwin.karte.ne
 instancel2tp Siegen-Wittgenstein_West_(Domain_38) nef38siwiw nef38siwiw.karte.neanderfunk.de 8153 1364 # 1 15 20
 instancel2tp Siegen-Nord_(Domain_39) nef39sin nef39sin.karte.neanderfunk.de 8154 1364 # 1 15 20
 instancel2tp Siegen-Mitte_(Domain_40) nef40sim nef40sim.karte.neanderfunk.de 8155 1364 # 1 15 20
-instancel2tp Siegen_Süd_(Domain_41) nef41sis nef40sis.karte.neanderfunk.de 8156 1364 # 1 15 20
+instancel2tp Siegen_Süd_(Domain_41) nef41sis nef41sis.karte.neanderfunk.de 8156 1364 # 1 15 20
 instancel2tp Siegen-Wittgenstein_Land_(Domain_42) nef42siwil nef42siwil.karte.neanderfunk.de 8157 1364 # 1 15 20
 
 #alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
@@ -104,7 +104,7 @@ group Flingern dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip karte.ffdus.de
 alias map.ffdus.de karte.ffdus.de
 
 #Siegerland
-group Siegerland sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef40sis,nef42siwil siegerland.map.eulenfunk.de
+group Siegerland sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef40sis,nef40sis,nef42siwil siegerland.map.eulenfunk.de
 instance Siegerland_(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406 # 1 90 600
 instance Siegerland_(Hilchenbach) sihb hilchenbach.map.eulenfunk.de 8099 1406 # 1 130 600
 instance Siegerland_(Siegen) sisi siegen.map.eulenfunk.de 8107 1406 # 1 400 2000
