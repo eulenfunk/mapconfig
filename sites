@@ -28,7 +28,7 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef40sis,nef42siwil map.eulenfunk.de
+basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil map.eulenfunk.de
 #basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,sifb,sihb,sisi map.eulenfunk.de
 
 #Nicht Eulenfunk
@@ -104,7 +104,7 @@ group Flingern dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip karte.ffdus.de
 alias map.ffdus.de karte.ffdus.de
 
 #Siegerland
-group Siegerland sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef40sis,nef40sis,nef42siwil siegerland.map.eulenfunk.de
+group Siegerland sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil siegerland.map.eulenfunk.de
 instance Siegerland_(Freudenberg) sifb freudenberg.map.eulenfunk.de 8101 1406 # 1 90 600
 instance Siegerland_(Hilchenbach) sihb hilchenbach.map.eulenfunk.de 8099 1406 # 1 130 600
 instance Siegerland_(Siegen) sisi siegen.map.eulenfunk.de 8107 1406 # 1 400 2000
