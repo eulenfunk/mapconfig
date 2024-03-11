@@ -108,5 +108,5 @@ instancel2tp Siegen-Mitte_(Domain_40) nef40sim nef40sim.karte.neanderfunk.de 815
 instancel2tp Siegen_Süd_(Domain_41) nef41sis nef41sis.karte.neanderfunk.de 8156 1364 # 1 15 20
 instancel2tp Siegen-Wittgenstein_Land_(Domain_42) nef42siwil nef42siwil.karte.neanderfunk.de 8157 1364 # 1 15 20
 group Siegerland sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil siegerland.map.eulenfunk.de
-alias map.freifunk-siegerland.de siegerland.map.eulenfunk.de
+#alias map.freifunk-siegerland.de siegerland.map.eulenfunk.de
 
