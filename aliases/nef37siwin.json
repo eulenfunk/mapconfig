@@ -1,0 +1,20 @@
+{
+   "98ded0366fb4": {
+     "nodeinfo": {
+       "node_id": "98ded0366fb4",
+       "location": {	
+         "latitude": "51.0148592",
+         "longitude": "8.405272"
+       }
+    }
+  },
+   "ec086bc63116": {
+     "nodeinfo": {
+       "node_id": "ec086bc63116",
+       "location": {	
+         "latitude": "50.960674",
+         "longitude": "7.9891034"
+       }
+    }
+  }
+}

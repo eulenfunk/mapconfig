@@ -1,0 +1,56 @@
+{
+   "e894f6aaf09e": {
+    "nodeinfo": {
+      "node_id": "e894f6aaf09e",
+       "location": {	
+         "latitude": "50.879027726",
+         "longitude": "8.019719124"
+       }
+    }
+  },
+   "14cc206e26c4": {
+    "nodeinfo": {
+       "node_id": "14cc206e26c4",
+       "location": {	
+         "latitude": "50.879203732",
+         "longitude": "8.020159006"
+       }
+    }
+  },
+   "10feede68394": {
+    "nodeinfo": {
+       "node_id": "10feede68394",
+       "location": {	
+         "latitude": "50.879725",
+         "longitude": "8.019966"
+       }
+    }
+  },
+   "54af97fb4ca8": {
+    "nodeinfo": {
+       "node_id": "54af97fb4ca8",
+       "location": {	
+         "latitude": "50.878832",
+         "longitude": "8.012854"
+       }
+    }
+  },
+   "f4f26d85a392": {
+    "nodeinfo": {
+       "node_id": "f4f26d85a392",
+       "location": {	
+         "latitude": "50.875968",
+         "longitude": "8.022093"
+       }
+    }
+  },
+   "909a4a86d3e5": {
+    "nodeinfo": {
+       "node_id": "909a4a86d3e5",
+       "location": {	
+         "latitude": "50.878779",
+         "longitude": "8.012366"
+       }
+    }
+  }
+}

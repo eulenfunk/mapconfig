@@ -28,8 +28,7 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil map.eulenfunk.de
-#basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,ffal,ffhe,ffis,ffls,ffmk,ffnr,ffmz,ffmk_nord,ffmk_west,ffmk_ost,gl,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,sifb,sihb,sisi map.eulenfunk.de
+basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil map.eulenfunk.de
 
 #Nicht Eulenfunk
 instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 1 50 100
@@ -50,7 +49,7 @@ alias map.leichlingen.freifunk.net lln.map.ffgl.eu
 
 
 #Neanderfunk
-group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef02met,nef05mon,nef07erk,nef03rat,nef01vel,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw karte.neanderfunk.de
+group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw karte.neanderfunk.de
 instancel2tp Neanderfunk_(Haan)_(Domain_06) nef06han nef06han.karte.neanderfunk.de 8115 1364 # 1 120 500
 instancel2tp Neanderfunk_(Heiligenhaus)_(Domain_08) nef08hlg nef08hlg.karte.neanderfunk.de 8116 1364 # 1 120 200
 instancel2tp Neanderfunk_(Hilden)_(Domain_04) nef04hld nef04hld.karte.neanderfunk.de 8117 1364 # 1 120 500
@@ -108,5 +107,5 @@ instancel2tp Siegen-Mitte_(Domain_40) nef40sim nef40sim.karte.neanderfunk.de 815
 instancel2tp Siegen_Süd_(Domain_41) nef41sis nef41sis.karte.neanderfunk.de 8156 1364 # 1 15 20
 instancel2tp Siegen-Wittgenstein_Land_(Domain_42) nef42siwil nef42siwil.karte.neanderfunk.de 8157 1364 # 1 15 20
 group Siegerland sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil siegerland.map.eulenfunk.de
-#alias map.freifunk-siegerland.de siegerland.map.eulenfunk.de
+alias map.freifunk-siegerland.de siegerland.map.eulenfunk.de
 
