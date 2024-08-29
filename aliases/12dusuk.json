@@ -1,15 +1,16 @@
 {
-   "02a5a799a213": {
+   "02a5a799e165": {
     "firstseen": "2015-02-02T17:49:18.252Z",
     "nodeinfo": {
       "owner": {
         "contact": "team@ffdus.de"
       },
-      "node_id": "02a5a799a213",
+      "node_id": "02a5a799e165",
       "network": {
-        "mac": "02:a5:a7:99:a2:13",
+        "mac": "02:a5:a7:99:e1:65",
         "mesh_interfaces": [
-          "02:a5:a7:99:a2:13"
+          "02:a5:a7:99:e1:65",
+          "fe:24:7f:57:19:ac"
         ],
         "addresses": [
           "fe80::ac98:fdff:feaa:f251"
@@ -18,7 +19,8 @@
           "bat0": {
             "interfaces": {
               "other": [
-                "02:a5:a7:99:a2:13"
+                "02:a5:a7:99:a2:13",
+                "fe:24:7f:57:19:ac"
               ]
             }
           }
@@ -28,7 +30,7 @@
       "software": {
         "firmware": {
           "base": "ubuntu",
-          "release": "18.04LTS"
+          "release": "20.04LTS"
         }
       }
     },
@@ -39,3 +41,4 @@
     }
   }
 }
+

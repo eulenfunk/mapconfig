@@ -31,8 +31,7 @@
 basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil map.eulenfunk.de
 
 #Nicht Eulenfunk
-instance Freifunk_GL.Wupper gl map.gl.wupper.ffrl.de 8085 1406 # 1 50 100
-#alias map.gl.wupper.freifunk-rheinland.net map.gl.wupper.ffrl.de
+instance Freifunk_GL.Wupper gl gl.map.eulenfunk.de 8085 1406 # 1 50 100
 instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 1 300 1000
 alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
 instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 2 180 500
