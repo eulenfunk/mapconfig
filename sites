@@ -28,7 +28,7 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil map.eulenfunk.de
+basedom Eulenfunk dus,12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,sifb,sihb,sisi,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil,bgl43gl,bgl44ll,bgl45bs,bgl46od,bgl47rr,nef48rdv map.eulenfunk.de
 
 #Nicht Eulenfunk
 instance Freifunk_GL.Wupper gl gl.map.eulenfunk.de 8085 1406 # 1 50 100
@@ -37,7 +37,7 @@ alias map.freifunk-wuppertal.net wup.map.eulenfunk.de
 instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 2 180 500
 
 #GL
-group Freifunk_GL gl,bgl,lln,bcd,ode,rrh map.ffgl.eu 
+group Freifunk_GL gl,bgl,lln,bcd,ode,rrh,bgl43gl,bgl44ll,bgl45bs,bgl46od,bgl47rr map.ffgl.eu 
 instance Freifunk_Bergisch_Gladbach bgl bgl.map.ffgl.eu 8105 1406 # 1 400 1500
 instance Freifunk_Leichlingen lln lln.map.ffgl.eu 8102 1406 # 1 240 1000
 instance Freifunk_Burscheid bcd bcd.map.ffgl.eu 8109 1406 # 1 150 400 2000
@@ -45,10 +45,15 @@ instance Freifunk_Odenthal ode ode.map.ffgl.eu 8110 1406 # 1 100 500
 instance Freifunk_Rösrath rrh rrh.map.ffgl.eu 8140 1406 # 1 100 100
 alias map.freifunk-bergischgladbach.de bgl.map.ffgl.eu 
 alias map.leichlingen.freifunk.net lln.map.ffgl.eu
+instancel2tp BGL-Gladbach_(Domain_43) bgl43gl bgl43gl.karte.neanderfunk.de 8158 1364 # 1 15 20
+instancel2tp BGL-Leichlingen_(Domain_44) bgl44ll bgl44ll.karte.neanderfunk.de 8159 1364 # 1 15 20
+instancel2tp BGL-Burscheid_(Domain_45) bgl45bs bgl45bs.karte.neanderfunk.de 8160 1364 # 1 15 20
+instancel2tp BGL-Odenthal_(Domain_46) bgl46od bgl46od.karte.neanderfunk.de 8161 1364 # 1 15 20
+instancel2tp BGL-Rösrath_(Domain_47) bgl47rr bgl47rr.karte.neanderfunk.de 8162 1364 # 1 15 20
 
 
 #Neanderfunk
-group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw karte.neanderfunk.de
+group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,nef48rdv,bgl43gl,bgl44ll,bgl45bs,bgl46od,bgl47rr karte.neanderfunk.de
 instancel2tp Neanderfunk_(Haan)_(Domain_06) nef06han nef06han.karte.neanderfunk.de 8115 1364 # 1 120 500
 instancel2tp Neanderfunk_(Heiligenhaus)_(Domain_08) nef08hlg nef08hlg.karte.neanderfunk.de 8116 1364 # 1 120 200
 instancel2tp Neanderfunk_(Hilden)_(Domain_04) nef04hld nef04hld.karte.neanderfunk.de 8117 1364 # 1 120 500
@@ -66,6 +71,7 @@ instancel2tp Wuppertal-Barmen 14wupbar wupbar14.karte.neanderfunk.de 8128 1364 #
 instancel2tp Marienheide 15mrh mrh15.karte.neanderfunk.de 8129 1364 # 1 120 500
 instancel2tp Gummersbach 16gmb gmb16.karte.neanderfunk.de 8130 1364 # 1 30 80
 instancel2tp Wipperfürth 17wip wip17.karte.neanderfunk.de 8131 1364 # 1 20 100
+instancel2tp BGL-Gladbach_(Domain_48) nef48rdv nef48rdv.karte.neanderfunk.de 8163 1364 # 1 15 20
 instancel2tp Neanderfunk_Unterkünfte_(Domain_18) nef18uk nef18uk.karte.neanderfunk.de 8132 1364 # 1 15 100
 instancel2tp Neanderfunk_Agios_(Domain_19) nef19agi nef19agi.karte.neanderfunk.de 8133 1364 # 1 15 20
 instancel2tp Neanderfunk_Gertis_(Domain_20) nef20grt nef20grt.karte.neanderfunk.de 8134 1364 # 1 15 20
