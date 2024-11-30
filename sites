@@ -15,7 +15,7 @@
 
 #  instance: Freifunk-Broadcast-Domain
 #      name         - Bezeichnung, die auf der Map angezeigt wird
-#      sitecode     - Eindeutiger Code der Instanz
+#      sitecode     - Eindeutiger Code der Instanz0
 #      fqdn         - Domainname, unter dem die Map erreichbar sein soll
 #      port         - IP-Port auf dem der interne Hopglass-Server für diese Domain antwortet
 #      mtu          - fastd-MTU der Domäne
@@ -28,16 +28,14 @@
 #      fqdn         - Domainname, unter dem die Map ebenfalls erreichbar sein soll
 #      ziel         - Domainname der Zielinstanz
 
-basedom Eulenfunk 12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,gl,wup,rdv,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil,bgl43gl,bgl44ll,bgl45bs,bgl46od,bgl47rr,nef48rdv map.eulenfunk.de
+basedom Eulenfunk 12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,wup,rrh,bgl,lln,ode,bcd,nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21dias,22dusukn,23dusuks,24dusukw,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,nef37siwin,nef38siwiw,nef39sin,nef40sim,nef41sis,nef42siwil,rbk43gl,rbk44ll,rbk45bs,rbk46od,rbk47rr,nef48rdv map.eulenfunk.de
 
 #Nicht Eulenfunk
-instance Freifunk_GL.Wupper gl gl.map.eulenfunk.de 8085 1406 # 1 50 100
 instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 1 300 1000
 alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
-instance Freifunk_Radevormwald rdv rade.map.eulenfunk.de 8111 1426 # 2 180 500
 
-#GL
-group Freifunk_GL gl,bgl,lln,bcd,ode,rrh,bgl43gl,bgl44ll,bgl45bs,bgl46od,bgl47rr map.ffgl.eu 
+#RBK
+group Freifunk_RBK bgl,lln,bcd,ode,rrh,rbk43gl,rbk44ll,rbk45bs,rbk46od,rbk47rr map.ffgl.eu 
 instance Freifunk_Bergisch_Gladbach bgl bgl.map.ffgl.eu 8105 1406 # 1 400 1500
 instance Freifunk_Leichlingen lln lln.map.ffgl.eu 8102 1406 # 1 240 1000
 instance Freifunk_Burscheid bcd bcd.map.ffgl.eu 8109 1406 # 1 150 400 2000
@@ -45,15 +43,14 @@ instance Freifunk_Odenthal ode ode.map.ffgl.eu 8110 1406 # 1 100 500
 instance Freifunk_Rösrath rrh rrh.map.ffgl.eu 8140 1406 # 1 100 100
 alias map.freifunk-bergischgladbach.de bgl.map.ffgl.eu 
 alias map.leichlingen.freifunk.net lln.map.ffgl.eu
-instancel2tp BGL-Gladbach_(Domain_43) bgl43gl bgl43gl.karte.neanderfunk.de 8158 1364 # 1 15 20
-instancel2tp BGL-Leichlingen_(Domain_44) bgl44ll bgl44ll.karte.neanderfunk.de 8159 1364 # 1 15 20
-instancel2tp BGL-Burscheid_(Domain_45) bgl45bs bgl45bs.karte.neanderfunk.de 8160 1364 # 1 15 20
-instancel2tp BGL-Odenthal_(Domain_46) bgl46od bgl46od.karte.neanderfunk.de 8161 1364 # 1 15 20
-instancel2tp BGL-Rösrath_(Domain_47) bgl47rr bgl47rr.karte.neanderfunk.de 8162 1364 # 1 15 20
-
+instancel2tp RBK-Gladbach_(Domain_43) rbk43gl rbk43gl.karte.neanderfunk.de 8158 1364 # 1 15 20
+instancel2tp RBK-Leichlingen_(Domain_44) rbk44ll rbk44ll.karte.neanderfunk.de 8159 1364 # 1 15 20
+instancel2tp RBK-Burscheid_(Domain_45) rbk45bs rbk45bs.karte.neanderfunk.de 8160 1364 # 1 15 20
+instancel2tp RBK-Odenthal_(Domain_46) rbk46od rbk46od.karte.neanderfunk.de 8161 1364 # 1 15 20
+instancel2tp RBK-Rösrath_(Domain_47) rbk47rr rbk47rr.karte.neanderfunk.de 8162 1364 # 1 15 20
 
 #Neanderfunk
-group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21gls,nef22png,nef23atk,nef24krv,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,nef48rdv,bgl43gl,bgl44ll,bgl45bs,bgl46od,bgl47rr karte.neanderfunk.de
+group Neanderfunk nef06han,nef08hlg,nef04hld,nef09lgf,nef01vel,nef02met,nef05mon,nef07erk,nef03rat,nef10wlf,nef11lvr,nef18uk,nef19agi,nef20grt,nef21dias,nef25pss,nef26vts,nef27grd,nef28plt,nef29gvd,nef30sol,nef31lvrno,nef32lvrnw,nef33lvrmo,nef34lvrmw,nef35lvrso,nef36lvrsw,nef48rdv,rbk43gl,rbk44ll,rbk45bs,rbk46od,rbk47rr karte.neanderfunk.de
 instancel2tp Neanderfunk_(Haan)_(Domain_06) nef06han nef06han.karte.neanderfunk.de 8115 1364 # 1 120 500
 instancel2tp Neanderfunk_(Heiligenhaus)_(Domain_08) nef08hlg nef08hlg.karte.neanderfunk.de 8116 1364 # 1 120 200
 instancel2tp Neanderfunk_(Hilden)_(Domain_04) nef04hld nef04hld.karte.neanderfunk.de 8117 1364 # 1 120 500
@@ -75,10 +72,10 @@ instancel2tp BGL-Gladbach_(Domain_48) nef48rdv nef48rdv.karte.neanderfunk.de 816
 instancel2tp Neanderfunk_Unterkünfte_(Domain_18) nef18uk nef18uk.karte.neanderfunk.de 8132 1364 # 1 15 100
 instancel2tp Neanderfunk_Agios_(Domain_19) nef19agi nef19agi.karte.neanderfunk.de 8133 1364 # 1 15 20
 instancel2tp Neanderfunk_Gertis_(Domain_20) nef20grt nef20grt.karte.neanderfunk.de 8134 1364 # 1 15 20
-instancel2tp Neanderfunk_Gaastria_(Domain_21) nef21gls nef21gls.karte.neanderfunk.de 8135 1364 # 1 15 20
-instancel2tp Neanderfunk_Panagia_(Domain_22) nef22png nef22png.karte.neanderfunk.de 8136 1364 # 1 15 20
-instancel2tp Neanderfunk_Atokos_(Domain_23) nef23atk nef23atk.karte.neanderfunk.de 8137 1364 # 1 15 20
-instancel2tp Neanderfunk_Kravia_(Domain_24) nef24krv nef24krv.karte.neanderfunk.de 8138 1364 # 1 15 20
+instancel2tp Neanderfunk_Diaspora_(Domain_21) nef21dias nef21dias.karte.neanderfunk.de 8135 1364 # 1 15 20
+instancel2tp Düsseldorf-Unterkünfte-Nord_(Domain_22) 22dusukn dusukn22.map.ffdus.de 8136 1364 # 1 15 20
+instancel2tp Düsseldorf-Unterkünfte-Süd_(Domain_23) 23dusuks dusuks23.map.ffdus.de 8137 1364 # 1 15 20
+instancel2tp Düsseldorf-Unterkünfte-West_(Domain_24) 24dusukw dusukw24.map.ffdus.de 8138 1364 # 1 15 20
 instancel2tp Neanderfunk_Pasas_(Domain_25) nef25pss nef25pss.karte.neanderfunk.de 8139 1364 # 1 15 20
 instancel2tp Neanderfunk_Vatos_(Domain_26) nef26vts nef26vts.karte.neanderfunk.de 8145 1364 # 1 15 20
 instancel2tp Neanderfunk_Gordi_(Domain_27) nef27grd nef27grd.karte.neanderfunk.de 8141 1364 # 1 15 20
@@ -97,7 +94,7 @@ alias map.neanderfunk.de karte.neanderfunk.de
 #alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
 
 #Flingern-Grouping
-group Flingern 12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip karte.ffdus.de
+group Flingern 12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,22dusukn,23dusuks,24dusukw karte.ffdus.de
 alias map.ffdus.de karte.ffdus.de
 
 #Siegerland

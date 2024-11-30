@@ -2,6 +2,7 @@
 # set -u # stop at unset variables
 # set -o pipefail # do not assume ok after multple chained pies.
 # set -e # stop on errors - want to, but errorhandling is not yet done. TBD
+export LANG=de_DE.UTF-8
 cd /opt/eulenfunk/map
 
 
