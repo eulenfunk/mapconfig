@@ -35,7 +35,7 @@ instance Freifunk_Wuppertal wup wup.map.eulenfunk.de 8108 1426 # 1 300 1000
 alias map.freifunk-wuppertal.net wup.map.eulenfunk.de 
 
 #RBK
-group Freifunk_RBK bgl,lln,bcd,ode,rrh,rbk43gl,rbk44ll,rbk45bs,rbk46od,rbk47rr map.ffgl.eu 
+group Freifunk_RBK rbk43gl,rbk44ll,rbk45bs,rbk46od,rbk47rr,bgl,lln,bcd,ode,rrh map.ffgl.eu 
 instance Freifunk_Bergisch_Gladbach bgl bgl.map.ffgl.eu 8105 1406 # 1 400 1500
 instance Freifunk_Leichlingen lln lln.map.ffgl.eu 8102 1406 # 1 240 1000
 instance Freifunk_Burscheid bcd bcd.map.ffgl.eu 8109 1406 # 1 150 400 2000
@@ -94,7 +94,7 @@ alias map.neanderfunk.de karte.neanderfunk.de
 #alias karte.fflvr.de nef11lvr.karte.neanderfunk.de
 
 #Flingern-Grouping
-group Flingern 12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,22dusukn,23dusuks,24dusukw karte.ffdus.de
+group Flingern 12dusuk,13dusfl,14wupbar,15mrh,16gmb,17wip,nef21dias,22dusukn,23dusuks,24dusukw karte.ffdus.de
 alias map.ffdus.de karte.ffdus.de
 
 #Siegerland
