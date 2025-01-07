@@ -1,0 +1,26 @@
+{
+  "timestamp": "1970-01-01T00:00:00.000Z",
+  "version": 1,
+  "batadv": {
+    "multigraph": false,
+    "directed": true,
+    "nodes": [
+      {
+        "id": "02:a5:a7:99:f0:fa"
+      },
+      {
+        "id": "02:ca:ff:ee:00:00",
+        "node_id": "f2caffeebeef"
+      }
+    ],
+    "links": [
+      {
+        "source": 0,
+        "target": 1,
+        "tq": 1,
+        "type": "tunnel"
+      }
+    ],
+    "graph": null
+  }
+}

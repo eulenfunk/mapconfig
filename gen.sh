@@ -111,7 +111,7 @@ function instance_hgserver {
 	cp $HOME/aliases/$3.json /etc/hopglass-server/$3/aliases.json 2> /dev/null
 	cd $HOME
 	mkdir -p /var/local/hopglass-server/$3
-	#systemctl enable hopglass-server@$3
+	systemctl enable hopglass-server@$3
 	systemctl restart hopglass-server@$3
 }
 
@@ -179,6 +179,9 @@ function basedom_nginx {
 	BASEDOM=$4
 	cp $HOME/templates/basedom/nginx.conf $WEBCONF/$4.conf
 	replace $WEBCONF/$4.conf URL $4
+        mkdir $WEBDATA/data
+        cp $HOME/templates/basedom/graph.json $WEBDATA/data/graph.json
+        cp $HOME/templates/basedom/nodes.json $WEBDATA/data/nodes.json
 }
 
 # wgvxlan ipv6 helper function

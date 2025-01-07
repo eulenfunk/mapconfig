@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "nodes": [
+    {
+      "nodeinfo": {
+        "owner": {
+          "contact": "kontakt@neanderfunk.de"
+        },
+        "hardware": {
+          "model": "Fallback Datei",
+          "nproc": 8
+        },
+        "software": {
+          "batman-adv": {
+            "version": ""
+          },
+          "firmware": {
+            "release": "",
+            "base": ""
+          }
+        },
+        "system": {
+          "primary_domain_code": "ffnefd00",
+          "domain_code": "ffnefd00"
+        },
+        "network": {
+          "addresses": [
+          ],
+          "mesh": {
+            "bat29": {
+              "interfaces": {
+                "tunnel": [
+                  "02:ca:ff:ee:00:00"
+                ]
+              }
+            }
+          },
+          "mac": "f2:ca:ff:ee:be:ef"
+        },
+        "node_id": "HOPGLASSDOWN",
+        "hostname": "🚨HOPGLASS DOWN (DOMAINID)",
+        "vpn": true
+      },
+      "flags": {
+        "gateway": true,
+        "online": true
+      },
+      "statistics": {
+        "uptime": 0,
+        "airtime": [],
+        "memory_usage": 0.0,
+        "clients": {
+          "total": 0,
+          "wifi": 0,
+          "wifi24": 0,
+          "wifi5": 0
+        },
+        "loadavg": 0.0
+      },
+      "lastseen": "1970-01-01T00:00:00.000Z",
+      "firstseen": "1970-01-01T00:00:00.000Z"
+    }
+  ],
+  "timestamp": "1970-01-01T00:00:00.000Z"
+}
