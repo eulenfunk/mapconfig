@@ -30,7 +30,7 @@
       "software": {
         "firmware": {
           "base": "Ubuntu",
-          "release": "20.04 LTS"
+          "release": "24.04"
         }
       }
     },
@@ -69,7 +69,7 @@
       "software": {
         "firmware": {
           "base": "ubuntu",
-          "release": "18.04LTS"
+          "release": "24.04"
         }
       }
     },

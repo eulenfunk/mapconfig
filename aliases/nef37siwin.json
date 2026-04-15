@@ -8,22 +8,4 @@
        }
     }
   },
-   "ec086bc63116": {
-     "nodeinfo": {
-       "node_id": "ec086bc63116",
-       "location": {	
-         "latitude": "50.960674",
-         "longitude": "7.9891034"
-       }
-    }
-  },
-   "c04a0093abab": {
-     "nodeinfo": {
-       "node_id": "c04a0093abab",
-       "location": {	
-         "latitude": "50.990061614",
-         "longitude": "8.031043410"
-       }
-    }
-  }
 }

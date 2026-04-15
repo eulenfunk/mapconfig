@@ -30,7 +30,7 @@
       "software": {
         "firmware": {
           "base": "ubuntu",
-          "release": "20.04LTS"
+          "release": "24.04"
         }
       }
     },

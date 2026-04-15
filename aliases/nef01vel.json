@@ -28,7 +28,7 @@
       "software": {
         "firmware": {
           "base": "ubuntu",
-          "release": "18.04LTS"
+          "release": "24.04"
         }
       }
     },
