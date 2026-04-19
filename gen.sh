@@ -7,7 +7,10 @@ cd /opt/eulenfunk/map
 
 
 function replace {
-	find $1 -type f -print0 | xargs -0 sed -i "s;$2;$3;g"
+#  echo Ersatze in Datei:"$1" string:"$2" by:"$3"
+#	if [[ -n $1 &&  -n $2 &&  -n $3 ]]; then
+   	  find $1 -type f -print0 | xargs -0 sed -i "s;$2;$3;g"
+#   	 fi
 }
 
 #instance functions
@@ -39,6 +42,7 @@ function instance_l2tp {
 	BROKERS="$(cat $(ls /etc/fastd/peers/$3/*|grep -v '~') | \
 		tr "\n" "#" | \
 		sed -e 's/^/-b /g' -e 's/#$//g' -e 's/#/ -b /g')"
+#"
 	echo "BROKERS=\"$BROKERS\"" > /etc/l2tp/$3
 	echo "ID=$5" >> /etc/l2tp/$3
 	echo "MTU=$6" >> /etc/l2tp/$3
@@ -169,8 +173,14 @@ function alias_nginx {
 	ALIAS_TYPE=$(echo $LINE | cut -d' ' -f1)
 	cp $HOME/templates/alias/$ALIAS_TYPE.conf $WEBCONF/$2.conf
 	replace $WEBCONF/$2.conf URL $2
-	replace $WEBCONF/$2.conf PORT $(echo $LINE | cut -d' ' -f5)
-	replace $WEBCONF/$2.conf ALIAS $(echo $LINE | cut -d' ' -f4)
+	port=$(echo $LINE | cut -d' ' -f5)
+	if [ -n $port ] ; then
+	  replace $WEBCONF/$2.conf PORT $port
+	 fi
+	ersatz=$(echo $LINE | cut -d' ' -f4) 
+	if [ -n $ersatz ] ; then
+  	  replace $WEBCONF/$2.conf ALIAS $ersatz
+  	 fi
 }
 
 #basedom functions
